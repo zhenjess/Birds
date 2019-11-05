@@ -5,20 +5,20 @@ import {
 
 const _nullUser = Object.freeze({ id: null });
 
-const sessionReducer = (state = _nullUser, action) => {
-    Object.freeze(state);
+const sessionReducer = (oldState = _nullUser, action) => {
+    Object.freeze(oldState);
     let newState;
 
     switch(action.type) {
         case RECEIVE_CURRENT_USER:
-            newState = Object.assign({}, state, {id: action.currentUser.id});
+            newState = Object.assign({}, oldState, {id: action.currentUser.id});
             return newState;
 
         case LOGOUT_CURRENT_USER:
             newState = _nullUser;
             return newState;
         default:
-            return state;
+            return oldState;
     }
 };
 
