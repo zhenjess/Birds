@@ -11,6 +11,10 @@
   </head>
 
   <body>
+  <h1>User Info</h1>
+  <% if logged_in? %>
+    <%= current_user.email %>
+  <% end %>
     <%= yield %>
   </body>
 </html>
