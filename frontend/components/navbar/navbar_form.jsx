@@ -31,42 +31,43 @@ import { Link } from 'react-router-dom';
 // }
 
 class NavbarForm extends React.Component {
-    renderForm() {
+    render() {
         return(
-            <div class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn">MEN
-                        <i class="fa fa-caret-down"></i>
+            <div className="navbar">
+                <div className="dropdown">
+                    <button className="dropbtn">MALE
+                        <i className="fa fa-caret-down"></i>
                     </button>
-                    <div class="dropdown-content">
-                        <a href="#">Shop All Men</a>
+                    <div className="dropdown-content">
+                        <a href="#">Shop ALL BIRDS</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button class="dropbtn">WOMEN
-                        <i class="fa fa-caret-down"></i>
+
+                <div className="dropdown">
+                    <button className="dropbtn">FEMALE
+                        <i className="fa fa-caret-down"></i>
                     </button>
-                    <div class="dropdown-content">
-                        <a href="#">Shop All Women</a>
+                    <div className="dropdown-content">
+                        <a href="#">Shop ALL BIRDS</a>
                     </div>
                 </div>
-                <a href="#kids">KIDS</a>
+
+                <a href="#chicks">CHICKS</a>
                 
                 <header className="navbar">
                     <h1 className="logo">birds</h1>
-                    <div>
-                        {display}
-                    </div>
                 </header>
 
-                <a href="#materials">MATERIALS</a>
-                <a href="#stores">STORES</a>
-                <a href="#account">ACCOUNT</a>
-                <a href="?">?</a>
-                <a href="cart">CART</a>
+                <div className="links">
+                    <a href="#materials">MATERIALS</a>
+                    <a href="#stores">STORES</a>
+                    <a href="#account">ACCOUNT</a>
+                    <a href="?">?</a>
+                    <a href="nest">NEST</a>
+                </div>
             </div>
         );
     }
 }
 
-export default HavbarForm;
+export default NavbarForm;
