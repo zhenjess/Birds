@@ -6,19 +6,13 @@ import NavbarForm from './navbar_form';
 
 import { Link, Route } from 'react-router-dom';
 
-// import BirdsDropDown from './navbar_birds_dropdown';
 
-import { withRouter } from 'react-router-dom';
+const mapStateToProps = state => ({
+    currentUser:state.session.currentUser
+});
 
-// // import DropDownButton from './dropdownbutton';
-
-
-const mapStateToProps = state => {
-    return {};
-};
-
-const mapDispatchToProps = dispatch => {
-    return {};
-};
+const mapDispatchToProps = dispatch => ({
+    logout: () => dispatch(logout())
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavbarForm);
