@@ -55,7 +55,7 @@ class SignupForm extends React.Component {
                     </ul>
 
                     {this.renderErrors()}
-                    <div classname="signup-form">
+                    <div className="signup-form">
                         <br />
                         <label>FIRST NAME
                                 <input

@@ -8,25 +8,21 @@ import LoginFormContainer from './session/login_form_container';
 
 import LogoutFormContainer from './session/logout_form_container';
 
-// import Account from './session/account';
+import AccountFormsContainer from './session/account_forms_container';
 
 import NavBarContainer from './navbar/navbar_container';
 
-import Main from './main/main_container';
+import Main from './main/main';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
 const App = () => (
     <div>
+        <Route path="/" component={NavBarContainer}/>
         <Switch>
-            {/* <Route exact path="/account" component={Account}/> */}
-            <AuthRoute exact path="/login" component={LoginFormContainer}/>
-            <AuthRoute exact path="/signup" component={SignupFormContainer}/>
-            <ProtectedRoute />
-            <Route exact path="/signup" component={SignupFormContainer}/>
-            <Route exact path="/login" component={LoginFormContainer}/>
-            <Route exact path="/logout" component={LogoutFormContainer}/>
+            <Route exact path="/" component={Main}/>
+            <Route exact path="/account" component={AccountFormsContainer}/> 
 
         </Switch>
     </div>
