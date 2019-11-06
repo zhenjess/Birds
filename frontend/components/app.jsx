@@ -14,11 +14,16 @@ import NavBarContainer from './navbar/navbar_container';
 
 import Main from './main/main_container';
 
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+
 
 const App = () => (
     <div>
         <Switch>
             {/* <Route exact path="/account" component={Account}/> */}
+            <AuthRoute exact path="/login" component={LoginFormContainer}/>
+            <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+            <ProtectedRoute />
             <Route exact path="/signup" component={SignupFormContainer}/>
             <Route exact path="/login" component={LoginFormContainer}/>
             <Route exact path="/logout" component={LogoutFormContainer}/>
