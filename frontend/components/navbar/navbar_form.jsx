@@ -1,56 +1,72 @@
-// import React from 'react';
-
-// import { Link } from 'react-router-dom';
-
-// class NavbarForm extends React.Component {
-//     constructor(props) {
-//         super(props);
-//     }
-
-//     renderForm() {
-        
-//         return (
-//             <div className="navbar">
-//                 <Link className="button" to="/account">Account</Link>
-//             </div>
-//         );
-//     }
-
-//     return (
-        
-//     );
-// }
-
-// export default NavbarForm;
-
 import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-export default ({ currentUser, logout }) => {
-    const display = currentUser ? (
-        <div>
+// export default ({ currentUser, logout }) => {
+//     const display = currentUser ? (
+//         <div>
 
-        </div>
-    ) : (
-        <div>
-            <Link className="button" to="/MEN">MEN</Link>
-            <Link className="button" to="/WOMEN">WOMEN</Link>
-            <Link className="button" to="/KIDS">KIDS</Link>
-            <Link className="button" to="MATERIALS">MATERIALS</Link>
-            <Link className="button" to="STORES">STORES</Link>
-            <Link className="button" to="ACCOUNT">ACCOUNT</Link>
-            <Link className="button" to="?">?</Link>
-            <Link className="button" to="CART">Cart</Link>
-        </div>
-    );
+//         </div>
+//     ) : (
+//         <div>
+//             <Link className="button" to="/MEN">MEN</Link>
+//             <Link className="button" to="/WOMEN">WOMEN</Link>
+//             <Link className="button" to="/KIDS">KIDS</Link>
+//             <Link className="button" to="MATERIALS">MATERIALS</Link>
+//             <Link className="button" to="STORES">STORES</Link>
+//             <Link className="button" to="ACCOUNT">ACCOUNT</Link>
+//             <Link className="button" to="?">?</Link>
+//             <Link className="button" to="CART">Cart</Link>
+//         </div>
+//     );
 
-    return (
-        <header className="navbar">
-            <h1 className="logo">birds</h1>
-            <div>
-                {display}
+//     return (
+//         <header className="navbar">
+//             <h1 className="logo">birds</h1>
+//             <div>
+//                 {display}
+//             </div>
+//         </header>
+//     );
+// }
+
+class NavbarForm extends React.Component {
+    renderForm() {
+        return(
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">MEN
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Shop All Men</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">WOMEN
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Shop All Women</a>
+                    </div>
+                </div>
+                <a href="#kids">KIDS</a>
+                
+                <header className="navbar">
+                    <h1 className="logo">birds</h1>
+                    <div>
+                        {display}
+                    </div>
+                </header>
+
+                <a href="#materials">MATERIALS</a>
+                <a href="#stores">STORES</a>
+                <a href="#account">ACCOUNT</a>
+                <a href="?">?</a>
+                <a href="cart">CART</a>
             </div>
-        </header>
-    );
+        );
+    }
 }
+
+export default HavbarForm;
