@@ -51,7 +51,7 @@ class SignupForm extends React.Component {
 
                     <ul>
                         <li>Your credit card information will not be saved.</li>
-                        <li>Register for fast and easy checkout and for save account order information.</li>
+                        <li>Register for fast and easy checkout and to save account order information.</li>
                     </ul>
 
                     {this.renderErrors()}

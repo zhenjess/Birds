@@ -2,11 +2,13 @@ import React from "react";
 
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
-import SignupFormContainer from './session/login_form_container';
+import SignupFormContainer from './session/signup_form_container';
 
 import LoginFormContainer from './session/login_form_container';
 
-import LogoutFormContainer from './session/login_form_container';
+import LogoutFormContainer from './session/logout_form_container';
+
+// import Account from './session/account';
 
 import NavBarContainer from './navbar/navbar_container';
 
@@ -16,10 +18,12 @@ import Main from './main/main_container';
 const App = () => (
     <div>
         <Switch>
-            <Route exact path="/login" component={LoginFormContainer}/>
+            {/* <Route exact path="/account" component={Account}/> */}
             <Route exact path="/signup" component={SignupFormContainer}/>
+            <Route exact path="/login" component={LoginFormContainer}/>
             <Route exact path="/logout" component={LogoutFormContainer}/>
-        </Switch>/>
+
+        </Switch>
     </div>
 );
 
