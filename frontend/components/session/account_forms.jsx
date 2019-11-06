@@ -24,7 +24,6 @@ class AccountForms extends React.Component {
     render() {
         return (
            this.renderForm()
-        //    <h1>hello</h1>
         );
     }
 }
