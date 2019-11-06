@@ -2,7 +2,11 @@ import React from "react";
 
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
-import SessionFormContainer from './session/login_form_container';
+import SignupFormContainer from './session/login_form_container';
+
+import LoginFormContainer from './session/login_form_container';
+
+import LogoutFormContainer from './session/login_form_container';
 
 import NavBarContainer from './navbar/navbar_container';
 

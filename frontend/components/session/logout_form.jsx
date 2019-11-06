@@ -25,7 +25,7 @@ class LogoutForm extends React.Component {
 
     render() {
         return (
-            <div className="session_form_container">
+            <div className="logout_form_container">
                 <form onSubmit={this.handleSubmit}>
                     <h1>MY ACCOUNT</h1>
                     <br/>
