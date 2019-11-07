@@ -10,7 +10,7 @@ class NavbarForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown">
                         <button className="dropbtn">FEMALE
@@ -34,8 +34,8 @@ class NavbarForm extends React.Component {
 
                 <div className="logo">
                     <style>
-                        @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-                </style>
+                        @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400i&display=swap');
+                    </style>
                     <h1>birds</h1>
                 </div>
 
