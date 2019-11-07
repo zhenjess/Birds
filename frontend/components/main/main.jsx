@@ -19,6 +19,7 @@ class Main extends React.Component {
                 </div>
 
                 <div className="main-links">
+                    
 
                     <Link className="main-link" to="/collections/female">SHOP FEMALE</Link>
                     <Link className="main-link" to="/collections/male">SHOP MALE</Link>

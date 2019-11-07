@@ -44,6 +44,8 @@ body, html {
     justify-content: space-between;
     color: white;
     text-align: center;
+    padding: 10px 0px 10px 0px;
+    transition: .2s;
 
     .main-link:hover{
       margin: 30px 110px 30px 110px;
@@ -61,7 +63,6 @@ body, html {
 //     flex-direction: row;
 //     justify-content: space-between; 
 //     width: 300px;
-
 //     .link-items {
 //         width: 350px;
 //         margin: 0px 0px 20px 0px;
