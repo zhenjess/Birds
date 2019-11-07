@@ -7,12 +7,15 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div className="main">
-                <div className="hero-img-frame">
-                    {/* <img className="hero-img" src="https://www.instagram.com/p/B2qyIVCpTyj/?utm_source=ig_web_button_share_sheet" alt=""/> */}
-                    <h1>BETTER SHOES IN A BETTER WAY</h1>
-                    <button>Shop FEMALE</button>
-                    <button>Shop MALE</button>
+            <div class="main-image">
+                <div class="main-text">
+                    <style>
+                        @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
+                    </style>
+                    <h1>BETTER SHOES</h1>
+                    <h1>IN A BETTER WAY</h1>
+                    <button>SHOP FEMALE</button>
+                    <button>SHOP MALE</button>
                 </div>
             </div>
         );
