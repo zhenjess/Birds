@@ -13,18 +13,20 @@ class NavbarForm extends React.Component {
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown">
-                        <button className="dropbtn">FEMALE
-                        <i className="fa fa-caret-down"></i>
-                        </button>
+                        <Link className="nav-link" to="/collections/female">FEMALE</Link>
+                        {/* <button className="dropbtn">FEMALE */}
+                        {/* <i className="fa fa-caret-down"></i>
+                        </button> */}
                         <div className="dropdown-content">
                             <a href="#">Shop ALL BIRDS</a>
                         </div>
 
                     </div>
                     <div className="dropdown">
-                        <button className="dropbtn">MALE
+                        <Link className="nav-link" to="/collections/male">MALE</Link>
+                        {/* <button className="dropbtn">MALE
                         <i className="fa fa-caret-down"></i>
-                        </button>
+                        </button> */}
                         <div className="dropdown-content">
                             <a href="#">Shop ALL BIRDS</a>
                         </div>
