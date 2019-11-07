@@ -15,10 +15,11 @@ class Main extends React.Component {
                     <h1>BETTER SHOES</h1>
                     <h1>IN A BETTER WAY</h1>
                 </div>
-                <div className="button-text">
+                <div className="female-button-text">
                     <button>SHOP FEMALE</button>
+                </div>
+                <div className="male-button-text">
                     <button>SHOP MALE</button>
-
                 </div>
             </div>
         );
