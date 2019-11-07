@@ -3,3 +3,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 75px 190px 75px 190px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+    }
+}
+
+

@@ -60,9 +60,15 @@ class LoginForm extends React.Component {
                     {this.renderErrors()}
                     <div className="login-form">
                         <br />
-                        <h1>LOGIN</h1>
+                        <h2>LOGIN</h2>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+                        </style>
                         <br />
                         <label>EMAIL</label>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+                        </style>
                             <input
                                 type="text"
                                 value={this.state.email}
@@ -70,6 +76,9 @@ class LoginForm extends React.Component {
                             />
 
                         <label>PASSWORD</label>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+                        </style>
                             <input
                                 type="password"
                                 value={this.state.password}
@@ -77,9 +86,10 @@ class LoginForm extends React.Component {
                             />
                         <br />
                         <input type="submit" className="submit" value="SIGN IN" />
+                        <br/>
+                        <input type="submit" onClick={this.demoLogin} className="submit" value="DEMO SIGN IN" />
                     </div>
                 </form>
-                <input type="submit" onClick={this.demoLogin} className="submit" value="DEMO SIGN IN" />
             </div>
         );
     }

@@ -47,53 +47,68 @@ class SignupForm extends React.Component {
         return (
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit}>
-                    <h1>CREATE AN ACCOUNT</h1>
-
-                    <ul>
-                        <li>Your credit card information will not be saved.</li>
-                        <li>Register for fast and easy checkout and to save account order information.</li>
-                    </ul>
 
                     {this.renderErrors()}
                     <div className="signup-form">
+                        <br/>
+                        <h2>CREATE AN ACCOUNT</h2>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+                        </style>
+                        <br/>
+                        
+                        <p>Your credit card information will not be saved.</p>
+                        <p>Register for fast and easy checkout and to save account order information.</p>
+                    
                         <br />
-                        <label>FIRST NAME
-                                <input
+                        <label>FIRST NAME</label>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+                        </style>
+                            <input
                                 type="text"
                                 value={this.state.first_name}
                                 onChange={this.update('first_name')}
                             />
-                        </label>
-                        <br/>
-                        <label>LAST NAME
-                                <input
+                        
+                        <label>LAST NAME</label>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+                        </style>
+                            <input
                                 type="text"
                                 value={this.state.last_name}
                                 onChange={this.update('last_name')}
                             />
-                        </label>
-                        <br/>
-                        <label>EMAIL*
-                                <input
+                        
+                        <label>EMAIL*</label>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+                        </style>
+                            <input
                                 type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                             />
-                        </label>
-                        <br/>
-                        <label>PASSWORD*
-                                <input
+                        
+                        <label>PASSWORD*</label>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+                        </style>
+                            <input
                                 type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                             />
-                        </label>
-                        <br />
+                        <br/>
                         <input type="submit" className="submit" value="REGISTER" />
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+                        </style>
+                        <p>By creating an account, you agree to our Terms of Use and Privacy Policy.</p>
+                        <p id="required-fields">* REQUIRED FIELDS</p>
                     </div>
                 </form>
-                <p>By creating an account, you agree to our Terms of Use and Privacy Policy.</p>
-                <p id="required-fields">* REQUIRED FIELDS</p>
             </div>
         );
     }

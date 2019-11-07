@@ -7,4 +7,12 @@
 .login-form {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    margin: 75px 220px 75px 220px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+    }
 }
