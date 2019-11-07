@@ -19,17 +19,10 @@ class Main extends React.Component {
                 </div>
 
                 <div className="main-links">
-                    <div className="link-items">
-                        <div className="main-link" id="female-button">
-                            <Link className="link-box" to="/collections/female">SHOP FEMALE</Link>
-                        </div>
-                    </div>
 
-                    <div className="link-items">
-                        <div className="main-link" id="male-button">
-                            <Link className="link-box" to="/collections/male">SHOP MALE</Link>
-                        </div>
-                    </div>
+                    <Link className="main-link" to="/collections/female">SHOP FEMALE</Link>
+                    <Link className="main-link" to="/collections/male">SHOP MALE</Link>
+            
                 </div>
                 {/* <div className="female-button-text">
                     <button>SHOP FEMALE</button>
