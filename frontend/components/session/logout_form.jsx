@@ -25,9 +25,12 @@ class LogoutForm extends React.Component {
 
     render() {
         return (
-            <div className="logout_form_container">
+            <div className="logout-form-container">
                 <form onSubmit={this.handleSubmit}>
-                    <h1>MY ACCOUNT</h1>
+                    <h2>MY ACCOUNT</h2>
+                    <style>
+                        @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+                    </style>
                     <br/>
                     <input type="submit" className="submit" value="LOGOUT"/>
                 </form>
