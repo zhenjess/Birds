@@ -1,11 +1,10 @@
-// .navbar {
-//     display: flex;
-//     flex-direction: inherit;
-//     align-items: center;
-//     justify-content: center;
-//     font-family: sans-serif;
-
-// }
+.nav-left {
+    position: relative;
+    margin-right: 750px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+}
 
 // .logo {
 //     display: inline-block;
@@ -19,7 +18,18 @@
 //     padding-top: 50px;
 // }
 
-// .links {
-    
-// }
+.logo {
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    vertical-align: top;
+    font-family: 'Lobster', cursive;
+}
 
+.nav-right {
+    position: relative;
+    margin-left: 700px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+}
