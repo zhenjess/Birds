@@ -1,3 +1,5 @@
+//@import 'utils';
+
 body, html {
     height: 100%;
 }
@@ -31,28 +33,63 @@ body, html {
   font-size: 25px;
 }
 
-.female-button-text {
-    text-align: center;
-    position: relative;
-    top: 80.5%;
-    left: 50%;
-    bottom: 80%;
-    transform: translate(-50%, -50%); 
+#main-links {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    width: 300px;
-}
+    align-items: center;
+    z-index: 1;
 
-.male-button-text {
-    text-align: center;
-    position: relative;
-    top: 77%;
-    left: 70%;
-    bottom: 80%;
-    transform: translate(-50%, -50%); 
-    display: flex;
-    flex-direction: row;
-    // justify-content: space-between; 
-    width: 100px;
+    .link-items {
+        width: 350px;
+        margin: 20px;
+
+        .main-link {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 px 10px 0 px;
+            border-bottom: 2px solid white;
+            margin: 30px 20px 30px 20px;
+            transition: .2s;
+
+            .link-box {
+                display: flex;
+                text-align: center;
+                flex-direction: row;
+                width: 700px;
+                position: relative;
+                left: 20%;
+                top: 80%;
+                bottom: 60%;
+            }
+        }
+        // .main-link#female-button: hover {
+//         //      margin: 30px 110px 30px 110px;
+//         // }
+    }
+
+    
 }
+// .female-button-text {
+//     text-align: center;
+//     position: relative;
+//     top: 80.5%;
+//     left: 50%;
+//     bottom: 80%;
+//     transform: translate(-50%, -50%); 
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between; 
+//     width: 300px;
+// }
+
+// .male-button-text {
+//     text-align: center;
+//     position: relative;
+//     top: 77%;
+//     left: 70%;
+//     bottom: 80%;
+//     transform: translate(-50%, -50%); 
+//     display: flex;
+//     flex-direction: row;
+//     // justify-content: space-between; 
+//     width: 100px;
+// }
