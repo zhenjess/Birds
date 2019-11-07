@@ -13,33 +13,35 @@ class NavbarForm extends React.Component {
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown">
-                        <Link className="nav-link" to="/collections/female">FEMALE</Link>
+                        <span className="nav-link" to="/collections/female">FEMALE</span>
                         {/* <button className="dropbtn">FEMALE */}
                         {/* <i className="fa fa-caret-down"></i>
                         </button> */}
                         <div className="dropdown-content">
-                            <a href="#">Shop ALL BIRDS</a>
+                            <Link to="/collections/female">SHOP ALL BIRDS</Link>
+                            {/* <a href="#">Shop ALL BIRDS</a> */}
                         </div>
-
                     </div>
+
                     <div className="dropdown">
-                        <Link className="nav-link" to="/collections/male">MALE</Link>
+                        <span className="nav-link" to="/collections/male">MALE</span>
                         {/* <button className="dropbtn">MALE
                         <i className="fa fa-caret-down"></i>
                         </button> */}
                         <div className="dropdown-content">
-                            <a href="#">Shop ALL BIRDS</a>
+                            <Link to="/collections/male">SHOP ALL BIRDS</Link>
                         </div>
                     </div>
-                    <a href="#kids">KIDS</a>
-                </div>
 
-                <div className="logo">
+                    <a href="#kids">KIDS</a>
+
+                </div>  
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400i&display=swap');
                     </style>
-                    <h1>birds</h1>
-                </div>
+                    
+
+                    <Link className="logo" to='/'>birds</Link>
 
                 <div className="nav-right">
                     <a href="#materials">MATERIALS</a>

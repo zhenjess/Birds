@@ -21,16 +21,13 @@ class Main extends React.Component {
                 <div className="main-links">
                     
 
+                <div className="link-text">
                     <Link className="main-link" to="/collections/female">SHOP FEMALE</Link>
+                </div>
+                <div className="link-text">     
                     <Link className="main-link" to="/collections/male">SHOP MALE</Link>
-            
                 </div>
-                {/* <div className="female-button-text">
-                    <button>SHOP FEMALE</button>
                 </div>
-                <div className="male-button-text">
-                    <button>SHOP MALE</button>
-                </div> */}
             </div>
         );
     }
