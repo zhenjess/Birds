@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 class LogoutForm extends React.Component {
     constructor(props) {
         super(props);
@@ -32,7 +34,8 @@ class LogoutForm extends React.Component {
                         @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
                     </style>
                     <br/>
-                    <input type="submit" className="submit" value="LOGOUT"/>
+                    {/* <input type="submit" className="submit" value="LOGOUT"/> */}
+                    <Link to="/">LOGOUT</Link>
                 </form>
             </div>
         );
