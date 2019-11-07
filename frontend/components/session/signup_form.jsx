@@ -45,7 +45,7 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div className="signup_form_container">
+            <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit}>
                     <h1>CREATE AN ACCOUNT</h1>
 
@@ -64,6 +64,7 @@ class SignupForm extends React.Component {
                                 onChange={this.update('first_name')}
                             />
                         </label>
+                        <br/>
                         <label>LAST NAME
                                 <input
                                 type="text"
@@ -71,6 +72,7 @@ class SignupForm extends React.Component {
                                 onChange={this.update('last_name')}
                             />
                         </label>
+                        <br/>
                         <label>EMAIL*
                                 <input
                                 type="text"
@@ -78,6 +80,7 @@ class SignupForm extends React.Component {
                                 onChange={this.update('email')}
                             />
                         </label>
+                        <br/>
                         <label>PASSWORD*
                                 <input
                                 type="password"

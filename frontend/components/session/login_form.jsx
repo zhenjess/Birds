@@ -61,21 +61,20 @@ class LoginForm extends React.Component {
                     <div className="login-form">
                         <br />
                         <h1>LOGIN</h1>
-                        <label>EMAIL
-                                    <input
+                        <br />
+                        <label>EMAIL</label>
+                            <input
                                 type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                             />
-                        </label>
-                        <br/>
-                        <label>PASSWORD
-                                    <input
+
+                        <label>PASSWORD</label>
+                            <input
                                 type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                             />
-                        </label>
                         <br />
                         <input type="submit" className="submit" value="SIGN IN" />
                     </div>
