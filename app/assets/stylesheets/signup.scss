@@ -8,14 +8,47 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 215px 190px 215px 190px;
+    margin: 215px 5px 215px 5px;
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 450;
     
     h2 {
         font-family: 'Roboto', sans-serif;
         font-size: 25px;
     }
+
+    input {
+
+        box-sizing: border-box;
+        // min-height: 40px;
+        // min-width: 390px;
+        padding: 20px;
+        border: 1px solid #E6E5E5;
+        margin: 10px;
+        font-size: 13px;
+        border-radius: 2px;
+    }
+
+    .submit:hover {
+        cursor: pointer;
+        background-color: #EEE8E6;
+        color: black;
+    }
+
+    .submit{
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+        // min-width: 390px;
+        // min-height: 40px;
+        padding: 20px;
+        //margin: 20px;
+        transition: 0.3s;
+        border: 2px solid black;
+    }
+        
+
 }
 
 
