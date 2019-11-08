@@ -9,6 +9,7 @@ class LoginForm extends React.Component {
             processed: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     update(field) {
