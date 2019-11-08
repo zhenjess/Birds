@@ -11,7 +11,25 @@ class MaterialsMain extends React.Component {
         return (
             <div className='materials-main'>
                 <div className="images-panel">
+
                     <div className='left-image-panel'>
+                        <div className="left-image">
+                            <div className="left-image-text">
+                                
+                                <h2>Wool</h2>
+                                <p>Warm &amp; Cozy</p>
+                                <div className="left-links">
+                                    <div className="left-link-text">
+                                        <Link className="left-link" to="/collections/female">SHOP FEMALE</Link>
+                                    </div>
+
+                                    <div className="left-link-text">
+                                        <Link className="left-link" to="/collections/male">SHOP MALE</Link>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                         <div className="left-gif"></div>
                         <div className='left-small-image'></div>
 
@@ -19,18 +37,6 @@ class MaterialsMain extends React.Component {
                             @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
                         </style>
 
-                        <h2>WOOL</h2>
-                        <p>Warm &amp; Cozy</p>
-
-                        <div className="left-links">
-                            <div className="left-link-text">
-                                <Link className="left-link" to="/collections/female">SHOP FEMALE</Link>
-                            </div>
-
-                            <div className="left-link-text">
-                                <Link className="left-link" to="/collections/male">SHOP MALE</Link>
-                            </div>
-                        </div>
                     </div>
 
                     <div className='right-image-panel'>
