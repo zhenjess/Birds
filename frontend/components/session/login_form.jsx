@@ -25,15 +25,24 @@ class LoginForm extends React.Component {
         this.setState({ processed: true });
     }
 
+    // demoLogin(e) {
+    //     e.preventDefault();
+    //     const demoLogin = { email: 'user@gmail.com', password: 'password' };
+    //     this.setState({ user: demoLogin }, 
+    //                   () => { const login = this.props.login;
+    //                         let user = this.state.user;
+    //                         login(user);
+    //                         } 
+    //                 );
+    // }
+
     demoLogin(e) {
         e.preventDefault();
         const demoLogin = { email: 'user@gmail.com', password: 'password' };
-        this.setState({ user: demoLogin }, 
-                      () => { const login = this.props.login;
-                            let user = this.state.user;
-                            login(user);
-                            } 
-                    );
+        demoLogin = this.props.demoLogin;
+        const demoUser = Object.assign({}, this.state);
+        login(demoUser);
+        this.setState({ processed: true });
     }
 
     renderErrors() {

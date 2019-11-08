@@ -57,7 +57,7 @@ class SignupForm extends React.Component {
                         </style>
                 
                         <p>Your credit card information will not be saved.</p>
-                        <p className="last-p">Register for fast and easy checkout and to save account order information.</p>
+                        <p className="first-p">Register for fast and easy checkout and to save account order information.</p>
                     
                      
                         <label>FIRST NAME</label>
@@ -104,8 +104,8 @@ class SignupForm extends React.Component {
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
                         </style>
-                        <p>By creating an account, you agree to our Terms of Use and Privacy Policy.</p>
-                        <p id="required-fields">* REQUIRED FIELDS</p>
+                        <p className="second-last-p">By creating an account, you agree to our Terms of Use and Privacy Policy.</p>
+                        <p className="last-p" id="required-fields">* REQUIRED FIELDS</p>
                     </div>
                 </form>
             </div>
