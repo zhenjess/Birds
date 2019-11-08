@@ -1,5 +1,5 @@
 .about-main {
-
+    height: 80vh;
 }
 
 .about-image {
@@ -18,16 +18,20 @@
 .about-text {
     
     h2 {
+        display: flex;
         text-align: right;
         font-family: 'Merriweather Sans', sans-serif;
-        font-size: 18px;
+        font-size: 20px;
         right: 250px;
         margin-bottom: 20px;
+        margin: -430px -25px 25px 120px;
         position: relative;
         flex-direction: column;  
+        font-weight: bold;
     }
 
     p {
+        display: flex;
         text-align: center;
         font-family: 'Merriweather Sans', sans-serif;
         font-size: 14px;
