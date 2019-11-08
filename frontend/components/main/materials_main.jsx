@@ -12,6 +12,10 @@ class MaterialsMain extends React.Component {
             <div className='materials-main'>
                 <div className="images-panel">
                     <div className='left-image-panel'>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+                        </style>
+
                         <h2>WOOL</h2>
                         <p>Warm &amp; Cozy</p>
 
@@ -27,6 +31,10 @@ class MaterialsMain extends React.Component {
                     </div>
 
                     <div className='right-image-panel'>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+                        </style>
+
                         <h2>TREE</h2>
                         <p>Light &amp; Breezy</p>
 
