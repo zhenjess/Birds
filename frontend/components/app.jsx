@@ -16,6 +16,8 @@ import Main from './main/main';
 
 import AboutMain from './main/about_main';
 
+import MaterialsMain from './main/materials_main';
+
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -28,6 +30,7 @@ const App = () => (
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 
+        <Route exact path="/" component={MaterialsMain} />
     </div>
 
 );
