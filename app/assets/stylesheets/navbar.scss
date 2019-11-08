@@ -16,6 +16,7 @@
     position: relative;
     //margin-right: 500px;
     width: 220px;
+    left: 1%;
     display: flex;
     justify-content: space-between;
     font-family: sans-serif;
@@ -76,7 +77,8 @@
 .nav-right {
     position: relative;
     //margin-left: 600px;
-    width: 300px;
+    width: 350px;
+    right: 1%;
     display: flex;
     justify-content: space-between;
     font-family: sans-serif;

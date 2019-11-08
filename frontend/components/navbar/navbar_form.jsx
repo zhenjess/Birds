@@ -33,7 +33,7 @@ class NavbarForm extends React.Component {
                         </div>
                     </div>
 
-                    <a href="#kids">KIDS</a>
+                    <a href="#chicks">CHICKS</a>
 
                 </div>  
                     <style>
@@ -45,10 +45,10 @@ class NavbarForm extends React.Component {
 
                 <div className="nav-right">
                     <a href="#materials">MATERIALS</a>
-                    <a href="#stores">STORES</a>
+                    <a href="#branches">BRANCHES</a>
                     <a href="#account">ACCOUNT</a>
                     <a href="?">?</a>
-                    <a href="cart">CART</a>
+                    <a href="nest">NEST</a>
                 </div>
             </div>
         );
