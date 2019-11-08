@@ -12,6 +12,9 @@ class MaterialsMain extends React.Component {
             <div className='materials-main'>
                 <div className="images-panel">
                     <div className='left-image-panel'>
+                        <div className="left-gif"></div>
+                        <div className='left-small-image'></div>
+
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
                         </style>
@@ -31,6 +34,7 @@ class MaterialsMain extends React.Component {
                     </div>
 
                     <div className='right-image-panel'>
+                        <div className="right-gif"></div>
                         <div className="right-small-image"></div>
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
