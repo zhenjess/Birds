@@ -14,6 +14,8 @@ import NavBarContainer from './navbar/navbar_container';
 
 import Main from './main/main';
 
+import AboutMain from './main/about_main';
+
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -25,7 +27,9 @@ const App = () => (
             <Route exact path="/account" component={AccountFormsContainer}/> 
 
         </Switch>
+        <Route exact path="/" component={AboutMain} /> 
     </div>
+
 );
 
 export default App;

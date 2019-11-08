@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import AboutMain from './about_main';
+
 class Main extends React.Component {
     constructor(props) {
         super(props);
@@ -19,18 +21,18 @@ class Main extends React.Component {
                 </div>
 
                 <div className="main-links">
-                    
+                    <div className="link-text">
+                        <Link className="main-link" to="/collections/female">SHOP FEMALE</Link>
+                    </div>
 
-                <div className="link-text">
-                    <Link className="main-link" to="/collections/female">SHOP FEMALE</Link>
+                    <div className="link-text">     
+                        <Link className="main-link" to="/collections/male">SHOP MALE</Link>
+                    </div>
                 </div>
-                <div className="link-text">     
-                    <Link className="main-link" to="/collections/male">SHOP MALE</Link>
-                </div>
-                </div>
-            </div>
+            </div>    
         );
     }
+    
 }
 
 export default Main;
