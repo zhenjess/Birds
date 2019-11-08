@@ -37,9 +37,10 @@ class LoginForm extends React.Component {
     }
 
     renderErrors() {
-        if (this.state.processed) {
+        // if (this.state.processed) {
+          
             return (
-                <div>
+                <div className="errors">
                     <ul>
                         {
                             this.props.errors.map( (error, i) => (
@@ -49,22 +50,22 @@ class LoginForm extends React.Component {
                     </ul>
                 </div>
             );
-        }
+        // }
     }
 
     render() {
         return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit}>
+                <form  className="login-form" onSubmit={this.handleSubmit}>
 
-                    {this.renderErrors()}
-                    <div className="login-form">
-                        <br />
+                    <div className="login-content">
+                        <br/>
                         <h2>LOGIN</h2>
+                        {this.renderErrors()}
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
                         </style>
-                        <br />
+                        
                         <label>EMAIL</label>
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');

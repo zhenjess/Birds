@@ -55,12 +55,11 @@ class SignupForm extends React.Component {
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
                         </style>
-                        <br/>
-                        
+                
                         <p>Your credit card information will not be saved.</p>
-                        <p>Register for fast and easy checkout and to save account order information.</p>
+                        <p className="last-p">Register for fast and easy checkout and to save account order information.</p>
                     
-                        <br />
+                     
                         <label>FIRST NAME</label>
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');

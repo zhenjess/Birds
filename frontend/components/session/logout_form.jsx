@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class LogoutForm extends React.Component {
     constructor(props) {
@@ -23,23 +23,25 @@ class LogoutForm extends React.Component {
         const user = Object.assign({}, this.state);
         logout(user);
         this.setState({ processed: true });
+        console.log(this.props);
+        this.props.history.push('/');
     }
 
     render() {
         return (
             <div className="logout-form-container">
-                <form onSubmit={this.handleSubmit}>
+                <form>
                     <h2>MY ACCOUNT</h2>
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
                     </style>
                     <br/>
-                    <input type="submit" className="submit" value="LOGOUT"/>  
-                    {/* <Link className="logout-link" to="/">LOGOUT</Link> */}
+                    {/* <input type="submit" className="submit" value="LOGOUT"/>   */}
+                    <Link className="logout-link" onClick={this.handleSubmit} to="/">LOGOUT</Link> 
                 </form>
             </div>
         );
     }
 }
 
-export default LogoutForm;
+export default withRouter(LogoutForm);
