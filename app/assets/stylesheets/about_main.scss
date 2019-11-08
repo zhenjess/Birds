@@ -1,4 +1,32 @@
-.about-main-text {
-    font-family: sans-serif;
-    font-weight: bold;
+.about-main {
+
+}
+
+.about-image {
+
+}
+
+.about-text {
+    h2 {
+        text-align: right;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-size: 18px;
+        right: 250px;
+        position: relative;
+        flex-direction: column;
+        
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-size: 14px;
+        left: 480px;
+        position: relative;
+        flex-direction: column;
+    }
+}
+
+.about-main-link {
+    
 }
