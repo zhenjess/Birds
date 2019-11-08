@@ -26,6 +26,7 @@ class AboutMain extends React.Component {
                     <Link className="about-main-link" to={"/collections/male"}>
                         <input 
                             type="submit"
+                            className="submit"
                             value="LEARN MORE ABOUT OUR MATERIALS"
                         />
                     </Link>

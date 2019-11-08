@@ -3,18 +3,28 @@
 }
 
 .about-image {
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/homepage/en-US/images/21Qx20nUNN1w1t3eQo7lwM/1");
+    background-position: relative;
+    width: 26vw;
+    height: 50vh;
+    flex-direction: column;
+    margin: 100px 75px 5px 70px;
+    margin-left: 350px;
+    background-color: white;
 
 }
 
 .about-text {
+    
     h2 {
         text-align: right;
         font-family: 'Merriweather Sans', sans-serif;
         font-size: 18px;
         right: 250px;
+        margin-bottom: 20px;
         position: relative;
-        flex-direction: column;
-        
+        flex-direction: column;  
     }
 
     p {
@@ -28,5 +38,41 @@
 }
 
 .about-main-link {
-    
+    position: relative;
+    left: 1230px;
+    input {
+        box-sizing: border-box;
+        min-height: 40px;
+        min-width: 400px;
+        padding: 20px;
+        border: 1px solid #E6E5E5;
+        right: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        border-radius: 2px;
+    }
+
+    .submit:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+    }
+
+    .submit{
+        background-color: white;
+        color: black;
+        box-sizing: border-box;
+        //min-width: 390px;
+       // min-height: 40px;
+        padding: 20px;
+        // margin: 20px;
+        transition: 0.3s;
+        border: 2px solid black;
+
+        value:hover {
+            color: white;
+        }
+    }
 }
