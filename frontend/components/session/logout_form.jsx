@@ -34,8 +34,8 @@ class LogoutForm extends React.Component {
                         @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
                     </style>
                     <br/>
-                    {/* <input type="submit" className="submit" value="LOGOUT"/>  */}
-                    <Link className="logout-link" to="/">LOGOUT</Link>
+                    <input type="submit" className="submit" value="LOGOUT"/>  
+                    {/* <Link className="logout-link" to="/">LOGOUT</Link> */}
                 </form>
             </div>
         );
