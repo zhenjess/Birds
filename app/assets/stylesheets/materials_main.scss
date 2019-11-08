@@ -7,14 +7,22 @@
 }
 
 .left-image-panel {
-    color: black;
+    color: white;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://di2ponv0v5otw.cloudfront.net/posts/2018/04/13/5ad0d29261ca10b99302e25c/m_5ba418cf6a0bb7321db97edd.jpg");
+    background-position: relative;
+    width: 24.8vw;
+    height: 70vh;
+    margin: 90px 500px 170px 200px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .left-links {
 
     .left-link-text {
-        color: black;
+        color: white;
         .left-link {
 
         }
@@ -22,13 +30,32 @@
 }
 
 .right-image-panel {
+    color: white;
+    font-family: 'Roboto', sans-serif;
     display: flex;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://pmcfootwearnews.files.wordpress.com/2018/03/allbirds-women.jpg?w=700&h=437&crop=1");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.businessinsider.com/images/5cc9db1c021b4c1545564eb3-320-240.jpg");
     background-position: relative;
     width: 30vw;
     height: 52vh;
     margin: 90px 500px 170px 200px;
     margin-left: 950px;
     margin-right: 950px;
+}
 
+.right-small-image {
+    display: flex;
+    background-position: relative;
+    width: 18vw;
+    height: 30vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://pmcfootwearnews.files.wordpress.com/2018/03/allbirds-women.jpg?w=700&h=437&crop=1");
+}
+
+.right-links {
+
+    .right-link-text {
+        color: white;
+        .right-link {
+
+        }
+    }
 }

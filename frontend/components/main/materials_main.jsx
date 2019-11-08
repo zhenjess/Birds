@@ -31,6 +31,7 @@ class MaterialsMain extends React.Component {
                     </div>
 
                     <div className='right-image-panel'>
+                        <div className="right-small-image"></div>
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
                         </style>
