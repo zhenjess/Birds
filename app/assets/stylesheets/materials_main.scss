@@ -1,5 +1,5 @@
 .materials-main {
-
+    width: 100%;
 }
 
 .images-panel {
@@ -88,7 +88,8 @@
 
 .right-image-panel {
     width: 50vw;
-    padding: 20px;
+    margin-left: 940px;
+    margin-top: -945px;
     box-sizing: border-box;
 }
 
@@ -112,9 +113,10 @@
 }
 
 .right-small-image, .right-gif{
-    margin-top: 10px;
-    margin-left: 1200px;
-    display: inline-block;
+    margin-bottom: 1240px;
+    margin-left: 2px;
+    // display: inline-block;
+    display: flex;
     background-position: relative;
     background-size: cover;
     width: 50%;
