@@ -1,5 +1,5 @@
 body, html {
-    height: 100%;
+    height: 70%;
     width: 100%;
 }
 
@@ -8,7 +8,7 @@ body, html {
   // background-position: bottom;
   display: flex;
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/homepage/en-US/images/5rokZNEQHVOAaVo3t2trG0/2");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.bizj.us/view/img/11416605/sourceallbirds*800xx1211-683-54-0.jpg");
 
   /* Set a specific height */
   height: 100vh;
@@ -34,7 +34,7 @@ body, html {
     // top: 400px;
     // left: 35%;
     // margin-left: -100px;
-    bottom: 400px;
+    bottom: 500px;
     width: 650px;
     justify-content: space-between;
     color: white;

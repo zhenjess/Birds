@@ -22,7 +22,7 @@ class AccessoriesMain extends React.Component {
 
                 <div className="link">
                     <div className="link-text">
-                        <Link className="shoe-link" to="/collections/female">SHOP SOCKS</Link>
+                        <Link className="shoe-link" to="/collections/female">SHOP ACCESSORIES</Link>
                     </div>
                 </div>
             </div>
