@@ -112,9 +112,9 @@
     // margin-right: 200px;
 }
 
-.right-small-image, .right-gif{
-    margin-bottom: 1240px;
-    margin-left: 2px;
+.right-small-image {
+    margin-top: 0px;
+    margin-left: 480px;
     // display: inline-block;
     display: flex;
     background-position: relative;
@@ -131,6 +131,16 @@
 //     // position: relative;
 //     width: 50%;
 //     height: 100px;
+    // margin-top: 10px;
+    // margin-bottom: 1240px;
+    // margin-left: 2px;
+    // display: inline-block;
+    display: flex;
+    background-position: relative;
+    background-size: cover;
+    width: 50%;
+    height: auto;
+    padding-top: 50%;
      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/homepage/en-US/images/WSq9PUDu2tsVLHsGlgktD/1");
 }
 
