@@ -17,7 +17,7 @@ class MaterialsMain extends React.Component {
                             <div className="left-image-text">
                                 
                                 <h2>Wool</h2>
-                                <p>Warm &amp; Cozy</p>
+                                <p>DURABLE &amp; FLEXIBLE</p>
                                 <div className="left-links">
                                     <div className="left-link-text">
                                         <Link className="left-link" to="/collections/female">FEMALE BIRDS</Link>

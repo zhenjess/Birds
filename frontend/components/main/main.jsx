@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import AboutMain from './about_main';
+// import AboutMain from './about_main';
 
 class Main extends React.Component {
     constructor(props) {
