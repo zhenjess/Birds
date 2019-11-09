@@ -41,6 +41,8 @@ class MaterialsMain extends React.Component {
 
 
                     <div className='right-image-panel'>
+                        <div className="right-gif"></div>
+                        <div className='right-small-image'></div>
                         <div className="right-image">
                             <div className="right-image-text">
 
@@ -58,8 +60,6 @@ class MaterialsMain extends React.Component {
                             </div>
 
                         </div>
-                        <div className="right-gif"></div>
-                        <div className='right-small-image'></div>
 
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');

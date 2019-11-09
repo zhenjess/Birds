@@ -2,20 +2,24 @@
     display: flex;
     margin-top: 10px;
     width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 20vw;
+    padding-right: 20vw;
 }
 
 .about-image {
     // display: flex;
     background-image: url("https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/homepage/en-US/images/21Qx20nUNN1w1t3eQo7lwM/1");
     background-position: center;
-    width: 100vw;
+     width: 100vw;
     height: 100vh;
     flex-direction: column;
     // margin: 100px 75px 5px 70px;
     // margin-left: 350px;
     background-color: white;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
 
 }
