@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     # resource :cart 
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
+    resources :shoes, only: [:index, :show]
   end
   root "static_pages#root"
 end

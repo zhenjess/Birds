@@ -5,7 +5,7 @@ class Material < ApplicationRecord
         #sugarcane and synthetic for accessories and shoe insole
     ].sort.freeze
 
-    validates :material, presence: true
+    validates :material, presence: true, inclusion: { in: TYPES }
 
     belongs_to :material
 end
