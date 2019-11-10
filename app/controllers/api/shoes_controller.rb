@@ -14,7 +14,7 @@ class Api::ShoesController < ApplicationController
         if @shoe
             render :show
         else
-            render json: @shoe.errors.full_messages, status: 422
+            render json: ["Birds not found"], status: 404
         end
     end
 
@@ -24,7 +24,7 @@ class Api::ShoesController < ApplicationController
         if @shoe.save
             render :show
         else
-            render json: @shoe.errors.full_messages, status: 422
+            render json: ["Birds don't exist"], status: 404
         end
     end
 
