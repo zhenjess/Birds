@@ -10,6 +10,11 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :shoes, only: [:index, :show]
+    resources :materials, only: [:index, :show]
+    resources :colors, only: [:index, :show]
+    resources :shoes_colors, only: [:index, :show]
+    resources :shoes_materials, only: [:index, :show]
+
   end
   root "static_pages#root"
 end

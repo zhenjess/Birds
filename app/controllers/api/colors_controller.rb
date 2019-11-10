@@ -20,6 +20,6 @@ class Api::ColorsController < ApplicationController
 
     private
     def hue_params
-        params.require(:hue).permit()
+        params.require(:hue).permit(:id)
     end
 end

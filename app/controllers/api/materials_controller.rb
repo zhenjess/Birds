@@ -20,6 +20,6 @@ class Api::MaterialsController < ApplicationController
 
     private
     def material_params
-        params.require(:material).permit()
+        params.require(:material).permit(:id)
     end
 end
