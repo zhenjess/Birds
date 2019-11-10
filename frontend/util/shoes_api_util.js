@@ -1,6 +1,13 @@
-export const fetchShoes = (shoe) => {
+export const fetchShoes = () => {
     return $.ajax({
-        url: '/api/shoes', 
+        url: '/api/shoes',
+        method: 'GET'
+    });
+};
+
+export const fetchShoe = (shoeId) => {
+    return $.ajax({
+        url: `/api/shoes/${shoeId}`,
         method: 'GET'
     });
 };
