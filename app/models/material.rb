@@ -7,5 +7,6 @@ class Material < ApplicationRecord
 
     validates :material, presence: true, inclusion: { in: TYPES }
 
-    belongs_to :material
+    has_many :shoe_materials
+    has_many :shoes, through: :shoe_materials
 end

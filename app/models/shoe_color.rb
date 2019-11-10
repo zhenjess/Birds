@@ -1,3 +1,4 @@
 class ShoeColor < ApplicationRecord
-    has_many :shoe_id, :hue_id
+    belongs_to :shoe
+    belongs_to :color
 end

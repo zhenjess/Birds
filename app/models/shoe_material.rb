@@ -1,3 +1,4 @@
 class ShoeMaterial < ApplicationRecord
-    has_many :shoe_id, :material_id
+    belongs_to :shoe
+    belongs_to :material
 end
