@@ -1,11 +1,11 @@
 class Api::ShoesController < ApplicationController
     def new
-        @shoe = Shoe.new
+        @shoes = Shoe.new
         render :new
     end
 
     def index 
-        @shoe = Shoe.all
+        @shoes = Shoe.all
     end
 
     def show 
