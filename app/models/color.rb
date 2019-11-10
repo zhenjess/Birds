@@ -1,5 +1,6 @@
 class Color < ApplicationRecord
     validates :hue, presence: true
 
-    belongs_to :color
+    has_many :shoe_colors
+    has_many :shoes, through: :shoe_colors
 end
