@@ -3,7 +3,7 @@ import {
     FETCH_SHOE
 } from '../actions/shoes_actions';
 
-const shoesReduver = (oldState={}, action) => {
+const shoesReducer = (oldState={}, action) => {
     Object.freeze(oldState);
 
     let shoe;
@@ -13,7 +13,7 @@ const shoesReduver = (oldState={}, action) => {
             return Object.assign({}, oldState, action.shoes);
         case FETCH_SHOE:
             shoe = action.payload.shoes;
-            
+
             const newShoe = { [action.shoe.id]: action.shoe };
 
             return Object.assign({}, oldState, newShoe);
