@@ -57,8 +57,8 @@ const App = () => (
         <Route exact path="/materials" component={MoreMaterialsMain} />
 
         <Route exact path="/materials/tree" component={AboutTreeMaterial} />
-        {/* <Route exact path="/materials/tree" component={AboutTreeSub} />
-        <Route exact path="/materials/tree" component={MoreTreeMain} />    */}
+        <Route exact path="/materials/tree" component={AboutTreeSub} />
+        <Route exact path="/materials/tree" component={MoreTreeMain} />   
     </div>
 
 );

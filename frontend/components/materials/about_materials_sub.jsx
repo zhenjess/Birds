@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-class AboutMaterialsSub extends React.Component {
+class AboutTreeSub extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -11,17 +11,17 @@ class AboutMaterialsSub extends React.Component {
 
         return(
 
-            <div className="sub-image">
+            <div className="tree-sub-image">
 
                 {/* <div className="about-materials-sub"> */}
-                    <div className="head-text">
+                    <div className="tree-head-text">
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
                         </style>
                         <h2>Inspired by the Flock</h2>
                     </div>
 
-                    <div className="sub-text">
+                    <div className="tree-sub-text">
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                         </style>
