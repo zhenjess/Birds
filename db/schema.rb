@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_09_223240) do
+ActiveRecord::Schema.define(version: 2019_11_11_221453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,29 +27,29 @@ ActiveRecord::Schema.define(version: 2019_11_09_223240) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "shoe_colors", force: :cascade do |t|
+    t.integer "shoe_id", null: false
+    t.integer "hue_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hue_id"], name: "index_shoe_colors_on_hue_id", unique: true
+    t.index ["shoe_id"], name: "index_shoe_colors_on_shoe_id", unique: true
+  end
+
+  create_table "shoe_materials", force: :cascade do |t|
+    t.integer "shoe_id", null: false
+    t.integer "material_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["material_id"], name: "index_shoe_materials_on_material_id", unique: true
+    t.index ["shoe_id"], name: "index_shoe_materials_on_shoe_id", unique: true
+  end
+
   create_table "shoes", force: :cascade do |t|
     t.string "model", null: false
     t.string "gender", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "shoes_colors", force: :cascade do |t|
-    t.integer "shoe_id", null: false
-    t.integer "hue_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["hue_id"], name: "index_shoes_colors_on_hue_id", unique: true
-    t.index ["shoe_id"], name: "index_shoes_colors_on_shoe_id", unique: true
-  end
-
-  create_table "shoes_materials", force: :cascade do |t|
-    t.integer "shoe_id", null: false
-    t.integer "material_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["material_id"], name: "index_shoes_materials_on_material_id", unique: true
-    t.index ["shoe_id"], name: "index_shoes_materials_on_shoe_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|

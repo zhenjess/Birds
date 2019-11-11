@@ -38,6 +38,8 @@ import AboutTreeSub from './materials/tree/about_tree_sub';
 
 import MoreTreeMain from './materials/tree/more_tree_main';
 
+import ShoeIndexContainer from './shoes/shoe_index_container';
+
 const App = () => (
     <div>
         <Route path="/" component={NavBarContainer}/> 
@@ -46,6 +48,7 @@ const App = () => (
             <Route exact path="/account" component={AccountFormsContainer}/> 
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/materials/tree" component={Tree} /> 
+            <Route exact path="/shoes" component={ShoeIndexContainer} />
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 

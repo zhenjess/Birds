@@ -10,4 +10,8 @@ require 'open-uri'
 
 User.destroy_all
 
+Shoe.destroy_all
+
 demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gmail.com', password: "password")
+
+shoes = Shoe.create!(model: 'runner')

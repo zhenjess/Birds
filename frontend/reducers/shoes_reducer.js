@@ -1,6 +1,6 @@
 import {
-    FETCH_ALL_SHOES,
-    FETCH_SHOE
+    RECEIVE_ALL_SHOES,
+    RECEIVE_SHOE
 } from '../actions/shoes_actions';
 
 const shoesReducer = (oldState={}, action) => {
@@ -9,9 +9,9 @@ const shoesReducer = (oldState={}, action) => {
     let shoe;
 
     switch(action.type) {
-        case FETCH_ALL_SHOES:
+        case RECEIVE_ALL_SHOES:
             return Object.assign({}, oldState, action.shoes);
-        case FETCH_SHOE:
+        case RECEIVE_SHOE:
             shoe = action.payload.shoes;
 
             const newShoe = { [action.shoe.id]: action.shoe };

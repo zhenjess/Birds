@@ -3,6 +3,6 @@ class Color < ApplicationRecord
 
     has_many :shoe_colors
     has_many :shoes, 
-        through: :shoe_colors
+        through: :shoe_colors,
         source: :shoe
 end
