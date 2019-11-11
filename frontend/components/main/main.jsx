@@ -16,8 +16,8 @@ class Main extends React.Component {
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
                     </style>
-                    <h1>FLY INTO</h1>
-                    <h1>THIN AIR</h1>
+                    <h1>BETTER SHOES</h1>
+                    <h1>IN A BETTER WAY</h1>
                 </div>
 
                 <div className="main-links">

@@ -14,8 +14,8 @@ class Materials extends React.Component {
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
                     </style>
-                    <h1>BETTER SHOES</h1>
-                    <h1>IN A BETTER WAY</h1>
+                    <h1>NATURAL</h1>
+                    <h1>SUSTAINABLE</h1>
                 </div>
 
                 <div className="material-types">
