@@ -8,11 +8,14 @@ import errorsReducer from './errors_reducer';
 
 import entitiesReducer from './entities_reducer';
 
+import shoesReducer from './shoes_reducer';
+
 const rootReducer = combineReducers({
     session: sessionReducer, 
     sessionErrors: sessionErrorsReducer, 
     errors: errorsReducer, 
-    entities: entitiesReducer
+    entities: entitiesReducer,
+    shoes: shoesReducer
 });
 
 export default rootReducer;
