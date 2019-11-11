@@ -8,14 +8,14 @@ body, html {
   // background-position: bottom;
   display: flex;
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.newsapi.com.au/image/v1/9737c9d4ad943f7885456f1d6fc67b67?width=650");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://image.freepik.com/free-photo/eucalyptus-tree-against-sky_41997-88.jpg");
 
   /* Set a specific height */
   height: 90vh;
   width: 100vw;
 
   /* Position and center the image to scale nicely on all screens */
-  background-position: 50% 80%;
+  background-position: 50% 15%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
