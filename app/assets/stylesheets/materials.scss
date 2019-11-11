@@ -44,7 +44,8 @@ body, html {
     align-items: center;
     z-index: 1;
     position: absolute;
-    width: 550px;
+    height: 75px;
+    width: 800px;
     flex-direction: row;
     justify-content: space-between;
     // padding: 10px 10px 10px 0px;
@@ -58,7 +59,8 @@ body, html {
        
         // position: relative;
         // left: 1230px;
-        margin: 
+        
+        margin: 10px;
         input {
             box-sizing: border-box;
             // min-height: 40px;
