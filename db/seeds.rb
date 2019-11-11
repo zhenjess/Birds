@@ -14,4 +14,7 @@ Shoe.destroy_all
 
 demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gmail.com', password: "password")
 
-shoes = Shoe.create!(model: 'runner')
+shoe_1 = Shoe.create!(model: wool, gender: male)
+shoe_2 = Shoe.create!(model: tree, gender: female)
+
+
