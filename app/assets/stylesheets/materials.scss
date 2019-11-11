@@ -3,14 +3,15 @@ body, html {
     width: 100%;
 }
 
+/* The hero image */
 .material-image {
   // background-position: bottom;
   display: flex;
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/p960x960/57618391_2631884423495284_7480690834619236352_o.jpg?_nc_cat=101&_nc_oc=AQm5I2Y8biWh2jfdxao_5cp_DrDhh3QtagL3A4v6q3vMrGup_w42BqPYMlkAlHkaErgsDIOo7GE9QaJpYiF_BNNI&_nc_ht=scontent-sjc3-1.xx&oh=1cee218ab5493e4bf2c4afbab4fd259a&oe=5E5785FF");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.newsapi.com.au/image/v1/9737c9d4ad943f7885456f1d6fc67b67?width=650");
 
   /* Set a specific height */
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
 
   /* Position and center the image to scale nicely on all screens */
@@ -38,43 +39,55 @@ body, html {
   font-size: 42px;
 }
 
-.material-link {
-    // position: relative;
-    // left: 1230px;
-    input {
-        box-sizing: border-box;
-        min-height: 40px;
-        min-width: 400px;
-        padding: 20px;
-        border: 1px solid #E6E5E5;
-        right: 60px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 13px;
-        border-radius: 2px;
-        text-align: center;
-    }
+.material-types {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 550px;
 
-    .submit:hover {
-        cursor: pointer;
-        background-color: black;
-        color: white;
-        font-weight: bold;
-    }
-
-    .submit{
-        background-color: white;
-        color: black;
-        box-sizing: border-box;
-        //min-width: 390px;
-       // min-height: 40px;
-        padding: 20px;
-        // margin: 20px;
-        transition: 0.3s;
-        border: 2px solid black;
-
-        value:hover {
+    .material-link {
+        // display: flex;
+        // position: relative;
+        // flex-direction: row;
+       
+        // position: relative;
+        // left: 1230px;
+        input {
+            box-sizing: border-box;
+            // min-height: 40px;
+            min-width: 175px;
+            padding: 20px;
+            border: 1px solid #E6E5E5;
+            right: 60px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            border-radius: 2px;
+            text-align: center;
+        }
+    
+        .submit:hover {
+            cursor: pointer;
+            background-color: black;
             color: white;
+            font-weight: bold;
+        }
+    
+        .submit{
+            background-color: white;
+            color: black;
+            box-sizing: border-box;
+            //min-width: 390px;
+           // min-height: 40px;
+            padding: 20px;
+            // margin: 20px;
+            transition: 0.3s;
+            border: 2px solid black;
+    
+            value:hover {
+                color: white;
+            }
         }
     }
 }

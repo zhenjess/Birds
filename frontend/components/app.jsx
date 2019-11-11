@@ -20,6 +20,8 @@ import MaterialsMain from './main/materials_main';
 
 import AccessoriesMain from './main/accessories_main';
 
+import Materials from './materials/materials';
+
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -29,7 +31,7 @@ const App = () => (
         <Switch>
             <Route exact path="/" component={Main}/> 
             <Route exact path="/account" component={AccountFormsContainer}/> 
-            {/* <Route exact path="/materials" component={Materials} /> */}
+            <Route exact path="/materials" component={Materials} />
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 
