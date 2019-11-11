@@ -11,7 +11,3 @@ const configureStore = (preloadedState={}) => {
 };
 
 export default configureStore;
-
-
-window.getState = store.getState;
-window.dispatch = store.dispatch;
