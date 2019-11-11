@@ -21,7 +21,7 @@ class AboutTreeSub extends React.Component {
                     <h2>Rooted in Sustainability</h2>
                 </div>
 
-                <div className="about-tree-sub-text">
+                <div className="about-tree-sub-texts">
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                         </style>
