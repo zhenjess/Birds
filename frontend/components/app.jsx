@@ -28,6 +28,8 @@ import AboutMaterials from "./materials/about_materials";
 
 import AboutMaterialsSub from './materials/about_materials_sub';
 
+import MoreMaterialsMain from './materials/more_materials_main';
+
 const App = () => (
     <div>
         <Route path="/" component={NavBarContainer}/> 
@@ -42,6 +44,7 @@ const App = () => (
         <Route exact path="/" component={AccessoriesMain} />
         <Route exact path="/materials" component={AboutMaterials} />
         <Route exact path="/materials" component={AboutMaterialsSub} />
+        <Route exact path="/materials" component={MoreMaterialsMain} />
     </div>
 
 );
