@@ -11,25 +11,27 @@ class AboutMaterialsSub extends React.Component {
 
         return(
 
-            <div className="about-materials-sub">
-                <div className="sub-image"></div>
-                <div className="head-text">
-                    <style>
-                        @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                    </style>
-                    <h2>Inspired by the Flock</h2>
-                </div>
+            <div className="sub-image">
 
-                <div className="sub-text">
-                    <style>
-                        @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
-                    </style>
-                    <p>Did you know in New Zealand, sheep outnumber humans about 6: 1?
-                        Thanks to their wool, our process uses 60% LESS energy than materials used in 
-                        typical synthetic shoes.
-                    </p>
+                {/* <div className="about-materials-sub"> */}
+                    <div className="head-text">
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
+                        </style>
+                        <h2>Inspired by the Flock</h2>
+                    </div>
+
+                    <div className="sub-text">
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
+                        </style>
+                        <p>Did you know in New Zealand, sheep outnumber humans about 6: 1?</p>
+                        <p>Thanks to their wool, our process uses 60% LESS energy than materials used in 
+                            typical synthetic shoes.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            // </div>
         );
 
     }
