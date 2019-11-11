@@ -37,7 +37,6 @@ const App = () => (
             <Route exact path="/" component={Main}/> 
             <Route exact path="/account" component={AccountFormsContainer}/> 
             <Route exact path="/materials" component={Materials} />
-            <Route exact path="/materials/tree" component={Tree} /> 
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 
@@ -48,9 +47,10 @@ const App = () => (
         <Route exact path="/materials" component={AboutMaterialsSub} />
         <Route exact path="/materials" component={MoreMaterialsMain} />
 
-        <Route exact path="/materials/tree" component={AboutTreeMaterial} />
+        {/* <Route exact path="/materials/tree" component={Tree} />  */}
+        {/* <Route exact path="/materials/tree" component={AboutTreeMaterial} />
         <Route exact path="/materials/tree" component={AboutTreeSub} />
-        <Route exact path="/materials/tree" component={MoreTreeMain} /> 
+        <Route exact path="/materials/tree" component={MoreTreeMain} />   */}
     </div>
 
 );

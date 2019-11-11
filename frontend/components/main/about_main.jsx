@@ -23,7 +23,7 @@ class AboutMain extends React.Component {
                     Designed practically and made from sustainable resources.
                     Closing the loop with ZEROING waste because we care about OUR planet.
                     That sounds better, right?</p>
-                    <Link className="about-main-link" to={"/collections/male"}>
+                    <Link className="about-main-link" to={"/materials"}>
                         <input 
                             type="submit"
                             className="submit"
