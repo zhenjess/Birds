@@ -20,8 +20,8 @@ export const fetchShoes = () => dispatch => (
         .then(shoes => dispatch(fetchAllShoes(shoes)))
 );
 
-export const fetchShoe = shoeId => dispatch => (
-    APIUtil.fetchShoe(shoeId)
+export const fetchAShoe = shoeId => dispatch => (
+    APIUtil.fetchAShoe(shoeId)
         .then(shoe => dispatch(fetchShoe(shoe)))
 );
 
