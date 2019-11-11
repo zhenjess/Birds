@@ -14,7 +14,7 @@ class ShoeIndex extends Component {
         if (!this.props.shoes) {
             return null;
         }
-        debugger
+        // debugger
         return (
             
             <section className="shoe"> 
