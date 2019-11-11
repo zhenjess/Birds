@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import Materials from './materials';
-
 class Tree extends React.Component {
     constructor(props) {
         super(props);

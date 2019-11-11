@@ -30,6 +30,14 @@ import AboutMaterialsSub from './materials/about_materials_sub';
 
 import MoreMaterialsMain from './materials/more_materials_main';
 
+import Tree from './materials/tree/tree';
+
+import AboutTreeMaterial from './materials/tree/about_tree_material';
+
+import AboutTreeSub from './materials/tree/about_tree_sub';
+
+import MoreTreeMain from './materials/tree/more_tree_main';
+
 const App = () => (
     <div>
         <Route path="/" component={NavBarContainer}/> 
@@ -37,6 +45,7 @@ const App = () => (
             <Route exact path="/" component={Main}/> 
             <Route exact path="/account" component={AccountFormsContainer}/> 
             <Route exact path="/materials" component={Materials} />
+            <Route exact path="/materials/tree" component={Tree} /> 
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 
@@ -47,10 +56,9 @@ const App = () => (
         <Route exact path="/materials" component={AboutMaterialsSub} />
         <Route exact path="/materials" component={MoreMaterialsMain} />
 
-        {/* <Route exact path="/materials/tree" component={Tree} />  */}
-        {/* <Route exact path="/materials/tree" component={AboutTreeMaterial} />
+        <Route exact path="/materials/tree" component={AboutTreeMaterial} />
         <Route exact path="/materials/tree" component={AboutTreeSub} />
-        <Route exact path="/materials/tree" component={MoreTreeMain} />   */}
+        <Route exact path="/materials/tree" component={MoreTreeMain} />   
     </div>
 
 );
