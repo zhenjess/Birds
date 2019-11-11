@@ -24,6 +24,7 @@ import Materials from './materials/materials';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+import AboutMaterials from "./materials/about_materials";
 
 const App = () => (
     <div>
@@ -37,6 +38,7 @@ const App = () => (
         <Route exact path="/" component={AboutMain} /> 
         <Route exact path="/" component={MaterialsMain} />
         <Route exact path="/" component={AccessoriesMain} />
+        <Route exact path="/materials" component={AboutMaterials} />
     </div>
 
 );
