@@ -26,6 +26,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import AboutMaterials from "./materials/about_materials";
 
+import AboutMaterialsSub from './materials/about_materials_sub';
+
 const App = () => (
     <div>
         <Route path="/" component={NavBarContainer}/> 
@@ -39,6 +41,7 @@ const App = () => (
         <Route exact path="/" component={MaterialsMain} />
         <Route exact path="/" component={AccessoriesMain} />
         <Route exact path="/materials" component={AboutMaterials} />
+        <Route exact path="/materials" component={AboutMaterialsSub} />
     </div>
 
 );
