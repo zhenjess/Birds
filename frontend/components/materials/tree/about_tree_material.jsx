@@ -19,17 +19,16 @@ class AboutTreeMaterial extends React.Component {
                         </style>
                         <p>Mother Nature is our muse. We responsibly source from the finest material resources SHE provides
                             to produce the most sustainable and aesthetically appealing birds for your comfort.
-                            Like wool from merino sheep, who have the best hair in nature.
+                            Like tree fiber,TENCEL™ Lyocell, sourced from Eucalyptus trees.
                         </p>
                     </div>
                     <div className="about-tree-sub-text">
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
                         </style>
-                        <p>Merino wool from fresh off the sheep! It's breathable, temperature-regulating,
-                            and moisture-wicking, all without that irritating scratchiness!
-                            We partner with organizations like ZQ Merino to ensure that we're sourcing wool from those who
-                            follow high standards of farming, land management, and animal welfare.
+                        <p>Eucalyptus tree fiber is breathable, silky-smooth, complete with a cooling effect to keep things breezy!
+                            It's naturally-derived and renewable, so it's much more sustainable than traditional shoe materials like cotton.
+                            Sourced from South African farms that minimize fertilizer and rely on rainfall, not irrigation. 
                         </p>
                     </div>
                 </div>
