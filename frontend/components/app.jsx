@@ -37,14 +37,20 @@ const App = () => (
             <Route exact path="/" component={Main}/> 
             <Route exact path="/account" component={AccountFormsContainer}/> 
             <Route exact path="/materials" component={Materials} />
+            <Route exact path="/materials/tree" component={Tree} />
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 
         <Route exact path="/" component={MaterialsMain} />
         <Route exact path="/" component={AccessoriesMain} />
+
         <Route exact path="/materials" component={AboutMaterials} />
         <Route exact path="/materials" component={AboutMaterialsSub} />
         <Route exact path="/materials" component={MoreMaterialsMain} />
+
+        <Route exact path="/materials/tree" component={AboutTreeMaterial} />
+        <Route exact path="/materials/tree" component={AboutTreeSub} />
+        <Route exact path="/materials/tree" component={MoreTreeMain} />
     </div>
 
 );

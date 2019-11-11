@@ -2,21 +2,21 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-class Materials extends React.Component {
+class Tree extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <div className="material-image">
-                <div className="header-text">
+            <div className="tree-image">
+                {/* <div className="header-text">
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
                     </style>
                     <h1>NATURAL</h1>
                     <h1>SUSTAINABLE</h1>
-                </div>
+                </div> */}
 
                 <div className="material-types">
                     <style>
@@ -57,4 +57,4 @@ class Materials extends React.Component {
 
 }
 
-export default Materials;
+export default Tree;
