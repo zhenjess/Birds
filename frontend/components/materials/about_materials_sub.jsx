@@ -11,17 +11,17 @@ class AboutMaterialsSub extends React.Component {
 
         return(
 
-            <div className="tree-sub-image">
+            <div className="sub-image">
 
                 {/* <div className="about-materials-sub"> */}
-                    <div className="tree-head-text">
+                    <div className="head-text">
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
                         </style>
                         <h2>Inspired by the Flock</h2>
                     </div>
 
-                    <div className="tree-sub-text">
+                    <div className="sub-text">
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                         </style>
