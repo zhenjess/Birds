@@ -13,3 +13,12 @@ const ShoeIndexItem = ({ shoe }) => (
 );
 
 export default ShoeIndexItem;
+
+
+// const ShoeIndexItem = props => (
+//     <li>
+//         <Link to={`/shoes/${props.shoe.id}`}>{props.shoe.gender, props.shoe.model}</Link>
+//     </li>
+// );
+
+// export default ShoeIndexItem;
