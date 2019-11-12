@@ -7,6 +7,7 @@ const ShoeIndexItem = ({ shoe }) => (
         <Link to={`/shoe/${shoe.id}`}>
             <span>{shoe.id}</span>
             <span>{shoe.gender}</span>
+            <span>{shoe.material}</span>
             <span>{shoe.model}</span>
         </Link>
     </li>

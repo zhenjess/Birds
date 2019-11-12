@@ -34,7 +34,8 @@ class ShoeIndex extends React.Component {
         const { shoes } = this.props;
 
         return (
-            <div>
+            <div className="shoe-index-text">
+                <h2>hello</h2>
                 <ul>
                     {
                         shoes.map(shoe => (
