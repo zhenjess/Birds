@@ -43,7 +43,7 @@ class ShoeIndex extends React.Component {
                 <h2>Runners</h2>
                 <ul>
                     {
-                        this.getShoesByModel('runner').map(shoe => (
+                        this.getShoesByModel('runners').map(shoe => (
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
@@ -57,7 +57,7 @@ class ShoeIndex extends React.Component {
                 <h2>Loungers</h2>
                 <ul>
                     {
-                        this.getShoesByModel('lounger').map(shoe => (
+                        this.getShoesByModel('loungers').map(shoe => (
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
