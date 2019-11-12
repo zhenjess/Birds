@@ -10,9 +10,17 @@ require 'open-uri'
 
 User.destroy_all
 Shoe.destroy_all
+Material.destroy_all
+ShoeMaterial.destroy_all
 
 demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gmail.com', password: "password")
 
-shoe_1 = Shoe.create!(gender: 'Male', material: 'Wool', model: 'Runner')
-shoe_2 = Shoe.create!(gender: 'Female', material: 'Tree', model: 'Lounger')
+wool = Material.create!(material: 'wool');
+tree = Material.create!(material: 'tree');
+
+shoe_1 = Shoe.create!(gender: 'Male', model: 'Runner')
+shoe_1.material_ids = [wool.id];
+
+shoe_2 = Shoe.create!(gender: 'Female', model: 'Lounger')
+shoe_2.material_ids = [tree.id];
 
