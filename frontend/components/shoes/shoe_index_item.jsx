@@ -10,6 +10,8 @@ const ShoeIndexItem = ({ shoe }) => (
             <span>{shoe.material}</span>
             <span>{shoe.model}</span>
         </Link>
+
+        <div>CSS style here</div>
     </li>
 );
 

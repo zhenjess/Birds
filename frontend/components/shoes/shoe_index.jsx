@@ -30,15 +30,20 @@ class ShoeIndex extends React.Component {
     //     );
     // }
 
+    getShoesByModel(model) {
+        let shoesArr = this.props.shoes.filter(shoe => shoe.model.toLowerCase() === model)
+        debugger
+        return shoesArr;
+    }
     render() {
         const { shoes } = this.props;
 
         return (
             <div className="shoe-index-text">
-                <h2>hello</h2>
+                <h2>Runners</h2>
                 <ul>
                     {
-                        shoes.map(shoe => (
+                        this.getShoesByModel('runner').map(shoe => (
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
@@ -47,6 +52,19 @@ class ShoeIndex extends React.Component {
                         ))
                     }
                    
+                </ul>
+                <h2>Loungers</h2>
+                <ul>
+                    {
+                        this.getShoesByModel('lounger').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                            />
+                        ))
+                    }
+
                 </ul>
             </div>
         );
