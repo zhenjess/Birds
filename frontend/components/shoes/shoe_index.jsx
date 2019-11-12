@@ -41,6 +41,7 @@ class ShoeIndex extends React.Component {
         return (
             <div className="shoe-index-text">
                 <h2>Runners</h2>
+                
                 <ul>
                     {
                         this.getShoesByModel('runners').map(shoe => (
@@ -95,20 +96,6 @@ class ShoeIndex extends React.Component {
                     }
 
                 </ul>
-
-                {/* <h2>Breezers</h2>
-                <ul>
-                    {
-                        this.getShoesByModel('breezers').map(shoe => (
-                            <ShoeIndexItem
-                                shoe={shoe}
-                                key={`${shoe.id}-${shoe.material}`}
-                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
-                            />
-                        ))
-                    }
-
-                </ul> */}
             </div>
         );
     }
