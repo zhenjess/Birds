@@ -53,6 +53,7 @@ class ShoeIndex extends React.Component {
                     }
                    
                 </ul>
+
                 <h2>Loungers</h2>
                 <ul>
                     {
@@ -66,6 +67,48 @@ class ShoeIndex extends React.Component {
                     }
 
                 </ul>
+
+                <h2>Skippers</h2>
+                <ul>
+                    {
+                        this.getShoesByModel('skippers').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                            />
+                        ))
+                    }
+
+                </ul>
+
+                <h2>Toppers</h2>
+                <ul>
+                    {
+                        this.getShoesByModel('toppers').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                            />
+                        ))
+                    }
+
+                </ul>
+
+                {/* <h2>Breezers</h2>
+                <ul>
+                    {
+                        this.getShoesByModel('breezers').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                            />
+                        ))
+                    }
+
+                </ul> */}
             </div>
         );
     }
