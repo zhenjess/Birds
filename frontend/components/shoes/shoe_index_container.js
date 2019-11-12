@@ -4,10 +4,13 @@ import ShoeIndex from './shoe_index';
 
 import { fetchAllShoes } from '../../actions/shoes_actions';
 
+import { selectAllShoes } from '../../reducers/selectors';
+
 const mapStateToProps = state => ({
-    shoes: Object.values(state.entities.shoes),
-    // shoe:selectAllShoes(state),
-    // loading: state.ui.loading.indexLoading
+    //shoes: Object.values(state.entities.shoes),
+
+    //selector to return an array of shoes with name material and shoe id
+    shoes: selectAllShoes(state),
 });
 
 const mapDispatchToProps = dispatch => ({
