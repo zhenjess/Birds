@@ -10,9 +10,9 @@ const shoesReducer = (oldState={}, action) => {
 
     switch(action.type) {
         case RECEIVE_ALL_SHOES:
-            return Object.assign({}, oldState, action.shoes);
+            return Object.assign({}, oldState, action.payload.shoes);
         case RECEIVE_SHOE:
-            shoe = action.payload.shoes;
+            shoe = action.shoe;
 
             const newShoe = { [action.shoe.id]: action.shoe };
 
