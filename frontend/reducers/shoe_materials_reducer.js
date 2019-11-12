@@ -2,7 +2,7 @@ import React from 'react';
 
 import { RECEIVE_ALL_SHOES } from '../actions/shoes_actions'; //import action type
 
-const shoeMaterialsReducer = (state = {}, action) => {
+const shoeMaterialsReducer = (state={}, action) => {
     Object.freeze(state);
 
     switch (action.type) {

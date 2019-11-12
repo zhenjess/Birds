@@ -26,18 +26,18 @@ json.shoeMaterials do
     end
 end
 
-#add colors(hue) key
-.json.colors do
-    @colors.each do |color|
-        json.set! color.id do 
+#add colors key
+json.colors do
+    #access instance variable set in shoes controller
+    @mcolors.each do |color|
+        json.set! color.id do #use id as outer key
             json.extract! color, :id, :hue
         end
     end
 end
 
 #link shoe colors to shoes
-
-.json.shoeColors do 
+json.shoeColors do 
     @shoe_colors.each do |shoe_color|
         json.set! shoe_color.id do 
             json.extract! shoe_color, :id, :shoe_id, :hue_id 

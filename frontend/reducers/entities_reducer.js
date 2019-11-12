@@ -8,11 +8,14 @@ import materialsReducer from './materials_reducer';
 
 import shoeMaterialsReducer from './shoe_materials_reducer';
 
+import shoeColorsReducer from './shoe_colors_reducer';
+
 const entitiesReducer = combineReducers({
     users: usersReducer, 
     shoes: shoesReducer, 
     materials: materialsReducer, 
-    shoeMaterials: shoeMaterialsReducer
+    shoeMaterials: shoeMaterialsReducer, 
+    shoeColors: shoeColorsReducer
 });
 
 export default entitiesReducer; //represents data from db and manages it

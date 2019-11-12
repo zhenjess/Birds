@@ -35,6 +35,13 @@ class ShoeIndex extends React.Component {
         debugger
         return shoesArr;
     }
+
+    getShoesByColor(hue) {
+        let shoesArray = this.props.shoes.filter(shoe => shoe.hue.toLowerCase() === hue)
+
+        return shoesArray;
+    }
+
     render() {
         const { shoes } = this.props;
 
@@ -48,7 +55,7 @@ class ShoeIndex extends React.Component {
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
-                                // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
                             />
                         ))
                     }
@@ -62,7 +69,7 @@ class ShoeIndex extends React.Component {
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
-                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
                             />
                         ))
                     }
@@ -76,7 +83,7 @@ class ShoeIndex extends React.Component {
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
-                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
                             />
                         ))
                     }
@@ -90,7 +97,7 @@ class ShoeIndex extends React.Component {
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
-                            // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
                             />
                         ))
                     }

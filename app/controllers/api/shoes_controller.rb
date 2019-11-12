@@ -8,6 +8,8 @@ class Api::ShoesController < ApplicationController
         @shoes = Shoe.all
         @materials = Material.all 
         @shoe_materials = ShoeMaterial.all
+        @colors = Color.all
+        @shoe_colors = ShoeColor.all
         #implicit render index
         
     end

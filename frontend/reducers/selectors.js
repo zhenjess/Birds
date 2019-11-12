@@ -28,7 +28,8 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
         if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
             //find shoe, if is the gender we want then do stuff 
             const material = state.entities.materials[shoeMaterial.materialId]; //to get material of shoe 
-            const shoeItem = Object.assign({}, material, shoe); //shoe to override material id
+            const color = state.entities.colors[shoeColor.hueId];
+            const shoeItem = Object.assign({}, color, material, shoe); //shoe to override material id
             shoes.push(shoeItem); //is combined shoe part and material part to return a full shoe
         }
     });
