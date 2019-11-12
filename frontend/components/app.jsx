@@ -46,8 +46,6 @@ import AboutSugarSub from './materials/sugar/about_sugar_sub';
 
 import MoreSugarMain from './materials/sugar/more_sugar_main';
 
-import ShoeIndexContainer from './shoes/shoe_index_container';
-
 import Trino from './materials/trino/trino';
 
 import AboutTrinoMaterial from './materials/trino/about_trino_material';

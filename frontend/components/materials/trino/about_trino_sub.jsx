@@ -25,7 +25,7 @@ class AboutTrinoSub extends React.Component {
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                         </style>
-                    <p>Trino™ synthetic fiber, from eucalyptus tree fibers and a handful of ZQ Merino wool. 
+                    <p>Trino™ fiber, from eucalyptus tree fibers and a handful of ZQ Merino wool. 
                         Working hand-in-hand with our fiber producers, yarn spinners, and textile makers, 
                         we made sure our high quality knit was sustainably sourced from top to toe.
                     </p>
