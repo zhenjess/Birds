@@ -48,6 +48,16 @@ import MoreSugarMain from './materials/sugar/more_sugar_main';
 
 import ShoeIndexContainer from './shoes/shoe_index_container';
 
+import Trino from './materials/trino/trino';
+
+import AboutTrinoMaterial from './materials/trino/about_trino_material';
+
+import AboutTrinoSub from './materials/trino/about_trino_sub';
+
+import MoreTrinoMain from './materials/trino/more_trino_main';
+
+import ShoeIndexContainer from './shoes/shoe_index_container';
+
 const App = () => (
     <div>
         <Route path="/" component={NavBarContainer}/> 
@@ -57,6 +67,7 @@ const App = () => (
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/materials/tree" component={Tree} /> 
             <Route exact path="/materials/sugar" component={Sugar} /> 
+            <Route exact path="/materials/trino" component={Trino} /> 
             <Route exact path="/shoes/:gender" component={ShoeIndexContainer} />
            
 
@@ -75,7 +86,11 @@ const App = () => (
 
         <Route exact path="/materials/sugar" component={AboutSugarMaterial} />
         <Route exact path="/materials/sugar" component={AboutSugarSub} />
-        <Route exact path="/materials/sugar" component={MoreSugarMain} />    
+        <Route exact path="/materials/sugar" component={MoreSugarMain} />   
+
+        <Route exact path="/materials/trino" component={AboutTrinoMaterial} />
+        <Route exact path="/materials/trino" component={AboutTrinoSub} />
+        <Route exact path="/materials/trino" component={MoreTrinoMain} />   
     </div>
 
 );

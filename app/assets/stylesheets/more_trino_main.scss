@@ -1,0 +1,27 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* The hero image */
+.more-trino-main-image {
+      // background-position: bottom;
+    display: flex;
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("https://shaggymuffins.com/wp-content/uploads/2019/08/allbirds-eco-friendly-shoes-e1567390944256.png");
+    
+      /* Set a specific height */
+    height: 45vh;
+    width: 56.9vw;
+    
+      /* Position and center the image to scale nicely on all screens */
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 490px;
+}
