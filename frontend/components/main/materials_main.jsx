@@ -20,11 +20,11 @@ class MaterialsMain extends React.Component {
                                 <p>Durable &amp; Flexible</p>
                                 <div className="left-links">
                                     <div className="left-link-text">
-                                        <Link className="left-link" to="/collections/female">FEMALE BIRDS</Link>
+                                        <Link className="left-link" to="/shoes/female">FEMALE BIRDS</Link>
                                     </div>
 
                                     <div className="left-link-text">
-                                        <Link className="left-link" to="/collections/male">MALE BIRDS</Link>
+                                        <Link className="left-link" to="/shoes/male">MALE BIRDS</Link>
                                     </div>
                                 </div>
                             </div>
@@ -50,11 +50,11 @@ class MaterialsMain extends React.Component {
                                 <p>Light &amp; Breezy</p>
                                 <div className="right-links">
                                     <div className="right-link-text">
-                                        <Link className="right-link" to="/collections/female">FEMALE BIRDS</Link>
+                                        <Link className="right-link" to="/shoes/female">FEMALE BIRDS</Link>
                                     </div>
 
                                     <div className="right-link-text">
-                                        <Link className="right-link" to="/collections/male">MALE BIRDS</Link>
+                                        <Link className="right-link" to="/shoes/male">MALE BIRDS</Link>
                                     </div>
                                 </div>
                             </div>
@@ -79,11 +79,11 @@ class MaterialsMain extends React.Component {
 
                         <div className="left-links">
                             <div className="left-link-text">
-                                <Link className="left-link" to="/collections/female">SHOP FEMALE</Link>
+                                <Link className="left-link" to="/shoes/female">SHOP FEMALE</Link>
                             </div>
 
                             <div className="left-link-text">
-                                <Link className="left-link" to="/collections/male">SHOP MALE</Link>
+                                <Link className="left-link" to="/shoes/male">SHOP MALE</Link>
                             </div>
                         </div>
                     </div> */}

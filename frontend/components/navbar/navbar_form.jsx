@@ -13,23 +13,23 @@ class NavbarForm extends React.Component {
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown">
-                        <span className="nav-link" to="/collections/female">FEMALE</span>
+                        <span className="nav-link" to="/shoes/female">FEMALE</span>
                         {/* <button className="dropbtn">FEMALE */}
                         {/* <i className="fa fa-caret-down"></i>
                         </button> */}
                         <div className="dropdown-content">
-                            <Link to="/collections/female">SHOP ALL BIRDS</Link>
+                            <Link to="/shoes/female">SHOP ALL BIRDS</Link>
                             {/* <a href="#">Shop ALL BIRDS</a> */}
                         </div>
                     </div>
 
                     <div className="dropdown">
-                        <span className="nav-link" to="/collections/male">MALE</span>
+                        <span className="nav-link" to="/shoes/male">MALE</span>
                         {/* <button className="dropbtn">MALE
                         <i className="fa fa-caret-down"></i>
                         </button> */}
                         <div className="dropdown-content">
-                            <Link to="/collections/male">SHOP ALL BIRDS</Link>
+                            <Link to="/shoes/male">SHOP ALL BIRDS</Link>
                         </div>
                     </div>
 
