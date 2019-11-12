@@ -6,6 +6,10 @@ class Api::ShoesController < ApplicationController
 
     def index 
         @shoes = Shoe.all
+        @materials = Material.all 
+        @shoe_materials = ShoeMaterial.all
+        #implicit render index
+        
     end
 
     def show 
