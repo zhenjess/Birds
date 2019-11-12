@@ -1,7 +1,7 @@
 class Material < ApplicationRecord
     TYPES = [
-        'tree',
-        'wool'
+        'Tree',
+        'Wool'
         #sugarcane and synthetic for accessories and shoe insole
     ].sort.freeze
 

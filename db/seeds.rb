@@ -14,9 +14,9 @@ Material.destroy_all
 ShoeMaterial.destroy_all
 
 demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gmail.com', password: "password")
-debugger
-wool = Material.create!(material: 'wool');
-tree = Material.create!(material: 'tree');
+
+wool = Material.create!(material: 'Wool');
+tree = Material.create!(material: 'Tree');
 
 shoe_1 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_1.material_ids = [wool.id];
@@ -41,3 +41,27 @@ shoe_7.material_ids = [wool.id];
 
 shoe_8 = Shoe.create!(gender: 'Male', model: 'Toppers')
 shoe_8.material_ids = [tree.id];
+
+shoe_9 = Shoe.create!(gender: 'Female', model: 'Runners')
+shoe_9.material_ids = [wool.id];
+
+shoe_10 = Shoe.create!(gender: 'Female', model: 'Runners')
+shoe_10.material_ids = [tree.id];
+
+shoe_11 = Shoe.create!(gender: 'Female', model: 'Loungers')
+shoe_11.material_ids = [wool.id];
+
+shoe_12 = Shoe.create!(gender: 'Female', model: 'Loungers')
+shoe_12.material_ids = [tree.id];
+
+shoe_13 = Shoe.create!(gender: 'Female', model: 'Skippers')
+shoe_13.material_ids = [wool.id];
+
+shoe_14 = Shoe.create!(gender: 'Female', model: 'Skippers')
+shoe_14.material_ids = [tree.id];
+
+shoe_15 = Shoe.create!(gender: 'Female', model: 'Toppers')
+shoe_15.material_ids = [wool.id];
+
+shoe_16 = Shoe.create!(gender: 'Female', model: 'Toppers')
+shoe_16.material_ids = [tree.id];
