@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_11_221453) do
+ActiveRecord::Schema.define(version: 2019_11_12_023712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 2019_11_11_221453) do
     t.integer "material_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["material_id"], name: "index_shoe_materials_on_material_id", unique: true
-    t.index ["shoe_id"], name: "index_shoe_materials_on_shoe_id", unique: true
+    t.index ["material_id"], name: "index_shoe_materials_on_material_id"
+    t.index ["shoe_id"], name: "index_shoe_materials_on_shoe_id"
   end
 
   create_table "shoes", force: :cascade do |t|

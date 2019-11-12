@@ -41,7 +41,8 @@ class ShoeIndex extends React.Component {
                         shoes.map(shoe => (
                             <ShoeIndexItem
                                 shoe={shoe}
-                                key={shoe.id}
+                                key={`${shoe.id}-${shoe.material}`}
+                                // key={`${shoe.id}-${shoe.material}`-${shoe.color}`}
                             />
                         ))
                     }

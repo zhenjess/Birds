@@ -4,10 +4,10 @@ json.shoes do # returns key and {} returns shoes and {what populates obj}
     @shoes.each do |shoe|
         json.set! shoe.id do 
             json.extract! shoe, :id, :model, :gender
-
         end
-
     end
+
+    
 end
 
 #add materials key

@@ -48,7 +48,8 @@ const App = () => (
             <Route exact path="/account" component={AccountFormsContainer}/> 
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/materials/tree" component={Tree} /> 
-            <Route exact path="/shoes" component={ShoeIndexContainer} />
+            <Route exact path="/shoes/:gender" component={ShoeIndexContainer} />
+           
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 

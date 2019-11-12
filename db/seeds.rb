@@ -24,3 +24,11 @@ shoe_1.material_ids = [wool.id];
 shoe_2 = Shoe.create!(gender: 'Female', model: 'Lounger')
 shoe_2.material_ids = [tree.id];
 
+shoe_3 = Shoe.create!(gender: 'Male', model: 'Lounger')
+shoe_3.material_ids = [wool.id];
+
+shoe_4 = Shoe.create!(gender: 'Female', model: 'Runner')
+shoe_4.material_ids = [tree.id];
+
+shoe_5 = Shoe.create!(gender: 'Female', model: 'Runner Mizzles')
+shoe_5.material_ids = [wool.id];
