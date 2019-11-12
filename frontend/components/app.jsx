@@ -38,6 +38,14 @@ import AboutTreeSub from './materials/tree/about_tree_sub';
 
 import MoreTreeMain from './materials/tree/more_tree_main';
 
+import Sugar from './materials/sugar/sugar';
+
+import AboutSugarMaterial from './materials/sugar/about_sugar_material';
+
+import AboutSugarSub from './materials/sugar/about_sugar_sub';
+
+import MoreSugarMain from './materials/sugar/more_sugar_main';
+
 import ShoeIndexContainer from './shoes/shoe_index_container';
 
 const App = () => (
@@ -48,6 +56,7 @@ const App = () => (
             <Route exact path="/account" component={AccountFormsContainer}/> 
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/materials/tree" component={Tree} /> 
+            <Route exact path="/materials/sugar" component={Sugar} /> 
             <Route exact path="/shoes/:gender" component={ShoeIndexContainer} />
            
 
@@ -62,7 +71,11 @@ const App = () => (
 
         <Route exact path="/materials/tree" component={AboutTreeMaterial} />
         <Route exact path="/materials/tree" component={AboutTreeSub} />
-        <Route exact path="/materials/tree" component={MoreTreeMain} />   
+        <Route exact path="/materials/tree" component={MoreTreeMain} /> 
+
+        <Route exact path="/materials/sugar" component={AboutSugarMaterial} />
+        <Route exact path="/materials/sugar" component={AboutSugarSub} />
+        <Route exact path="/materials/sugar" component={MoreSugarMain} />    
     </div>
 
 );
