@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 class NavbarForm extends React.Component {
     constructor(props) {
         super(props);
+        this.handleNestClick = this.handleNestClick.bind(this);
+    }
+    handleNestClick(e) {
+        e.preventDefault();
+
     }
 
     render() {
@@ -48,7 +53,7 @@ class NavbarForm extends React.Component {
                     <a href="#branches">BRANCHES</a>
                     <a href="#account">ACCOUNT</a>
                     <a href="?">?</a>
-                    <a href="nest">NEST</a>
+                    <button onClick={this.handleNestClick}>NEST</button>
                 </div>
             </div>
         );
