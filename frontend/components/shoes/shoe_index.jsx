@@ -32,7 +32,7 @@ class ShoeIndex extends React.Component {
 
     getShoesByMaterialAndModel(material, model) {
         let shoesArr = this.props.shoes.filter(shoe => shoe.model.toLowerCase() === model && shoe.material.toLowerCase() === material)
-        debugger
+        //debugger
         return shoesArr;
     }
 
@@ -47,7 +47,7 @@ class ShoeIndex extends React.Component {
 
         return (
             <div className="shoe-index-text">
-                <h2>Runners</h2>
+                <h2>Wool Runners</h2>
                 
                 <ul className="shoe-category">
                     {
@@ -62,6 +62,10 @@ class ShoeIndex extends React.Component {
                    
                 </ul>
 
+                <br/>
+
+                <h2>Tree Runners</h2>
+
                 <ul className="shoe-category">
                     {
                         this.getShoesByMaterialAndModel('tree', 'runners').map(shoe => (
@@ -74,53 +78,77 @@ class ShoeIndex extends React.Component {
                     }
 
                 </ul>
-            </div>)}
-//                 {/* <h2>Loungers</h2>
-//                 <ul>
-//                     {
-//                         this.getShoesByModel('loungers').map(shoe => (
-//                             <ShoeIndexItem
-//                                 shoe={shoe}
-//                                 key={`${shoe.id}-${shoe.material}`}
-//                                 key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
-//                             />
-//                         ))
-//                     }
 
-//                 </ul>
+                <br/>
 
-//                 <h2>Skippers</h2>
-//                 <ul>
-//                     {
-//                         this.getShoesByModel('skippers').map(shoe => (
-//                             <ShoeIndexItem
-//                                 shoe={shoe}
-//                                 key={`${shoe.id}-${shoe.material}`}
-//                                 key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
-//                             />
-//                         ))
-//                     }
+                <h2>Wool Loungers</h2>
 
-//                 </ul>
+                <ul className="shoe-category">
+                    {
+                        this.getShoesByMaterialAndModel('wool', 'loungers').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                            />
+                        ))
+                    }
 
-//                 <h2>Toppers</h2>
-//                 <ul>
-//                     {
-//                         this.getShoesByModel('toppers').map(shoe => (
-//                             <ShoeIndexItem
-//                                 shoe={shoe}
-//                                 key={`${shoe.id}-${shoe.material}`}
-//                                 key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
-//                             />
-//                         ))
-//                     }
+                </ul>
 
-//                 </ul>
-//             </div>
-//         );
-//     }
-//  */}
+                <br />
 
+                <h2>Tree Loungers</h2>
+            
+                <ul className="shoe-category">
+                    {
+                        this.getShoesByMaterialAndModel('tree', 'loungers').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                            />
+                        ))
+                    }
+
+                </ul>
+
+                <br />
+
+                <h2>Tree Skippers</h2>
+
+                <ul className="shoe-category">
+                    {
+                        this.getShoesByMaterialAndModel('tree', 'skippers').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                            />
+                        ))
+                    }
+
+                </ul>
+
+                <br/>
+
+                <h2>Tree Toppers</h2>
+
+                <ul className="shoe-category">
+                    {
+                        this.getShoesByMaterialAndModel('tree', 'toppers').map(shoe => (
+                            <ShoeIndexItem
+                                shoe={shoe}
+                                key={`${shoe.id}-${shoe.material}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                            />
+                        ))
+                    }
+
+                </ul>
+            </div>
+        )
+    }
 }
 
 export default ShoeIndex;

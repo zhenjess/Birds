@@ -20,7 +20,13 @@ demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gma
 wool = Material.create!(material: 'Wool');
 tree = Material.create!(material: 'Tree');
 
-grey = Color.create!(hue: 'grey');
+grey = Color.create!(hue: 'Grey');
+black = Color.create!(hue: 'Black');
+white = Color.create!(hue: 'White');
+red = Color.create!(hue: 'Red');
+green = Color.create!(hue: 'Green');
+blue = Color.create!(hue: 'Blue');
+
 
 shoe_1 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_1.material_ids = [wool.id];
@@ -28,72 +34,95 @@ shoe_1.color_ids = [grey.id];
 
 shoe_2 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_2.material_ids = [wool.id];
+shoe_2.color_ids = [black.id];
 
 shoe_3 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_3.material_ids = [wool.id];
+shoe_3.color_ids = [white.id];
 
 shoe_4 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_4.material_ids = [wool.id];
+shoe_4.color_ids = [red.id];
 
 shoe_5 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_5.material_ids = [wool.id];
+shoe_5.color_ids = [green.id];
 
 shoe_6 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_6.material_ids = [wool.id];
+shoe_6.color_ids = [blue.id];
 
 shoe_7 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_7.material_ids = [tree.id];
+shoe_7.color_ids = [grey.id];
 
 shoe_8 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_8.material_ids = [tree.id];
+shoe_8.color_ids = [black.id];
 
 shoe_9 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_9.material_ids = [tree.id];
+shoe_9.color_ids = [white.id];
 
 shoe_10 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_10.material_ids = [tree.id];
+shoe_10.color_ids = [red.id];
 
 shoe_11 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_11.material_ids = [tree.id];
+shoe_11.color_ids = [green.id];
 
 shoe_12 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_12.material_ids = [tree.id];
+shoe_12.color_ids = [blue.id];
 
 shoe_13 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_13.material_ids = [wool.id];
+shoe_13.color_ids = [grey.id];
 
 shoe_14 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_14.material_ids = [wool.id];
+shoe_14.color_ids = [black.id];
 
 shoe_15 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_15.material_ids = [wool.id];
+shoe_15.color_ids = [white.id];
 
 shoe_16 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_16.material_ids = [wool.id];
+shoe_16.color_ids = [red.id];
 
 shoe_17 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_17.material_ids = [wool.id];
+shoe_17.color_ids = [green.id];
 
 shoe_18 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_18.material_ids = [wool.id];
+shoe_18.color_ids = [blue.id];
 
 shoe_19 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_19.material_ids = [tree.id];
+shoe_19.color_ids = [grey.id];
 
 shoe_20 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_20.material_ids = [tree.id];
+shoe_20.color_ids = [black.id];
 
 shoe_21 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_21.material_ids = [tree.id];
+shoe_21.color_ids = [white.id];
 
 shoe_22 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_22.material_ids = [tree.id];
+shoe_22.color_ids = [red.id];
 
 shoe_23 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_23.material_ids = [tree.id];
+shoe_23.color_ids = [green.id];
 
 shoe_24 = Shoe.create!(gender: 'Male', model: 'Loungers')
 shoe_24.material_ids = [tree.id];
+shoe_24.color_ids = [blue.id];
 
 shoe_25 = Shoe.create!(gender: 'Male', model: 'Skippers')
 shoe_25.material_ids = [wool.id];

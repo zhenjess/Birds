@@ -1,7 +1,6 @@
 .shoe-index-text {
     font-family: sans-serif;
     margin-top: 75px;
-
     margin-left: 300px;
 }
 
@@ -16,4 +15,8 @@
     width: 275px;
     height: 275px;
     margin: 10px;
+}
+
+.shoe-index-item:hover {
+    box-shadow: 80px 80px 80px 80px whitesmoke;
 }
