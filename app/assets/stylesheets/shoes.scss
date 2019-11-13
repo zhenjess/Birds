@@ -1,5 +1,19 @@
 .shoe-index-text {
     font-family: sans-serif;
-    margin-top: 800px;
+    margin-top: 75px;
+
     margin-left: 300px;
+}
+
+.shoe-category {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.shoe-image {
+    width: 275px;
+    height: 275px;
+    margin: 10px;
 }

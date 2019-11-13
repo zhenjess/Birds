@@ -6,6 +6,8 @@ import shoesReducer from './shoes_reducer';
 
 import materialsReducer from './materials_reducer';
 
+import colorsReducer from './colors_reducer';
+
 import shoeMaterialsReducer from './shoe_materials_reducer';
 
 import shoeColorsReducer from './shoe_colors_reducer';
@@ -14,6 +16,7 @@ const entitiesReducer = combineReducers({
     users: usersReducer, 
     shoes: shoesReducer, 
     materials: materialsReducer, 
+    colors: colorsReducer,
     shoeMaterials: shoeMaterialsReducer, 
     shoeColors: shoeColorsReducer
 });

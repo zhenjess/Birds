@@ -12,14 +12,19 @@ User.destroy_all
 Shoe.destroy_all
 Material.destroy_all
 ShoeMaterial.destroy_all
+Color.destroy_all
+ShoeColor.destroy_all
 
 demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gmail.com', password: "password")
 
 wool = Material.create!(material: 'Wool');
 tree = Material.create!(material: 'Tree');
 
+grey = Color.create!(hue: 'grey');
+
 shoe_1 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_1.material_ids = [wool.id];
+shoe_1.color_ids = [grey.id];
 
 shoe_2 = Shoe.create!(gender: 'Male', model: 'Runners')
 shoe_2.material_ids = [wool.id];

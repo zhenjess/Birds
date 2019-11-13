@@ -30,17 +30,17 @@ class ShoeIndex extends React.Component {
     //     );
     // }
 
-    getShoesByModel(model) {
-        let shoesArr = this.props.shoes.filter(shoe => shoe.model.toLowerCase() === model)
+    getShoesByMaterialAndModel(material, model) {
+        let shoesArr = this.props.shoes.filter(shoe => shoe.model.toLowerCase() === model && shoe.material.toLowerCase() === material)
         debugger
         return shoesArr;
     }
 
-    getShoesByColor(hue) {
-        let shoesArray = this.props.shoes.filter(shoe => shoe.hue.toLowerCase() === hue)
+    // getShoesByColor(hue) {
+    //     let shoesArray = this.props.shoes.filter(shoe => shoe.hue.toLowerCase() === hue)
 
-        return shoesArray;
-    }
+    //     return shoesArray;
+    // }
 
     render() {
         const { shoes } = this.props;
@@ -49,9 +49,9 @@ class ShoeIndex extends React.Component {
             <div className="shoe-index-text">
                 <h2>Runners</h2>
                 
-                <ul>
+                <ul className="shoe-category">
                     {
-                        this.getShoesByModel('runners').map(shoe => (
+                        this.getShoesByMaterialAndModel('wool', 'runners').map(shoe => (
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
@@ -62,10 +62,9 @@ class ShoeIndex extends React.Component {
                    
                 </ul>
 
-                <h2>Loungers</h2>
-                <ul>
+                <ul className="shoe-category">
                     {
-                        this.getShoesByModel('loungers').map(shoe => (
+                        this.getShoesByMaterialAndModel('tree', 'runners').map(shoe => (
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
@@ -75,38 +74,52 @@ class ShoeIndex extends React.Component {
                     }
 
                 </ul>
+            </div>)}
+//                 {/* <h2>Loungers</h2>
+//                 <ul>
+//                     {
+//                         this.getShoesByModel('loungers').map(shoe => (
+//                             <ShoeIndexItem
+//                                 shoe={shoe}
+//                                 key={`${shoe.id}-${shoe.material}`}
+//                                 key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+//                             />
+//                         ))
+//                     }
 
-                <h2>Skippers</h2>
-                <ul>
-                    {
-                        this.getShoesByModel('skippers').map(shoe => (
-                            <ShoeIndexItem
-                                shoe={shoe}
-                                key={`${shoe.id}-${shoe.material}`}
-                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
-                            />
-                        ))
-                    }
+//                 </ul>
 
-                </ul>
+//                 <h2>Skippers</h2>
+//                 <ul>
+//                     {
+//                         this.getShoesByModel('skippers').map(shoe => (
+//                             <ShoeIndexItem
+//                                 shoe={shoe}
+//                                 key={`${shoe.id}-${shoe.material}`}
+//                                 key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+//                             />
+//                         ))
+//                     }
 
-                <h2>Toppers</h2>
-                <ul>
-                    {
-                        this.getShoesByModel('toppers').map(shoe => (
-                            <ShoeIndexItem
-                                shoe={shoe}
-                                key={`${shoe.id}-${shoe.material}`}
-                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
-                            />
-                        ))
-                    }
+//                 </ul>
 
-                </ul>
-            </div>
-        );
-    }
+//                 <h2>Toppers</h2>
+//                 <ul>
+//                     {
+//                         this.getShoesByModel('toppers').map(shoe => (
+//                             <ShoeIndexItem
+//                                 shoe={shoe}
+//                                 key={`${shoe.id}-${shoe.material}`}
+//                                 key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+//                             />
+//                         ))
+//                     }
 
+//                 </ul>
+//             </div>
+//         );
+//     }
+//  */}
 
 }
 
