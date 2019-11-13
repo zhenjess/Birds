@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import ShoeIndex from './shoe_index';
 
-import { fetchAllShoes } from '../../actions/shoes_actions';
+import { fetchAllShoes, fetchShoe } from '../../actions/shoes_actions';
 
 import { selectAllShoes, selectAllShoesByGender } from '../../reducers/selectors';
 
@@ -16,7 +16,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    fetchAllShoes: () => dispatch(fetchAllShoes())
+    fetchAllShoes: () => dispatch(fetchAllShoes()),
+    fetchShoe: (shoeId) => dispatch(fetchShoe(shoeId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoeIndex);

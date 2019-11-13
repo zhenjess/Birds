@@ -4,9 +4,33 @@ import { Link } from 'react-router-dom';
 
 const ShoeIndexItem = ({ shoe }) => (
     <li className="shoe-index-item">
-        <div>
-            <img className="shoe-image" src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_M_Wool_Runner_Kotare_GREY_PROFILEL_7c807da0-c1a4-4ac3-83f4-c97cb5b0b751.png?v=1571655678" alt=""/>
+
+        <div className="shoe-image"> 
+                <img id="1" className="grey-shoe" src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_M_Wool_Runner_Kotare_GREY_PROFILEL_7c807da0-c1a4-4ac3-83f4-c97cb5b0b751.png?v=1571655678" alt=""/>
+       
+                {/* <img id="2" className="black-shoe" src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Men_s_Wool_Runners_-_Natural_Black__Black_Sole__-_imageLeft.png?v=1571655678" alt="" /> */}
+
+            {/* <div className="shoe-image-2">
+                <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Men_s_Wool_Runners_-_Natural_Black__Black_Sole__-_imageLeft.png?v=1571655678" alt="" />
+            </div>
+
+            <div className="shoe-image-3">
+                <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_M_Wool_Runner_Kotare_WHITE_PROFILEL_bc9201bb-1f0d-4888-9297-92d99f97bc8c.png?v=1571655678" alt="" />
+            </div>
+
+            <div className="shoe-image-4">
+                <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_August_ReFresh_WL_RN_Tuke_Jam_LAT_7eebfa07-e157-4412-a566-473dc39d7d52.png?v=1571655678" alt="" />
+            </div>
+
+            <div className="shoe-image-5">
+                <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_WL_RN_Tuke_Matcha_LAT_47d9d30a-30e2-4068-955b-b51370492355.png?v=1571655678" alt="" />
+            </div>
+
+            <div className="shoe-image-6">
+                <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_FY19_August_PDP_WL_RN_Savanna_Night_LAT_9dbb2f9d-8a67-4fcc-a0fe-1bcc2a28e2eb.png?v=1571655947" alt="" />
+            </div> */}
         </div>
+        
         <Link to={`/shoe/${shoe.id}`}>
             {/* <span>{shoe.id}</span>  */}
             <span>{shoe.hue}</span>

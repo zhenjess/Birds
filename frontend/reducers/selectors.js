@@ -41,8 +41,8 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
                 }
             })
             //remove these lines when shoe has color
-            shoeItem = Object.assign({}, material, shoe); //if no color add to shoe
-            shoes.push(shoeItem); //is combined shoe part and material part to return a full shoe
+            // shoeItem = Object.assign({}, material, shoe); //if no color add to shoe
+            // shoes.push(shoeItem); //is combined shoe part and material part to return a full shoe
         }
     });
     // debugger
