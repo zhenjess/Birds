@@ -26,24 +26,55 @@ red = Color.create!(color: 'Red');
 green = Color.create!(color: 'Green');
 blue = Color.create!(color: 'Blue');
 
-all_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
+# all_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
 
 shoe_1 = Shoe.create!(gender: 'Male', model: 'Runners')
-shoe_1.material_ids = [wool.id, tree.id];
-shoe_1.color_ids = all_color_ids;
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_1_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
+shoe_1_material_ids = [wool.id, tree.id];
+
+shoe_1_color_ids.each do |color_id|
+    shoe_1_material_ids.each do |material_id|
+        ShoeOption.create!(shoe_id: shoe_1.id, color_id: color_id, material_id: material_id)
+    end
+end
 
 shoe_2 = Shoe.create!(gender: 'Male', model: 'Loungers')
-shoe_2.material_ids = [wool.id, tree.id];
-shoe_2.color_ids = all_color_ids;
+# shoe_2.material_ids = [wool.id, tree.id];
+# shoe_2.color_ids = all_color_ids;
+shoe_2_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
+shoe_2_material_ids = [wool.id, tree.id];
 
+shoe_2_color_ids.each do |color_id|
+    shoe_2_material_ids.each do |material_id|
+        ShoeOption.create!(shoe_id: shoe_2.id, color_id: color_id, material_id: material_id)
+    end
+end
 
 shoe_3 = Shoe.create!(gender: 'Female', model: 'Runners')
-shoe_3.material_ids = [wool.id, tree.id];
-shoe_3.color_ids = all_color_ids;
+# shoe_3.material_ids = [wool.id, tree.id];
+# shoe_3.color_ids = all_color_ids;
+shoe_3_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
+shoe_3_material_ids = [wool.id];
+
+shoe_3_color_ids.each do |color_id|
+    shoe_3_material_ids.each do |material_id|
+        ShoeOption.create!(shoe_id: shoe_3.id, color_id: color_id, material_id: material_id)
+    end
+end
 
 shoe_4 = Shoe.create!(gender: 'Female', model: 'Loungers')
-shoe_4.material_ids = [wool.id, tree.id];
-shoe_4.color_ids = all_color_ids;
+# shoe_4.material_ids = [wool.id, tree.id];
+# shoe_4.color_ids = all_color_ids;
+shoe_4_color_ids = [grey.id, black.id];
+shoe_4_material_ids = [ tree.id];
+
+shoe_4_color_ids.each do |color_id|
+    shoe_4_material_ids.each do |material_id|
+        ShoeOption.create!(shoe_id: shoe_4.id, color_id: color_id, material_id: material_id)
+    end
+end
 
 # shoe_2 = Shoe.create!(gender: 'Male', model: 'Runners')
 # shoe_2.material_ids = [wool.id];
