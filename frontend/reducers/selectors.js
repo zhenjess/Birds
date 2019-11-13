@@ -20,9 +20,11 @@ export const selectAllShoes = (state) => {
 
 export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded by url
     // debugger
+   return [];
     const shoes = [];
     //iterate through shoeMaterials slice of state
     Object.values(state.entities.shoeMaterials).forEach((shoeMaterial) => {
+       
         const shoe = state.entities.shoes[shoeMaterial.shoeId]; //to get shoe //shoe material has shoe id and use to key into shoe's slice of state 
         // debugger
         if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
