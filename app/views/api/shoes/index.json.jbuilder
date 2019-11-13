@@ -17,30 +17,38 @@ json.materials do
     end
 end
 
-#link shoe materials to shoes
-json.shoeMaterials do 
-    @shoe_materials.each do |shoe_material|
-        json.set! shoe_material.id do
-            json.extract! shoe_material, :id, :shoe_id, :material_id
-        end
-    end
-end
+# #link shoe materials to shoes
+# json.shoeMaterials do 
+#     @shoe_materials.each do |shoe_material|
+#         json.set! shoe_material.id do
+#             json.extract! shoe_material, :id, :shoe_id, :material_id
+#         end
+#     end
+# end
 
 #add colors key
 json.colors do
     #access instance variable set in shoes controller
     @colors.each do |color|
         json.set! color.id do #use id as outer key
-            json.extract! color, :id, :hue
+            json.extract! color, :id, :color
         end
     end
 end
 
-#link shoe colors to shoes
-json.shoeColors do 
-    @shoe_colors.each do |shoe_color|
-        json.set! shoe_color.id do 
-            json.extract! shoe_color, :id, :shoe_id, :hue_id 
+# #link shoe colors to shoes
+# json.shoeColors do 
+#     @shoe_colors.each do |shoe_color|
+#         json.set! shoe_color.id do 
+#             json.extract! shoe_color, :id, :shoe_id, :hue_id 
+#         end
+#     end
+# end
+
+json.shoeOptions do 
+    @shoe_options.each do |shoe_option|
+        json.set! shoe_option.id do 
+            json.extract! shoe_option, :id, :shoe_id, :color_id, :material_id 
         end
     end
 end

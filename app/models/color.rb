@@ -1,5 +1,5 @@
 class Color < ApplicationRecord
-    validates :hue, presence: true
+    validates :color, presence: true
 
     has_many :shoe_colors
     has_many :shoes, 

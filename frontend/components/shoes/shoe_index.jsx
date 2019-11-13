@@ -91,7 +91,7 @@ class ShoeIndex extends React.Component {
                                 <ShoeIndexItem
                                     shoe={shoe}
                                     key={`${shoe.id}-${shoe.material}`}
-                                    key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                                    key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                                 />
                             ))
                         }
@@ -117,7 +117,7 @@ class ShoeIndex extends React.Component {
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
-                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                             />
                         ))
                     }
@@ -134,7 +134,7 @@ class ShoeIndex extends React.Component {
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
-                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                             />
                         ))
                     }
@@ -151,7 +151,7 @@ class ShoeIndex extends React.Component {
                             <ShoeIndexItem
                                 shoe={shoe}
                                 key={`${shoe.id}-${shoe.material}`}
-                                key={`${shoe.id}-${shoe.material}-${shoe.hue}`}
+                                key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                             />
                         ))
                     }
