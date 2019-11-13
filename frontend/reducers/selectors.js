@@ -19,21 +19,21 @@ export const selectAllShoes = (state) => {
 
 
 export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded by url
-    // debugger
-//    return [];
+    //    return [];
     const shoes = [];
-     Object.values(state.entities.shoeOptions).forEach((shoeOption) => {
+    Object.values(state.entities.shoeOptions).forEach((shoeOption) => {
         const shoe = state.entities.shoes[shoeOption.shoeId];
-
+        
         if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
             const color = state.entities.colors[shoeOption.colorId];
             const material = state.entities.materials[shoeOption.materialId];
-    
+            
             const shoeItem = Object.assign({}, color, material, shoe);
             shoes.push(shoeItem);
         }
-     })
-     return shoes;
+    })
+    // debugger
+    return shoes;
 
     //iterate through shoeMaterials slice of state
     // Object.values(state.entities.shoeMaterials).forEach((shoeMaterial) => {
