@@ -1,5 +1,7 @@
 import React from "react";
 
+import Modal from './modal/modal';
+
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
 import SignupFormContainer from './session/signup_form_container';
@@ -58,7 +60,15 @@ import ShoeIndexContainer from './shoes/shoe_index_container';
 
 const App = () => (
     <div>
-        <Route path="/" component={NavBarContainer}/> 
+        <div>
+            <Modal />
+            <header>
+                <Link to="/shoes" className="nest-link">
+                    <h1>You're $50 away from free shipping</h1>
+                </Link>
+            </header>  
+            <Route path="/" component={NavBarContainer}/> 
+        </div>
         <Switch>
             <Route exact path="/" component={Main}/> 
             <Route exact path="/account" component={AccountFormsContainer}/> 
