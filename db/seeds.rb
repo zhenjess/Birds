@@ -11,21 +11,20 @@ require 'open-uri'
 User.destroy_all
 Shoe.destroy_all
 Material.destroy_all
-ShoeMaterial.destroy_all
 Color.destroy_all
-ShoeColor.destroy_all
+ShoeOption.destroy_all
 
 demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gmail.com', password: "password")
 
 wool = Material.create!(material: 'Wool');
 tree = Material.create!(material: 'Tree');
 
-grey = Color.create!(hue: 'Grey');
-black = Color.create!(hue: 'Black');
-white = Color.create!(hue: 'White');
-red = Color.create!(hue: 'Red');
-green = Color.create!(hue: 'Green');
-blue = Color.create!(hue: 'Blue');
+grey = Color.create!(color: 'Grey');
+black = Color.create!(color: 'Black');
+white = Color.create!(color: 'White');
+red = Color.create!(color: 'Red');
+green = Color.create!(color: 'Green');
+blue = Color.create!(color: 'Blue');
 
 all_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
 

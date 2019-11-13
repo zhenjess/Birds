@@ -35,6 +35,7 @@ const ShoeIndexItem = ({ shoe }) => (
             {/* <span>{shoe.id}</span>  */}
             <span>{shoe.hue}</span>
             <br/> 
+            <span>{"$95 "}</span>
             <span>{shoe.gender + " "}</span>
             <span>{shoe.material + " "}</span>
             <span>{shoe.model}</span>

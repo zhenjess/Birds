@@ -7,9 +7,10 @@ class Api::ShoesController < ApplicationController
     def index 
         @shoes = Shoe.all
         @materials = Material.all 
-        @shoe_materials = ShoeMaterial.all
+        # @shoe_materials = ShoeMaterial.all
         @colors = Color.all
-        @shoe_colors = ShoeColor.all
+        # @shoe_colors = ShoeColor.all
+        @shoe_options = ShoeOption.all
         #implicit render index
         
     end

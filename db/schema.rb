@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_223025) do
+ActiveRecord::Schema.define(version: 2019_11_13_201958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_11_12_223025) do
   end
 
   create_table "colors", force: :cascade do |t|
-    t.string "hue", null: false
+    t.string "color", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,22 +48,13 @@ ActiveRecord::Schema.define(version: 2019_11_12_223025) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "shoe_colors", force: :cascade do |t|
+  create_table "shoe_options", force: :cascade do |t|
     t.integer "shoe_id", null: false
-    t.integer "hue_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["hue_id"], name: "index_shoe_colors_on_hue_id"
-    t.index ["shoe_id"], name: "index_shoe_colors_on_shoe_id"
-  end
-
-  create_table "shoe_materials", force: :cascade do |t|
-    t.integer "shoe_id", null: false
+    t.integer "color_id", null: false
     t.integer "material_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["material_id"], name: "index_shoe_materials_on_material_id"
-    t.index ["shoe_id"], name: "index_shoe_materials_on_shoe_id"
+    t.index ["color_id"], name: "index_shoe_options_on_color_id"
+    t.index ["material_id"], name: "index_shoe_options_on_material_id"
+    t.index ["shoe_id", "color_id", "material_id"], name: "index_shoe_options_on_shoe_id_and_color_id_and_material_id", unique: true
   end
 
   create_table "shoes", force: :cascade do |t|
