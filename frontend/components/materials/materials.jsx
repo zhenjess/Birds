@@ -12,11 +12,8 @@ class Materials extends React.Component {
         return (
             <div className="material-image">
                 <div className="header-text">
-                    <style>
-                        @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                    </style>
-                    <h1>NATURAL</h1>
-                    <h1>SUSTAINABLE</h1>
+                    <p>NATURAL</p>
+                    <p>SUSTAINABLE</p>
                 </div>
 
                 <div className="material-types">

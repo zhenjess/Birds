@@ -9,21 +9,27 @@ body, html {
     height: 65vh;
     width: 100vw;
 
-    background-position: 30% 65%;
+    background-position: 50% 70%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    min-height: 400px;
+    min-height: 500px;
 
     .shoe-header-text {
         text-align: center;
         // transform: rotate(-6deg);
         color: white;
         font-family: 'Merriweather Sans', sans-serif;
-        font-size: 24px;
+        .shoe-header-title {
+            font-size: 48px;
+        }
+
+        .shoe-header-texts {
+            font-size: 16px;
+        }
     }
 }
 
@@ -33,21 +39,27 @@ body, html {
     height: 65vh;
     width: 100vw;
 
-    background-position: 40% 65%;
+    background-position: 50% 70%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    min-height: 400px;
+    min-height: 500px;
 
     .shoe-header-text {
         text-align: center;
         // transform: rotate(-6deg);
         color: white;
         font-family: 'Merriweather Sans', sans-serif;
-        font-size: 24px;
+        .shoe-header-title {
+            font-size: 48px;
+        }
+
+        .shoe-header-texts {
+            font-size: 16px;
+        }
     }
 }
 
@@ -78,6 +90,8 @@ body, html {
     font-family: sans-serif;
     margin-top: 75px;
     margin-left: 300px;
+    font-size: 24px;
+    line-height: 1.31;
 }
 
 .shoe-category {
@@ -93,7 +107,7 @@ body, html {
 
 
 .shoe-index-item:hover {
-    box-shadow: 80px 80px 80px 80px grey;
+    box-shadow: 80px 80px 80px 80px whitesmoke;
 }
 
 // img.grey-shoe img.black-shoe{
