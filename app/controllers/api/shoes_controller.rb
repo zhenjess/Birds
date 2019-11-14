@@ -37,7 +37,7 @@ class Api::ShoesController < ApplicationController
 
     private
     def shoe_params
-        params.require(:shoe).permit(:model, :gender)
+        params.require(:shoe).permit(:model, :gender, photos: [])
     end
 end
 

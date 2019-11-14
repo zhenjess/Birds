@@ -29,10 +29,11 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
             const material = state.entities.materials[shoeOption.materialId];
             
             const shoeItem = Object.assign({}, color, material, shoe);
+            shoeItem.photoUrl = shoeOption.photoUrl;
             shoes.push(shoeItem);
         }
     })
-    // debugger
+    //debugger
     return shoes;
 
     //iterate through shoeMaterials slice of state

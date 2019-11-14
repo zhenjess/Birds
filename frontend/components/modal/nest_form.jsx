@@ -20,7 +20,7 @@ class NestForm extends React.Component {
     }
 
     renderErrors() {
-        id (this.state.processed) {
+        if (this.state.processed) {
             return (
                 <div>
                     <ul>

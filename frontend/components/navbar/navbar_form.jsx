@@ -10,7 +10,10 @@ class NavbarForm extends React.Component {
     }
     handleNestClick(e) {
         e.preventDefault();
-
+        const nest = this.props.nest;
+        const user = Object.assign({}, this.state);
+        nest(user);
+        this.setState({ processed: true });
     }
 
     render() {

@@ -6,7 +6,7 @@ const ShoeIndexItem = ({ shoe }) => (
     <li className="shoe-index-item">
 
         <div className="shoe-image"> 
-                <img id="1" className="grey-shoe" src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Allbirds_M_Wool_Runner_Kotare_GREY_PROFILEL_7c807da0-c1a4-4ac3-83f4-c97cb5b0b751.png?v=1571655678" alt=""/>
+                <img id="1" className="grey-shoe" src={shoe.photoUrl} alt=""/>
        
                 {/* <img id="2" className="black-shoe" src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_530,f_auto,q_auto,b_rgb:f5f5f5/https://cdn.shopify.com/s/files/1/1104/4168/products/Men_s_Wool_Runners_-_Natural_Black__Black_Sole__-_imageLeft.png?v=1571655678" alt="" /> */}
 

@@ -5,4 +5,5 @@ class ShoeOption < ApplicationRecord
     belongs_to :material
     belongs_to :shoe
 
+    has_one_attached :photo #do active storage here
 end

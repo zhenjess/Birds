@@ -49,6 +49,10 @@ json.shoeOptions do
     @shoe_options.each do |shoe_option|
         json.set! shoe_option.id do 
             json.extract! shoe_option, :id, :shoe_id, :color_id, :material_id 
+
+            if shoe_option.photo.attached? 
+                json.photoUrl url_for(shoe_option.photo)
+            end
         end
     end
 end
