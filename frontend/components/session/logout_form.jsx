@@ -29,17 +29,35 @@ class LogoutForm extends React.Component {
 
     render() {
         return (
-            <div className="logout-form-container">
-                <form>
-                    <h2>MY ACCOUNT</h2>
-                    <style>
-                        @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
-                    </style>
-                    <br/>
-                    {/* <input type="submit" className="submit" value="LOGOUT"/>   */}
-                    <Link className="logout-link" onClick={this.handleSubmit} to="/">LOGOUT</Link> 
-                </form>
+            <div className="logout">
+                <div className="logout-form-container">
+                    <form>
+                        <h2>MY ACCOUNT</h2>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+                        </style>
+                        <br/>
+                        {/* <input type="submit" className="submit" value="LOGOUT"/>   */}
+                        <Link className="logout-link" onClick={this.handleSubmit} to="/">LOGOUT</Link> 
+                    </form>
+                </div>
+                <div className="logout-status">
+                    <div className="orders">
+                        <p>You haven't placed any orders yet.</p>
+                    </div>
+
+                    <div className="default">
+                        <h3 className="name">All Birds</h3>
+                        <div className="address-body">
+                            <div className="email">allbirds@gmail.com</div>
+                            <p>YOU HAVEN'T ADDED AN ADDRESS YET.</p>
+                            <a href="/account">Add an Address</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         );
     }
 }
