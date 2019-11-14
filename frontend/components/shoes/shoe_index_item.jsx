@@ -1,9 +1,13 @@
 import React from 'react';
 
+import ShoesHeader from './shoes_header';
+
 import { Link } from 'react-router-dom';
 
 const ShoeIndexItem = ({ shoe }) => (
+    
     <li className="shoe-index-item">
+
 
         <div className="shoe-image"> 
                 <img id="1" className="grey-shoe" src={shoe.photoUrl} alt=""/>

@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Route } from 'react-router-dom';
 
+import ShoesHeader from './shoes_header';
+
 import ShoeIndexItem from './shoe_index_item';
 
 class ShoeIndex extends React.Component {
@@ -80,7 +82,13 @@ class ShoeIndex extends React.Component {
         const { shoes } = this.props;
         // const filterAttrs = this.state.filterAttributes;
         // const { filterName, filterId, filterOptions } = filterAttrs;
+        // debugger
         return (
+            
+        <div>
+            <ShoesHeader 
+                gender={this.props.match.params.gender}
+             />
             <div className="shoe-index-text">
                 <h2>Wool Runners</h2>
                 
@@ -192,6 +200,7 @@ class ShoeIndex extends React.Component {
 
                 </ul>
             </div>
+        </div>
         )
     }
 }
