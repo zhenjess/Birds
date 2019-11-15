@@ -11,8 +11,8 @@ body, html {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://clipground.com/images/free-clipart-of-sugarcane-19.png");
     
       /* Set a specific height */
-    height: 50vh;
-    width: 53vw;
+    //height: 50vh;
+    width: 100%;
     
       /* Position and center the image to scale nicely on all screens */
     background-position: 50% 85%;
@@ -23,7 +23,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     min-height: 500px;
-    margin-left: 520px;
+    //margin-left: 520px;
 }
     
     /* Place text in the middle of the image */
