@@ -90,16 +90,16 @@ const App = () => (
         <Route exact path="/materials" component={MoreMaterialsMain} /> */}
 
         <Route exact path="/materials/tree" component={AboutTreeMaterial} />
-        <Route exact path="/materials/tree" component={AboutTreeSub} />
-        <Route exact path="/materials/tree" component={MoreTreeMain} /> 
+        {/* <Route exact path="/materials/tree" component={AboutTreeSub} />
+        <Route exact path="/materials/tree" component={MoreTreeMain} />  */}
 
         <Route exact path="/materials/sugar" component={AboutSugarMaterial} />
-        <Route exact path="/materials/sugar" component={AboutSugarSub} />
-        <Route exact path="/materials/sugar" component={MoreSugarMain} />   
+        {/* <Route exact path="/materials/sugar" component={AboutSugarSub} />
+        <Route exact path="/materials/sugar" component={MoreSugarMain} />    */}
 
         <Route exact path="/materials/trino" component={AboutTrinoMaterial} />
-        <Route exact path="/materials/trino" component={AboutTrinoSub} />
-        <Route exact path="/materials/trino" component={MoreTrinoMain} />   
+        {/* <Route exact path="/materials/trino" component={AboutTrinoSub} />
+        <Route exact path="/materials/trino" component={MoreTrinoMain} />    */}
     </div>
 
 );
