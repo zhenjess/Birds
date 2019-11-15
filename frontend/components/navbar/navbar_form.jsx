@@ -58,7 +58,7 @@ class NavbarForm extends React.Component {
                         </div>
                     </div>
 
-                    <a href="#chicks">CHICKS</a>
+                    <a href="#chicks">KIDS</a>
 
                 </div>  
                     <style>
