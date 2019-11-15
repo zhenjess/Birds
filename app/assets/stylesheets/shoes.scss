@@ -79,6 +79,8 @@ body, html {
 
     .dropdown-content {
         display: none;
+        flex-direction: row;
+        justify-content: space-evenly; 
         position: absolute;
         background-color: white;
         min-width: 130px;
