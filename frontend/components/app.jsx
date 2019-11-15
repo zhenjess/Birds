@@ -28,9 +28,9 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import AboutMaterials from "./materials/about_materials";
 
-import AboutMaterialsSub from './materials/about_materials_sub';
+// import AboutMaterialsSub from './materials/about_materials_sub';
 
-import MoreMaterialsMain from './materials/more_materials_main';
+// import MoreMaterialsMain from './materials/more_materials_main';
 
 import Tree from './materials/tree/tree';
 
@@ -82,11 +82,11 @@ const App = () => (
         </Switch>
         <Route exact path="/" component={AboutMain} /> 
         <Route exact path="/" component={MaterialsMain} />
-        <Route exact path="/" component={AccessoriesMain} />
+        {/* <Route exact path="/" component={AccessoriesMain} /> */}
 
         <Route exact path="/materials" component={AboutMaterials} />
-        <Route exact path="/materials" component={AboutMaterialsSub} />
-        <Route exact path="/materials" component={MoreMaterialsMain} />
+        {/* <Route exact path="/materials" component={AboutMaterialsSub} />
+        <Route exact path="/materials" component={MoreMaterialsMain} /> */}
 
         <Route exact path="/materials/tree" component={AboutTreeMaterial} />
         <Route exact path="/materials/tree" component={AboutTreeSub} />

@@ -89,6 +89,27 @@ class ShoeIndex extends React.Component {
             <ShoesHeader 
                 gender={this.props.match.params.gender}
              />
+
+             <div className='shoebar'>
+                 <div className="right">
+                    <div className="dropdowns">
+                        <span className="bar-link">Size</span>
+
+                        <div className="dropdown-items">
+                            <h3>8</h3>
+                        </div>
+                    </div>
+
+                    <div className="dropdowns">
+                        <span className="bar-link">Hue</span>
+
+                        <div className="dropdown-items">
+                            <h3>Blue</h3>
+                        </div>
+                    </div>
+                 </div>
+
+             </div>
             <div className="shoe-index-text">
                 <h2>Wool Runners</h2>
                 

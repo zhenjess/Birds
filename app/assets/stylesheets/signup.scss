@@ -1,3 +1,16 @@
+.signup-errors {
+    position: absolute;
+    top: 150px;
+
+    ul{
+        padding: 0px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+}
+
 .signup-form-container {
     background-color: #F1EBE7;
     display: flex;
@@ -13,6 +26,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     font-weight: 450;
+    position: relative;
     
     h2 {
         font-family: 'Roboto', sans-serif;

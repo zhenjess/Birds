@@ -30,10 +30,10 @@ class SignupForm extends React.Component {
     renderErrors() {
         if (this.state.processed) {
             return (
-                <div>
+                <div className="signup-errors">
                     <ul>
                         {
-                            this.props.errors.map( (error, i) => (
+                            this.props.errors.map((error, i) => (
                                 <li key={`error-${i}`}>{error}</li>
                             ))
                         }
@@ -48,7 +48,6 @@ class SignupForm extends React.Component {
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit}>
 
-                    {this.renderErrors()}
                     <div className="signup-form">
                         <br/>
                         <h2>CREATE AN ACCOUNT</h2>
@@ -59,6 +58,7 @@ class SignupForm extends React.Component {
                         <p>Your credit card information will not be saved.</p>
                         <p className="first-p">Register for fast and easy checkout and to save account order information.</p>
                     
+                        {this.renderErrors()}
                      
                         <label>FIRST NAME</label>
                         <style>

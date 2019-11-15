@@ -40,9 +40,9 @@ class LoginForm extends React.Component {
     demoLogin(e) {
         e.preventDefault();
         const demoLogin = { email: 'user@gmail.com', password: 'password' };
-        demoLogin = this.props.demoLogin;
-        const demoUser = Object.assign({}, this.state);
-        login(demoUser);
+        // demoLogin = this.props.demoLogin;
+        // const demoUser = Object.assign({}, this.state);
+        this.props.login(demoLogin);
         this.setState({ processed: true });
     }
 

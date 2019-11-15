@@ -10,11 +10,15 @@ class Materials extends React.Component {
 
     render() {
         return (
+            <>
             <div className="material-image">
                 <div className="header-text">
                     <p>NATURAL</p>
                     <p>SUSTAINABLE</p>
                 </div>
+            </div>
+
+           
 
                 <div className="material-types">
                     <style>
@@ -49,7 +53,8 @@ class Materials extends React.Component {
                         />
                     </Link>
                 </div>
-            </div>
+            
+            </>
         );
     }
 
