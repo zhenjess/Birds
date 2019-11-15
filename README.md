@@ -10,10 +10,11 @@ The project was designed and built within a two-week timeframe, though I plan to
 
 ## Features
   * Secure frontend to backend user authentication using BCrypt.
-  * Users can select and customize which pair of shoes to purchase from the shoe index.
-  * Users can learn more about the materials used to produce the pair through the links.
+  * Users can view pairs of shoes from the shoe collection.
+  * Users can learn more about the materials used to produce the pair through material links.
   * Shoe catalog dynamically adapts to display the entire shoe collection in an appealing way.
-  * Birds support images and animated GIFs.
+  * Smooth loading and transitions through tabs and pages.
+  * Implemented animations, gifs, and images for improved user experience.
 
 ### Shoe Collection
 
@@ -33,7 +34,7 @@ In addition to the included packages, [AWS][AWS S3] was used for image uploading
 
 [AWS]: https://aws.amazon.com/
 
-## Possible future features
+## Upcoming features
 
 In the future I would like to add:
   * Branch pages/birds
