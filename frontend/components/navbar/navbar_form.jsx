@@ -8,12 +8,20 @@ class NavbarForm extends React.Component {
         super(props);
         this.handleNestClick = this.handleNestClick.bind(this);
     }
-    handleNestClick(e) {
+    handleNestClick() {
         e.preventDefault();
         const nest = this.props.nest;
         const user = Object.assign({}, this.state);
         nest(user);
         this.setState({ processed: true });
+
+    }
+
+    handleSubmit(modal) {
+        return (e) => {
+            e.preventDefault();
+            this.props.openModal(modal);
+        }
     }
 
     render() {
@@ -56,7 +64,7 @@ class NavbarForm extends React.Component {
                     <a href="#branches">BRANCHES</a>
                     <a href="#account">ACCOUNT</a>
                     <a href="?">?</a>
-                    <button onClick={this.handleNestClick}>NEST</button>
+                    <button onClick={this.handleSubmit("shoe index")}>NEST</button>
                 </div>
             </div>
         );

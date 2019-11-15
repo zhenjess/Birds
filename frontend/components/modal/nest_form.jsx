@@ -1,6 +1,12 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { withRouter } from 'react-router-dom';
+
+import ShoeIndex from '../shoes/shoe_index';
+
+import ShoeIndexContainer from '../shoes/shoe_index_container';
 
 class NestForm extends React.Component {
     constructor(props) {
@@ -23,6 +29,7 @@ class NestForm extends React.Component {
         if (this.state.processed) {
             return (
                 <div>
+                    Hello
                     <ul>
                         {
                             this.props.errors.map( (error, i) => (
@@ -37,18 +44,57 @@ class NestForm extends React.Component {
 
     render() {
         return (
-           <div className="shop-form-container">
-               <form onSubmit={this.handleSubmit}>
+            <div className="nest-form">
 
-                   {this.renderErrors()}
-                   <div className="shop-form">
-                        
+                    <div className="shop-links">
+                        <p>Your Nest is Empty</p>
                         <style>
-                            @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
-                        </style>
-                   </div>
-               </form>
-           </div>
+                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
+                            </style>
+                        <Link className="shop-link" to={"/shoes/male"}>
+                            <input
+                                type="submit"
+                                className="submit"
+                                value="SHOP MALE"
+                            />
+                        </Link>
+                        <Link className="shop-link" to={"/shoes/female"}>
+                            <input
+                                type="submit"
+                                className="submit"
+                                value="SHOP FEMALE"
+                            />
+                        </Link>
+                        {/* <Link className="shop-link" to={"/shoes/chicks"}>
+                            <input
+                                type="submit"
+                                className="submit"
+                                value="SHOP CHICKS"
+                            />
+                        </Link>
+                        <Link className="shop-link" to={"/shoes"}>
+                            <input
+                                type="submit"
+                                className="submit"
+                                value="SHOP INSOLES"
+                            />
+                        </Link> */}
+                    </div>
+                {/* <div className="shop-form-container">
+                    <form onSubmit={this.handleSubmit}>
+
+                        {this.renderErrors()}
+                        <div className="shop-form">
+                                
+                                <style>
+                                    @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+                                </style>
+                        </div>
+                    </form>
+                </div> */}
+                {/* <ShoeIndex />
+                <ShoeIndexContainer /> */}
+            </div>
 
         );
     }
@@ -58,36 +104,3 @@ class NestForm extends React.Component {
 export default NestForm;
 
 
-<div className="material-types">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
-                    </style>
-    <Link className="material-link" to={"/materials"}>
-        <input
-            type="submit"
-            className="submit"
-            value="WOOL"
-        />
-    </Link>
-    <Link className="material-link" to={"/materials/tree"}>
-        <input
-            type="submit"
-            className="submit"
-            value="TREE"
-        />
-    </Link>
-    <Link className="material-link" to={"/materials/sugar"}>
-        <input
-            type="submit"
-            className="submit"
-            value="SUGAR"
-        />
-    </Link>
-    <Link className="material-link" to={"/materials/trino"}>
-        <input
-            type="submit"
-            className="submit"
-            value="Trino™"
-        />
-    </Link>
-</div>

@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { shoes } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import NestForm from './nest_form';
 
 const mapStateToProps = ({ errors }) => {
     return {

@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import NavbarForm from './navbar_form';
 
 import { Link, Route } from 'react-router-dom';
+import { openModal, closeModal } from '../../actions/modal_actions';
+
 
 
 const mapStateToProps = state => ({
@@ -12,7 +14,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    openModal: (modal) => dispatch(openModal(modal))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavbarForm);
