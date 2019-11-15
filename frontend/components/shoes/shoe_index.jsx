@@ -90,7 +90,7 @@ class ShoeIndex extends React.Component {
                 gender={this.props.match.params.gender}
              />
 
-             <div className='shoebar'>
+             {/* <div className='shoebar'>
                  <div className="right">
                     <div className="dropdowns">
                         <span className="bar-link">Size</span>
@@ -109,7 +109,7 @@ class ShoeIndex extends React.Component {
                     </div>
                  </div>
 
-             </div>
+             </div> */}
             <div className="shoe-index-text">
                 <h2>Wool Runners</h2>
                 

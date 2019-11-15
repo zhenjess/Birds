@@ -34,6 +34,60 @@ body, html {
     }
 }
 
+.shoe-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    border-bottom: 3px solid gray;
+    padding: 160px 100px 0px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    top: 0px; //for fixed and absolute
+
+    .left-bar p {
+        position: relative;
+        width: 220px;
+        left: 1%;
+        display: flex;
+        font-family: sans-serif;
+        font-size: 12px;
+    }
+
+    .right-bar {
+        position: relative;
+        width: 350px;
+        right: 1%;
+        display: flex;
+        justify-content: space-evenly;
+        // float: right;
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 130px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    
+}
+
 .male-shoe-image {
      display: flex;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2F1549480170%2Fallbirds-new-colorways-ALLBIRDSNEW0219.jpg%3Fitok%3DDbzhFLCb&q=85");
