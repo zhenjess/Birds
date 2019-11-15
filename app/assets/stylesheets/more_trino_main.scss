@@ -6,14 +6,14 @@ body, html {
 .trino {
   footer {
         height: 200px;
-        width: 100%;
+        width: 100vw;
         background-color: #1f3131;
         margin: 0;
         padding: 0;
         border: 0;
         font-size: 100%;
         font: inherit;
-        font-family: 'Poppins', sans-serif;
+        display: flex;
         vertical-align: baseline;
   }
 }
