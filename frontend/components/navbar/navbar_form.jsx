@@ -36,7 +36,8 @@ class NavbarForm extends React.Component {
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown">
-                        <span className="nav-link" to="/shoes/female">FEMALE</span>
+                        <span className="nav-link" to="/shoes/female">FEMALE</span>     
+                        <i class="fas fa-caret-down"></i>
                         {/* <button className="dropbtn">FEMALE */}
                         {/* <i className="fa fa-caret-down"></i>
                         </button> */}
@@ -48,6 +49,7 @@ class NavbarForm extends React.Component {
 
                     <div className="dropdown">
                         <span className="nav-link" to="/shoes/male">MALE</span>
+                        <i class="fas fa-caret-down"></i>
                         {/* <button className="dropbtn">MALE
                         <i className="fa fa-caret-down"></i>
                         </button> */}
@@ -69,9 +71,9 @@ class NavbarForm extends React.Component {
                 <div className="nav-right">
                     <a href="#materials">MATERIALS</a>
                     <a href="#branches">BRANCHES</a>
-                    <a href="#account">ACCOUNT</a>
-                    <a href="?">?</a>
-                    <button onClick={this.handleSubmit("shoe index")}>NEST</button>
+                    <a href="#account"><i class="far fa-user"></i></a>
+                    <a href="?"><i class="far fa-question-circle"></i></a>
+                    <button onClick={this.handleSubmit("shoe index")}><i class="fas fa-shopping-cart"></i></button>
                 </div>
             </div>
         );

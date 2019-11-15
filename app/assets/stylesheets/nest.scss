@@ -27,8 +27,14 @@
 
     .nest-text {
         border-bottom: 3px solid grey;
+
+        .nest-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
-    
+
     .shop-links {
         display: flex;
         align-items: center;

@@ -65,6 +65,7 @@ class NestForm extends React.Component {
 
                     <div className="shop-links">
                     <div className="nest-text">
+                        <div className="nest-img"><i class="fas fa-shopping-cart"></i></div>
                         <p>You're $50 away from free shipping</p>
                     </div>
                     <br/>

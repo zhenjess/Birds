@@ -24,6 +24,10 @@
     justify-content: space-between;
     font-family: sans-serif;
     font-size: 12px;
+
+    a:hover {
+      border-bottom: 2px solid black;
+    }
 }
 
 .dropdown {
@@ -49,6 +53,11 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid black;
 }
 
 // .logo {
@@ -86,4 +95,12 @@
     justify-content: space-between;
     font-family: sans-serif;
     font-size: 12px;
+
+    far fa-user, far fa-question-circle, fas fa-shopping-cart {
+      font-size: 32px;
+    }
+
+    a:hover {
+      border-bottom: 2px solid black;
+    }
 }

@@ -17,6 +17,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     min-height: 500px;
+    box-sizing: inherit;
 
     .shoe-header-text {
         text-align: center;
@@ -47,6 +48,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     min-height: 500px;
+    box-sizing: inherit;
 
     .shoe-header-text {
         text-align: center;
@@ -107,7 +109,7 @@ body, html {
 
 
 .shoe-index-item:hover {
-    box-shadow: 80px 80px 80px 80px whitesmoke;
+    box-shadow: 60px 60px 60px 60px #ebe8e8;
 }
 
 // img.grey-shoe img.black-shoe{
