@@ -85,7 +85,7 @@ class ShoeIndex extends React.Component {
         // debugger
         return (
             
-        <div>
+        <div className="shoe">
             <ShoesHeader 
                 gender={this.props.match.params.gender}
              />
@@ -221,6 +221,7 @@ class ShoeIndex extends React.Component {
 
                 </ul>
             </div>
+            <footer></footer>
         </div>
         )
     }

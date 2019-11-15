@@ -37,7 +37,7 @@ class NavbarForm extends React.Component {
                 <div className="nav-left">
                     <div className="dropdown">
                         <span className="nav-link" to="/shoes/female">FEMALE</span>     
-                        <i class="fas fa-caret-down"></i>
+                        <i className="fas fa-caret-down icon"></i>
                         {/* <button className="dropbtn">FEMALE */}
                         {/* <i className="fa fa-caret-down"></i>
                         </button> */}
@@ -49,7 +49,7 @@ class NavbarForm extends React.Component {
 
                     <div className="dropdown">
                         <span className="nav-link" to="/shoes/male">MALE</span>
-                        <i class="fas fa-caret-down"></i>
+                        <i className="fas fa-caret-down icon"></i>
                         {/* <button className="dropbtn">MALE
                         <i className="fa fa-caret-down"></i>
                         </button> */}
@@ -71,9 +71,9 @@ class NavbarForm extends React.Component {
                 <div className="nav-right">
                     <a href="#materials">MATERIALS</a>
                     <a href="#branches">BRANCHES</a>
-                    <a href="#account"><i class="far fa-user"></i></a>
-                    <a href="?"><i class="far fa-question-circle"></i></a>
-                    <button onClick={this.handleSubmit("shoe index")}><i class="fas fa-shopping-cart"></i></button>
+                    <a href="#account"><i className="far fa-user icon"></i></a>
+                    <a href="?"><i className="far fa-question-circle icon"></i></a>
+                    <button onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart icon"></i></button>
                 </div>
             </div>
         );

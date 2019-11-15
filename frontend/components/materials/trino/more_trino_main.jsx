@@ -9,7 +9,10 @@ class MoreTrinoMain extends React.Component {
 
     render() {
         return (
-            <div className="more-trino-main-image"></div>
+            <div className="trino">
+                <div className="more-trino-main-image"></div>
+                <footer></footer>
+            </div>
         );
     }
 }

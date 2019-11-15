@@ -9,7 +9,10 @@ class MoreTreeMain extends React.Component {
 
     render() {
         return (
-            <div className="more-tree-main-image"></div>
+            <div className="tree">
+                <div className="more-tree-main-image"></div>
+                <footer></footer>
+            </div>
         );
     }
 }

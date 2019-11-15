@@ -9,7 +9,11 @@ class MoreSugarMain extends React.Component {
 
     render() {
         return (
-            <div className="more-sugar-main-image"></div>
+            <div className="sugar">
+
+                <div className="more-sugar-main-image"></div>
+                <footer></footer>
+            </div>
         );
     }
 }

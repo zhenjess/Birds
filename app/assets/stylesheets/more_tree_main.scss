@@ -1,7 +1,23 @@
-// body, html {
-//     height: 100%;
-//     width: 100%;
-// }
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.tree {
+  footer {
+        height: 200px;
+        width: 100%;
+        background-color: #1f3131;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        font-family: 'Poppins', sans-serif;
+        vertical-align: baseline;
+  }
+}
+
 
 // /* The hero image */
 .more-tree-main-image {

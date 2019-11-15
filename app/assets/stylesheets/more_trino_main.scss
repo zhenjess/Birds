@@ -3,6 +3,21 @@ body, html {
     width: 100%;
 }
 
+.trino {
+  footer {
+        height: 200px;
+        width: 100%;
+        background-color: #1f3131;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        font-family: 'Poppins', sans-serif;
+        vertical-align: baseline;
+  }
+}
+
 /* The hero image */
 .more-trino-main-image {
       // background-position: bottom;
