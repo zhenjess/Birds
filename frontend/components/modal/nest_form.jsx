@@ -55,6 +55,7 @@ class NestForm extends React.Component {
 
     render() {
         return (
+
             <div className="nest-form">
                 {/* <div>
                     <Link to="/shoes" className="nest-link">
@@ -63,8 +64,9 @@ class NestForm extends React.Component {
                 </div>   */}
 
                     <div className="shop-links">
-
-                    <p>You're $50 away from free shipping</p>
+                    <div className="nest-text">
+                        <p>You're $50 away from free shipping</p>
+                    </div>
                     <br/>
                         <p>Your Nest is Empty</p>
                         <style>

@@ -23,9 +23,12 @@
 }
 
 .nest-form {
-    // h3 {
-    //     border-bottom: 3px grey;
-    // }
+    margin-left: -120px;
+
+    .nest-text {
+        border-bottom: 3px solid grey;
+    }
+    
     .shop-links {
         display: flex;
         align-items: center;
