@@ -15,6 +15,8 @@ class NestForm extends React.Component {
             processed: false
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleMaleModalClick = this.handleMaleModalClick.bind(this);
+        this.handleFemaleModalClick = this.handleFemaleModalClick.bind(this);
     }
 
     handleSubmit(e) {
@@ -42,29 +44,44 @@ class NestForm extends React.Component {
         }
     }
 
+    handleMaleModalClick() {
+        this.props.history.push('/shoes/male')
+        this.props.closeModal()
+    }
+
+    handleFemaleModalClick() {
+        this.props.history.push('/shoes/female')
+        this.props.closeModal()
+    }
+
     render() {
         return (
             <div className="nest-form">
+                <div>
+                    <Link to="/shoes" className="nest-link">
+                        <h1>You're $50 away from free shipping</h1>
+                    </Link>
+                </div>  
 
                     <div className="shop-links">
                         <p>Your Nest is Empty</p>
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                             </style>
-                        <Link className="shop-link" to={"/shoes/male"}>
+                        <div onClick={this.handleMaleModalClick} className="shop-link" >
                             <input
                                 type="submit"
                                 className="submit"
                                 value="SHOP MALE"
                             />
-                        </Link>
-                        <Link className="shop-link" to={"/shoes/female"}>
+                        </div>
+                    <div onClick={this.handleFemaleModalClick} className="shop-link">
                             <input
                                 type="submit"
                                 className="submit"
                                 value="SHOP FEMALE"
                             />
-                        </Link>
+                        </div>
                         {/* <Link className="shop-link" to={"/shoes/chicks"}>
                             <input
                                 type="submit"
@@ -101,6 +118,6 @@ class NestForm extends React.Component {
 
 }
 
-export default NestForm;
+export default withRouter(NestForm);
 
 

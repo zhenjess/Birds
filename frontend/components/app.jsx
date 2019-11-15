@@ -62,11 +62,11 @@ const App = () => (
     <div>
         <div>
             <Modal />
-            <header>
+            {/* <div>
                 <Link to="/shoes" className="nest-link">
                     <h1>You're $50 away from free shipping</h1>
                 </Link>
-            </header>  
+            </div>    */}
             <Route path="/" component={NavBarContainer}/> 
         </div>
         <Switch>

@@ -6,21 +6,28 @@ import { Link } from 'react-router-dom';
 class NavbarForm extends React.Component {
     constructor(props) {
         super(props);
-        this.handleNestClick = this.handleNestClick.bind(this);
+        // this.handleNestClick = this.handleNestClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.state = { processed: false }; 
     }
-    handleNestClick() {
-        e.preventDefault();
-        const nest = this.props.nest;
-        const user = Object.assign({}, this.state);
-        nest(user);
-        this.setState({ processed: true });
 
-    }
+    // handleNestClick() {
+    //     e.preventDefault();
+    //     const nest = this.props.nest;
+    //     const user = Object.assign({}, this.state);
+    //     nest(user);
+    //     this.setState({ processed: true });
+
+    // }
 
     handleSubmit(modal) {
         return (e) => {
             e.preventDefault();
-            this.props.openModal(modal);
+            if (this.state.processed) {
+                this.setState({ processed: false }, () => this.props.closeModal());
+            } else {
+                this.setState({ processed: true }, () => this.props.openModal(modal));
+            }
         }
     }
 

@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
         otherForm: (
             <button onClick={() => dispatch(openModal('Nest'))}>
                 Nest
-      </button>
+            </button>
         ),
         closeModal: () => dispatch(closeModal())
     };
