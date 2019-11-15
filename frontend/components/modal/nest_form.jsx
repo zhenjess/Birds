@@ -31,7 +31,6 @@ class NestForm extends React.Component {
         if (this.state.processed) {
             return (
                 <div>
-                    Hello
                     <ul>
                         {
                             this.props.errors.map( (error, i) => (
@@ -57,13 +56,16 @@ class NestForm extends React.Component {
     render() {
         return (
             <div className="nest-form">
-                <div>
+                {/* <div>
                     <Link to="/shoes" className="nest-link">
                         <h1>You're $50 away from free shipping</h1>
                     </Link>
-                </div>  
+                </div>   */}
 
                     <div className="shop-links">
+
+                    <p>You're $50 away from free shipping</p>
+                    <br/>
                         <p>Your Nest is Empty</p>
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
