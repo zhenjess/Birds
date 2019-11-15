@@ -9,14 +9,16 @@ class Tree extends React.Component {
 
     render() {
         return (
-            <div className="tree-image">
-                {/* <div className="header-text">
-                    <style>
-                        @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
-                    </style>
-                    <h1>NATURAL</h1>
-                    <h1>SUSTAINABLE</h1>
-                </div> */}
+            <div>
+                <div className="tree-image">
+                    {/* <div className="header-text">
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:800i&display=swap');
+                        </style>
+                        <h1>NATURAL</h1>
+                        <h1>SUSTAINABLE</h1>
+                    </div> */}
+                </div>
 
                 <div className="material-types">
                     <style>
