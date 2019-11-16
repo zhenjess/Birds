@@ -47,6 +47,9 @@ a:visited {
 }
 
 .main-links {
+   a:visited {
+    color: white;
+  }
     display: flex;
     align-items: center;
     z-index: 1;
@@ -66,6 +69,9 @@ a:visited {
     font-size: 14px;
     
     .link-text {
+      a:visited {
+        color: white;
+      }
         border-bottom: 2px solid white;
         margin: 20px;
         padding: 0px 60px 0px 60px;
