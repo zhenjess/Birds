@@ -33,6 +33,10 @@
     font-family: sans-serif;
     font-size: 12px;
 
+    .nav-left > a:visited {
+      color: black;
+    }
+
     a:hover {
       border-bottom: 2px solid black;
     }
@@ -103,6 +107,10 @@
     justify-content: space-between;
     font-family: sans-serif;
     font-size: 12px;
+
+    a:visited {
+      color: black;
+    }
 
    .icon {
       font-size: 18px;
