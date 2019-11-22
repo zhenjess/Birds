@@ -20,7 +20,7 @@ class NestForm extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDeafult();
+        e.preventDefault();
         const shop = this.props.shop;
         const user = Object.assign({}, this.state);
         shop(user);
@@ -30,7 +30,7 @@ class NestForm extends React.Component {
     renderErrors() {
         if (this.state.processed) {
             return (
-                <div>
+                <div>e
                     <ul>
                         {
                             this.props.errors.map( (error, i) => (
