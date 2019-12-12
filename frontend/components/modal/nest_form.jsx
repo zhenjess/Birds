@@ -15,8 +15,8 @@ class NestForm extends React.Component {
             processed: false
         }
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleMaleModalClick = this.handleMaleModalClick.bind(this);
-        this.handleFemaleModalClick = this.handleFemaleModalClick.bind(this);
+        this.handleMenModalClick = this.handleMenModalClick.bind(this);
+        this.handleWomenModalClick = this.handleWomenModalClick.bind(this);
     }
 
     handleSubmit(e) {
@@ -43,13 +43,13 @@ class NestForm extends React.Component {
         }
     }
 
-    handleMaleModalClick() {
-        this.props.history.push('/shoes/male')
+    handleMenModalClick() {
+        this.props.history.push('/shoes/men')
         this.props.closeModal()
     }
 
-    handleFemaleModalClick() {
-        this.props.history.push('/shoes/female')
+    handleWomenModalClick() {
+        this.props.history.push('/shoes/women')
         this.props.closeModal()
     }
 
@@ -73,18 +73,18 @@ class NestForm extends React.Component {
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                             </style>
-                        <div onClick={this.handleMaleModalClick} className="shop-link" >
+                        <div onClick={this.handleMenModalClick} className="shop-link" >
                             <input
                                 type="submit"
                                 className="submit"
-                                value="SHOP MALE"
+                                value="SHOP MEN"
                             />
                         </div>
-                    <div onClick={this.handleFemaleModalClick} className="shop-link">
+                    <div onClick={this.handleWomenModalClick} className="shop-link">
                             <input
                                 type="submit"
                                 className="submit"
-                                value="SHOP FEMALE"
+                                value="SHOP WOMEN"
                             />
                         </div>
                         {/* <Link className="shop-link" to={"/shoes/chicks"}>

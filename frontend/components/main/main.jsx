@@ -20,11 +20,11 @@ class Main extends React.Component {
 
                 <div className="main-links">
                     <div className="link-text">
-                        <Link className="main-link" to="/shoes/female">SHOP FEMALE</Link>
+                        <Link className="main-link" to="/shoes/women">SHOP WOMEN</Link>
                     </div>
 
                     <div className="link-text">     
-                        <Link className="main-link" to="/shoes/male">SHOP MALE</Link>
+                        <Link className="main-link" to="/shoes/men">SHOP MEN</Link>
                     </div>
                 </div>
             </div>    
