@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
                 clearTimeout(timeout);
             }
         }
-        typeUser();
+       // typeUser();
 
         const typePassword = () => {
             let timeout;
@@ -74,7 +74,7 @@ class LoginForm extends React.Component {
                 clearTimeout(timeout);
             }
         }
-        typePassword();
+        //typePassword();
 
         //this.props.login(demoLogin);
         //this.setState({ processed: true });
