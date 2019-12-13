@@ -58,6 +58,8 @@ import MoreTrinoMain from './materials/trino/more_trino_main';
 
 import ShoeIndexContainer from './shoes/shoe_index_container';
 
+import About from './about/about';
+
 
 const App = () => (
     <div>
@@ -78,6 +80,7 @@ const App = () => (
             <Route exact path="/materials/sugar" component={Sugar} /> 
             <Route exact path="/materials/trino" component={Trino} /> 
             <Route exact path="/shoes/:gender" component={ShoeIndexContainer} />
+            <Route exact path="/about" component={About} />
            
 
         </Switch>
