@@ -78,7 +78,22 @@ class LoginForm extends React.Component {
 
         //this.props.login(demoLogin);
         //this.setState({ processed: true });
-      
+
+        if (this.props.formType === 'login') {
+            typeUser();
+
+            window.setTimeout(() => {
+                typePassword();
+            }, 1500)
+
+            window.setTimeout(() => {
+                this.setState({email: 'user@gmail.com', password: 'password'}, () => {
+                    const user = Object.assign({}, this.state);
+                    this.props.login(user)
+                        .then(() => this.props.history.push('/account'));
+                });
+            }, 1500)
+        }
     }
     
     // typeWriter {
