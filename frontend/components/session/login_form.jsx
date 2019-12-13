@@ -53,18 +53,31 @@ class LoginForm extends React.Component {
         let email = 'user@gmail.com';
         let password = 'password';
         const typeUser = () => {
-            let timeout
+            let timeout;
             if (i < email.length) {
                 document.getElementById("email").value += email.charAt(i);
-                i++
-                timeout = setTimeout(typeUser, 100)
+                i++;
+                timeout = setTimeout(typeUser, 100);
             } else {
-                clearTimeout(timeout)
+                clearTimeout(timeout);
             }
         }
         typeUser();
-        // this.props.login(demoLogin);
-      //  this.setState({ processed: true });
+
+        const typePassword = () => {
+            let timeout;
+            if (i < password.length) {
+                document.getElementById('password').value += password.charAt(j);
+                j++;
+                timeout = setTimeout(typePassword, 100);
+            } else {
+                clearTimeout(timeout);
+            }
+        }
+        typePassword();
+
+        //this.props.login(demoLogin);
+        //this.setState({ processed: true });
       
     }
     
