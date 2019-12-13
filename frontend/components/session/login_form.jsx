@@ -6,10 +6,12 @@ class LoginForm extends React.Component {
         this.state = {
             email: "", 
             password: "", 
-            processed: false
+            processed: false,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
+        this.update = this.update.bind(this);
+        this.renderErrors = this.renderErrors.update.bind(this);
     }
 
     update(field) {
@@ -87,9 +89,14 @@ class LoginForm extends React.Component {
                 });
             }, 3000)
         }
-        
 
+        
     }
+    
+    update(field) {
+        return (e => this.setState({ [field]: e.target.value }));
+    };
+
 
     renderErrors() {
         // if (this.state.processed) {
