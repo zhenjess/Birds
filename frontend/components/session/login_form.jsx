@@ -6,13 +6,15 @@ class LoginForm extends React.Component {
         this.state = {
             email: "", 
             password: "", 
-            processed: false,
+            processed: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.demoLogin = this.demoLogin.bind(this);
-        this.update = this.update.bind(this);
-        this.renderErrors = this.renderErrors.update.bind(this);
     }
+
+    // componentDidMount() {
+    //     this.props.clearErrors();
+    // }
 
     update(field) {
         return (e) => {
@@ -26,6 +28,8 @@ class LoginForm extends React.Component {
         const user = Object.assign({}, this.state);
         login(user);
         this.setState({ processed: true });
+
+        
     }
 
     // demoLogin(e) {
@@ -41,62 +45,49 @@ class LoginForm extends React.Component {
 
     demoLogin(e) {
         e.preventDefault();
-        let i = 0;
-        let j = 0;
-        // let demoEmail = 'user@gmail.com';
-        // let demoPassword = 'password';
-        const demoLogin = { email: 'user@gmail.com', password: 'password' };
+        // const demoLogin = { email: 'user@gmail.com', password: 'password' };
         // demoLogin = this.props.demoLogin;
         // const demoUser = Object.assign({}, this.state);
-        this.props.login(demoLogin);
-        this.setState({ processed: true });
-
+        let i = 0;
+        let j = 0;
+        let email = 'user@gmail.com';
+        let password = 'password';
         const typeUser = () => {
-            let timeout;
-
+            let timeout
             if (i < email.length) {
-                document.getElementById('email').value += email.charAt(i);
-                i++;
-                timeout = setTimeOut(typeUser, 100);
+                document.getElementById("email").value += email.charAt(i);
+                i++
+                timeout = setTimeout(typeUser, 100)
             } else {
-                clearTimeout(timeout);
+                clearTimeout(timeout)
             }
         }
-
-        const typePassword = () => {
-            let timeout;
-            if (j < password.length) {
-                document.getElementById('password').value += password.chartAt(j);
-                j++;
-                timeout = setTimeOut(typePassword, 100);
-            } else {
-                clearTimeout(timeout);
-            }
-        }
-
-        if (this.props.formType === 'login') {
-            typeUser();
-
-            window.setTimeout(() => {
-                typePassword();
-            }, 1500)
-
-            window.setTimeout(() => {
-                this.setState({email: 'user@gmail.com', password: 'password'}, () => {
-                    const user = Object.assign({}, this.state);
-                    this.props.login(user)
-                        .then(() => this.props.history.push('/login'));
-                });
-            }, 3000)
-        }
-
-        
+        typeUser();
+        // this.props.login(demoLogin);
+      //  this.setState({ processed: true });
+      
     }
     
-    update(field) {
-        return (e => this.setState({ [field]: e.target.value }));
-    };
+    // typeWriter {
+    // //debugger
+    //     let i = 0;
+    //     let j = 0;
+    //     let email = 'user@gmail.com';
+    //     let password = 'password';
+    //     var speed = 100;
+    //     if (i < email.length) {
+    //         this.setState({ email: email.slice(0, i) });
+    //         i++;
+    //         setTimeout(typeWriter, speed);
+    //     }
 
+    //     if (j < password.length) {
+    //         document.getElementById('password').innerHTML += password.charAt(j);
+    //         j++;
+    //         setTimeout(typeWriter, speed);
+    //     }
+
+    // }
 
     renderErrors() {
         // if (this.state.processed) {
@@ -104,14 +95,11 @@ class LoginForm extends React.Component {
             return (
                 <div className="errors">
                     <ul>
-                        {/* {
+                        {
                             this.props.errors.map( (error, i) => (
                                 <li key={`error-${i}`}>{error}</li>
                             ))
-                        } */}
-                        {Object.keys(this.props.errors).map((error, i) => (
-                            <li key={`error-${i}`}>{this.props.errors[error]}</li>
-                        ))}
+                        }
                     </ul>
                 </div>
             );
@@ -126,6 +114,7 @@ class LoginForm extends React.Component {
                     <div className="login-content">
                         <br/>
                         <h2>LOGIN</h2>
+                       
                         {this.renderErrors()}
                         <style>
                             @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
@@ -136,8 +125,9 @@ class LoginForm extends React.Component {
                             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
                         </style>
                             <input
+                                id="email"
                                 type="text"
-                                value={this.state.email}
+                                // value={this.state.email}
                                 onChange={this.update('email')}
                             />
 
@@ -146,6 +136,7 @@ class LoginForm extends React.Component {
                             @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
                         </style>
                             <input
+                                id="password"
                                 type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
