@@ -60,6 +60,8 @@ import ShoeIndexContainer from './shoes/shoe_index_container';
 
 import About from './about/about';
 
+import Footer from './footer/footer_container';
+
 
 const App = () => (
     <div>
@@ -80,12 +82,15 @@ const App = () => (
             <Route exact path="/materials/sugar" component={Sugar} /> 
             <Route exact path="/materials/trino" component={Trino} /> 
             <Route exact path="/shoes/:gender" component={ShoeIndexContainer} />
-            <Route exact path="/about" component={About} />
-           
+            {/* <Route exact path="/about" component={About} /> */}
 
         </Switch>
         <Route exact path="/" component={AboutMain} /> 
         <Route exact path="/" component={MaterialsMain} />
+
+        <div className='footer'>
+            <Footer />
+        </div>
         {/* <Route exact path="/" component={AccessoriesMain} /> */}
 
         <Route exact path="/materials" component={AboutMaterials} />
