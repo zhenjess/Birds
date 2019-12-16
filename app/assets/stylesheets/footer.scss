@@ -16,6 +16,56 @@
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     margin-left: 5px;
+
+    .footer-label {
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    input {
+
+        box-sizing: border-box;
+       // min-height: 10px;
+        min-width: 20px;
+        padding: 15px -15px -25px 0px;
+        border: 1px solid #E6E5E5;
+        margin-top: 25px;
+        font-size: 12px;
+        border-radius: 2px;
+    }
+
+    .submit:hover {
+        cursor: pointer;
+        background-color: #EEE8E6;
+        color: black;
+    }
+
+    .submit{
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+        // min-width: 390px;
+        // min-height: 40px;
+        padding: 12px;
+        //margin: 20px;
+        transition: 0.3s;
+        border: 2px solid black;
+    }
+
+}
+
+.email-error {
+    position: absolute;
+    bottom: 20px;
+
+    ul{
+        padding: 0px;
+    }
+
+    li {
+        list-style-type: none;
+    }
 }
 
 .footer-container-flex-right {
@@ -89,3 +139,4 @@
     color: white;
     font-size: 1.5rem;
 }
+
