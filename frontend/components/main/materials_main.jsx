@@ -88,7 +88,6 @@ class MaterialsMain extends React.Component {
                         </div>
                     </div> */}
                 </div>
-                <footer></footer>
             </div>
         );
     }
