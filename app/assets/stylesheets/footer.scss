@@ -22,7 +22,7 @@
 
         box-sizing: border-box;
        // min-height: 10px;
-        min-width: 20px;
+        min-width: 200px;
         padding: 0px 10px 20px 0px;
         border: 1px solid #E6E5E5;
         margin-top: -12px;
@@ -41,7 +41,7 @@
         background-color: black;
         color: white;
         box-sizing: border-box;
-        // min-width: 390px;
+        min-width: 50px;
         // min-height: 40px;
         padding: 12px;
         //margin: 20px;
@@ -73,9 +73,9 @@
 .footer-copyright {
     color: white;
     font-weight: 400;
-    margin: 0 15px;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    margin-top: 3px;
 }
 
 .footer-git {
