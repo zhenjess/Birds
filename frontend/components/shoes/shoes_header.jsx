@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const ShoesHeader = ({ gender }) => {
-    if (gender === 'female') {
+    if (gender === 'women') {
         return (
             <div>
                 <div className="shoe-header">

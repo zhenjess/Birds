@@ -44,12 +44,12 @@ class NestForm extends React.Component {
     }
 
     handleMenModalClick() {
-        this.props.history.push('/shoes/male')
+        this.props.history.push('/shoes/men')
         this.props.closeModal()
     }
 
     handleWomenModalClick() {
-        this.props.history.push('/shoes/female')
+        this.props.history.push('/shoes/women')
         this.props.closeModal()
     }
 

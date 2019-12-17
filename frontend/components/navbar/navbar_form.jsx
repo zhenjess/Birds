@@ -36,25 +36,25 @@ class NavbarForm extends React.Component {
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown">
-                        <span className="nav-link" to="/shoes/female">WOMEN</span>     
+                        <span className="nav-link" to="/shoes/women">WOMEN</span>     
                         <i className="fas fa-caret-down icon"></i>
                         {/* <button className="dropbtn">FEMALE */}
                         {/* <i className="fa fa-caret-down"></i>
                         </button> */}
                         <div className="dropdown-content">
-                            <Link to="/shoes/female">SHOP ALL BIRDS</Link>
+                            <Link to="/shoes/women">SHOP ALL BIRDS</Link>
                             {/* <a href="#">Shop ALL BIRDS</a> */}
                         </div>
                     </div>
 
                     <div className="dropdown">
-                        <span className="nav-link" to="/shoes/male">MEN</span>
+                        <span className="nav-link" to="/shoes/men">MEN</span>
                         <i className="fas fa-caret-down icon"></i>
                         {/* <button className="dropbtn">MALE
                         <i className="fa fa-caret-down"></i>
                         </button> */}
                         <div className="dropdown-content">
-                            <Link to="/shoes/male">SHOP ALL BIRDS</Link>
+                            <Link to="/shoes/men">SHOP ALL BIRDS</Link>
                         </div>
                     </div>
 
