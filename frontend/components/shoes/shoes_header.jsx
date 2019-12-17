@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const ShoesHeader = ({ gender }) => {
-    if (gender === 'women') {
+    if (gender === 'female') {
         return (
             <div>
                 <div className="shoe-header">
@@ -10,7 +10,7 @@ const ShoesHeader = ({ gender }) => {
                     <div className="women-shoe-image">
                         <div className="shoe-header-text">
                             <p className="shoe-header-title">Women Shoes</p>
-                            <p className="shoe-header-texts">The world's most comfortable shoes for life’s everyday adventures.</p>
+                            <p className="shoe-header-texts">The world's most comfortable shoes for life’s every day adventures.</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ const ShoesHeader = ({ gender }) => {
                 <div className="men-shoe-image">
                     <div className="shoe-header-text">
                         <p className="shoe-header-title">Men Shoes</p>
-                        <p className="shoe-header-texts">The world's most comfortable shoes for life’s everyday adventures.</p>
+                        <p className="shoe-header-texts">The world's most comfortable shoes for life’s every day adventures.</p>
                     </div>
                 </div>  
 
