@@ -36,7 +36,7 @@ class NavbarForm extends React.Component {
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown">
-                        <span className="nav-link" to="/shoes/women">WOMEN</span>     
+                        <span className="nav-link" to="/shoes/female">WOMEN</span>     
                         <i className="fas fa-caret-down icon"></i>
                         {/* <button className="dropbtn">FEMALE */}
                         {/* <i className="fa fa-caret-down"></i>
@@ -48,17 +48,15 @@ class NavbarForm extends React.Component {
                     </div>
 
                     <div className="dropdown">
-                        <span className="nav-link" to="/shoes/men">MEN</span>
+                        <span className="nav-link" to="/shoes/male">MEN</span>
                         <i className="fas fa-caret-down icon"></i>
                         {/* <button className="dropbtn">MALE
                         <i className="fa fa-caret-down"></i>
                         </button> */}
                         <div className="dropdown-content">
-                            <Link to="/shoes/men">SHOP ALL BIRDS</Link>
+                            <Link to="/shoes/male">SHOP ALL BIRDS</Link>
                         </div>
                     </div>
-
-                    <a href="#chicks">KIDS</a>
 
                 </div>  
                     <style>

@@ -221,7 +221,7 @@ class ShoeIndex extends React.Component {
 
                 </ul>
             </div>
-            <footer></footer>
+           
         </div>
         )
     }
