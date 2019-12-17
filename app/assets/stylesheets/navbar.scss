@@ -15,7 +15,7 @@
     // margin: 0px;
 }
 
-.navbar > a{
+.navbar > a {
   color: black;
 }
 
@@ -26,7 +26,7 @@
 .nav-left {
     position: relative;
     //margin-right: 500px;
-    width: 220px;
+    width: 150px;
     left: 1%;
     display: flex;
     justify-content: space-between;
@@ -101,7 +101,7 @@
 .nav-right {
     position: relative;
     //margin-left: 600px;
-    width: 350px;
+    width: 275px;
     right: 1%;
     display: flex;
     justify-content: space-between;
@@ -115,10 +115,6 @@
    .icon {
       font-size: 18px;
    }
-
-    a:hover {
-      border-bottom: 2px solid black;
-    }
 
     .icon-button {
       display: flex;
@@ -153,4 +149,11 @@
     .fa-question-circle {
       font-size: 20px;
     }
+    
+    // .nav-right-links {
+    //   a:hover {
+    //     border-bottom: 2px solid black;
+    //   }
+    // }
 }
+

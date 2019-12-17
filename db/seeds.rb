@@ -38,7 +38,7 @@ shoe_1_colors.each do |color|
     shoe_1_materials.each do |material|
         shoe_option = ShoeOption.create!(shoe_id: shoe_1.id, color_id: color.id, material_id: material.id)
         filename = "#{shoe_1.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_1.model.downcase}.webp"
-        # p filename
+        #p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
     end
@@ -153,7 +153,7 @@ shoe_8_colors.each do |color|
     shoe_8_materials.each do |material|
         shoe_option = ShoeOption.create!(shoe_id: shoe_8.id, color_id: color.id, material_id: material.id)
         filename = "#{shoe_8.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_8.model.downcase}.webp"
-        # p filename
+       # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
     end

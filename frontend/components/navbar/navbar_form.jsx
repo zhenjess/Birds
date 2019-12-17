@@ -79,4 +79,67 @@ class NavbarForm extends React.Component {
     }
 }
 
+// class NavbarForm extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             processed: false, 
+//             showDropdown: false
+//         };
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//         this.showDropdown = this.showDropdown.bind(this);
+//         this.closeDropdown = this.closeDropdown.bind(this);
+//     }
+
+//     showDropdown(e) {
+//         e.preventDefault();
+        
+//         this.setState({ showDropdown: true }, () => {
+//             document.addEventListener('click', this.closeDropdown);
+//         });
+//     }
+
+//     closeDropdown() {
+//         this.setState({ showDropdown: false }, () => {
+//             document.removeEventListener('click', this.closeDropdown);
+//         });
+//     }
+
+//     handleSubmit(modal) {
+//         return (e) => {
+//             e.preventDefault();
+//             if (this.state.processed) {
+//                 this.setState({ processed: false }, () => this.props.closeModal());
+//             } else {
+//                 this.setState({ processed: true }, () => this.props.openModal(modal));
+//             }
+//         }
+//     }
+
+//     render() {
+//         return (
+//             <div className="navbar">
+//                 <div className="nav-left">
+
+//                 </div>
+
+//                 <style>
+//                     @import url('https://fonts.googleapis.com/css?family=Lobster+Two:400i&display=swap');
+//                 </style>
+//                 <Link className="logo" to='/'>birds</Link>
+
+//                 <div className="nav-right">
+//                     <div className="nav-right-links">
+//                         <a href="#materials">MATERIALS</a>
+//                         <a href="#branches">BRANCHES</a>
+//                     </div>
+//                     <a href="#account"><i className="far fa-user icon"></i></a>
+//                     <a href="?"><i className="far fa-question-circle icon"></i></a>
+//                     <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
+
 export default NavbarForm;
