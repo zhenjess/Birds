@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 const ShoeIndexItem = ({ shoe }) => (
     
     <li className="shoe-index-item">
-
-
         <div className="shoe-image"> 
                 <img id="1" className="grey-shoe" src={shoe.photoUrl} alt=""/>
        
@@ -43,10 +41,8 @@ const ShoeIndexItem = ({ shoe }) => (
             <span>{shoe.gender + " "}</span>
             <span>{shoe.material + " "}</span>
             <span>{shoe.model}</span>
+
         </Link>
-
-       
-
     </li>
 );
 
