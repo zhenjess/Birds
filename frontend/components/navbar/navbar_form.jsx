@@ -197,6 +197,13 @@ class NavbarForm extends React.Component {
                     <div className="nav-branches">
                         <a href="#branches">BRANCHES</a>
                     </div>
+
+                    <div className="nav-icons">
+                        <a href="#account"><i className="far fa-user icon"></i></a>
+                        <a href="?"><i className="far fa-question-circle icon"></i></a>
+                        <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button>
+                    </div>
+
                 </div>
             </div>
         );
