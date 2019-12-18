@@ -149,6 +149,14 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import ShoesDropdown from './nav_dropdown';
+
+import Dropdownbtn from './nav_dropbtn';
+
+import { withRouter } from 'react-router-dom';
+
+
+
 class NavbarForm extends React.Component {
     constructor(props) {
         super(props);
@@ -156,6 +164,7 @@ class NavbarForm extends React.Component {
             processed: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     handleSubmit(modal) {
