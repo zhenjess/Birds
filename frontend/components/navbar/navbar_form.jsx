@@ -1,4 +1,4 @@
-// import React from 'react';
+//  import React from 'react';
 
 // import { Link } from 'react-router-dom';
 
@@ -151,8 +151,6 @@ import { Link } from 'react-router-dom';
 
 import ShoesDropdown from './nav_dropdown';
 
-import Dropdownbtn from './nav_dropbtn';
-
 import { withRouter } from 'react-router-dom';
 
 
@@ -162,43 +160,26 @@ class NavbarForm extends React.Component {
         super(props);
         this.state = {
             processed: false, 
-            dropDown: false, 
-            dropDownGender: "Women",
-            activeHeader: false,
-            isAnimating: false,
-            bounce: false
+            // showDropdown: false,  
+            // closeDropdown: false,       
         };
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleAnimation = this.handleAnimation.bind(this);
-        this.showDropDown = this.showDropDown.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);    
+        // this.showDropdown = this.showDropdown.bind(this);  
+        // this.closeDropdown = this.closeDropdown.bind(this); 
     }
+    // showDropdown(e) {
+    //     e.preventDefault();
 
+    //     this.setState({ showDropdown: true }, () => {
+    //         document.addEventListener('click', this.closeDropdown);
+    //     });
+    // }
 
-    showDropDown(dropDownGender) {
-        this.setState(state => {
-            if (state.dropDown && dropDownGender !== state.dropDownGender) {
-                return ({
-                    dropDown: true,
-                    dropDownGender: dropDownGender,
-                    isAnimating: true,
-                    bounce: true
-                });
-            } else if (!state.dropDown) {
-                return ({
-                    dropDown: true,
-                    dropDownGender: dropDownGender,
-                    isAnimating: true,
-                    bounce: false
-                });
-            } else {
-                return ({
-                    dropDown: false,
-                    dropDownGender: dropDownGender,
-                    bounce: false
-                });
-            }
-        });
-    }
+    // closeDropdown() {
+    //     this.setState({ showDropdown: false }, () => {
+    //         document.removeEventListener('click', this.closeDropdown);
+    //     });
+    // }
 
     handleSubmit(modal) {
         return (e) => {
@@ -211,38 +192,32 @@ class NavbarForm extends React.Component {
         }
     }
 
-    handleAnimation() {
-        this.setState({
-            isAnimating: false
-        });
-    }
-
     render() {
-        const activeHeader = this.state.activeHeader;
-        const dropDown = this.state.dropDown;
+       
         return (
-
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown-women">
                         <span className="nav-link" to="/shoes/women">WOMEN</span> 
-                        <i className="fas fa-angle-down"></i>
-                        <DropDownBtn
-                            activeHeader={activeHeader}
-                            showDropDown={showDropDown}
-                            dropDown={this.state.dropDown}
-                            dropDownGender={this.state.dropDownGender}
-                        />
+                        <i className="fas fa-angle-down"></i>  
+                        {/* <i onclick="myFunction(this)" className="fas fa-angle-down"></i>
+                        <script>
+                            function myFunction(x) {
+                                x.classList.toggle("&minus;")
+                            }
+                        </script>      */}
+                        <div className="dropdown-content">
+                            <Link to="/shoes/women">SHOP ALL BIRDS</Link>
+                             {/* <a href="#">Shop ALL BIRDS</a> */}
+                         </div>
                     </div>
                     <div className="dropdown-men">
                         <span className="nav-link" to="/shoes/men">MEN</span>
                         <i className="fas fa-angle-down"></i>
-                        <DropDownBtn
-                            activeHeader={activeHeader}
-                            showDropDown={showDropDown}
-                            dropDown={this.state.dropDown}
-                            dropDownGender={this.state.dropDownGender}
-                        />
+                        <div className="dropdown-content">
+                            <Link to="/shoes/men">SHOP ALL BIRDS</Link>
+                            {/* <a href="#">Shop ALL BIRDS</a> */}
+                        </div>
                     </div>
                 </div>
 
@@ -268,17 +243,10 @@ class NavbarForm extends React.Component {
                     </div>
 
                 </div>
-                <div
-                    onAnimationEnd={this.handleAnimation}
-                    id="nav-dropdown"
-                    className={!this.state.dropDown ? "invisible" : !this.state.isAnimating ? "visible" : this.state.bounce ? "visible swipe-up-down" : "visible swipe-down"}>
-                    <ShoesDropdown gender={this.state.dropDownGender} genderQuery={this.state.dropDownGender === "Women" ? "womens" : "mens"} showDropDown={this.showDropDown} />
-                </div>
-                <div className={dropDown ? "overlay-visible" : "overly-invisible"}></div>
                 
             </div>
         );
     }
 }
 
-export default NavbarForm;
+export default withRouter(NavbarForm);
