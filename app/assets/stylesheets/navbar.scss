@@ -202,15 +202,8 @@
   right: 10%;
 }
 
-.nav-right-links {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  position: relative;
-  justify-content: space-between;
-  width: 150px;
-}
 
-.nav-right-links:hover {
+.nav-right:hover {
   border-bottom: 2px solid black;
 }
 
@@ -218,7 +211,7 @@
     font-weight: 400;
     margin: 0 15px;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     text-decoration: none;
 }
 

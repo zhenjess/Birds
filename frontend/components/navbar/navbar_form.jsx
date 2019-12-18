@@ -191,10 +191,10 @@ class NavbarForm extends React.Component {
                 <Link className="logo" to='/'>birds</Link>
 
                 <div className="nav-right">
-                    <div className="nav-right-links">
+                    
                         <a href="#materials">MATERIALS</a>
                         <a href="#branches">BRANCHES</a>
-                    </div>
+                    
                     <div className="nav-right-icons">
                         <a className="nav-user" href="#account"><i className="far fa-user icon"></i></a>
                         <a className="nav-question" href="?"><i className="far fa-question-circle icon"></i></a>
