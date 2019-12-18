@@ -161,10 +161,43 @@ class NavbarForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            processed: false
+            processed: false, 
+            dropDown: false, 
+            dropDownGender: "Women",
+            activeHeader: false,
+            isAnimating: false,
+            bounce: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        
+        this.handleAnimation = this.handleAnimation.bind(this);
+        this.showDropDown = this.showDropDown.bind(this);
+    }
+
+
+    showDropDown(dropDownGender) {
+        this.setState(state => {
+            if (state.dropDown && dropDownGender !== state.dropDownGender) {
+                return ({
+                    dropDown: true,
+                    dropDownGender: dropDownGender,
+                    isAnimating: true,
+                    bounce: true
+                });
+            } else if (!state.dropDown) {
+                return ({
+                    dropDown: true,
+                    dropDownGender: dropDownGender,
+                    isAnimating: true,
+                    bounce: false
+                });
+            } else {
+                return ({
+                    dropDown: false,
+                    dropDownGender: dropDownGender,
+                    bounce: false
+                });
+            }
+        });
     }
 
     handleSubmit(modal) {
@@ -178,17 +211,38 @@ class NavbarForm extends React.Component {
         }
     }
 
+    handleAnimation() {
+        this.setState({
+            isAnimating: false
+        });
+    }
+
     render() {
+        const activeHeader = this.state.activeHeader;
+        const dropDown = this.state.dropDown;
         return (
+
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown-women">
                         <span className="nav-link" to="/shoes/women">WOMEN</span> 
                         <i className="fas fa-angle-down"></i>
+                        <DropDownBtn
+                            activeHeader={activeHeader}
+                            showDropDown={showDropDown}
+                            dropDown={this.state.dropDown}
+                            dropDownGender={this.state.dropDownGender}
+                        />
                     </div>
                     <div className="dropdown-men">
                         <span className="nav-link" to="/shoes/men">MEN</span>
                         <i className="fas fa-angle-down"></i>
+                        <DropDownBtn
+                            activeHeader={activeHeader}
+                            showDropDown={showDropDown}
+                            dropDown={this.state.dropDown}
+                            dropDownGender={this.state.dropDownGender}
+                        />
                     </div>
                 </div>
 
@@ -214,6 +268,14 @@ class NavbarForm extends React.Component {
                     </div>
 
                 </div>
+                <div
+                    onAnimationEnd={this.handleAnimation}
+                    id="nav-dropdown"
+                    className={!this.state.dropDown ? "invisible" : !this.state.isAnimating ? "visible" : this.state.bounce ? "visible swipe-up-down" : "visible swipe-down"}>
+                    <ShoesDropdown gender={this.state.dropDownGender} genderQuery={this.state.dropDownGender === "Women" ? "womens" : "mens"} showDropDown={this.showDropDown} />
+                </div>
+                <div className={dropDown ? "overlay-visible" : "overly-invisible"}></div>
+                
             </div>
         );
     }
