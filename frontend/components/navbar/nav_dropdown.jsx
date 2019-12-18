@@ -59,7 +59,29 @@ class ShoesDropdown extends React.Component {
                         </li>
                     </Link>
                 </ul>
-                
+                <div id="dropdown-attributes-container">
+                    <div>
+                        <Link onClick={ () => this.props.showDropdown(this.props.gender)} to={`/shoes/${this.props.genderQuery}`}>
+                            <h2>Shop ALL BIRDS</h2>
+                        </Link>
+                        <div className="right-arrow"><i class="fas fa-angle-right"></i></div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <h3>BY MODEL</h3>
+                            <ol>
+                                <Link onClick={() => this.props.showDropdown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Runners</Link>
+                                <Link onClick={() => this.props.showDropdown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Loungers</Link>
+                                <Link onClick={() => this.props.showDropdown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Skippers</Link>
+                                <Link onClick={() => this.props.showDropdown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Toppers</Link>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div className="close-nav-dropDown">
+                    <h3 onClick={() => this.props.showDropdown(this.props.gender)} className="uparrow"><i class="fas fa-angle-up"></i></h3>
+                </div>
             </div>
         );
     }
