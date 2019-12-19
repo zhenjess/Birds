@@ -41,9 +41,9 @@ const ShoeIndexItem = ({ shoe }) => (
             <span>{shoe.gender + " "}</span>
             <span>{shoe.material + " "}</span>
             <span>{shoe.model}</span>
-
         </Link>
     </li>
+
 );
 
 export default ShoeIndexItem;
