@@ -177,6 +177,15 @@
   left: 1%;
 }
 
+
+.dropdown-women:hover {
+  border-bottom: 2px solid black;
+}
+
+.dropdown-men:hover {
+  border-bottom: 2px solid black;
+}
+
 .dropdown-women {
     position: relative;
     display: inline-block;
@@ -185,14 +194,6 @@
 .dropdown-men {
   position: relative;
   display: inline-block;
-}
-
-.dropdown-women:hover {
-  border-bottom: 2px solid black;
-}
-
-.dropdown-men:hover {
-  border-bottom: 2px solid black;
 }
 
 .dropdown-content {
@@ -237,7 +238,7 @@
   font-family: 'Lobster Two', cursive;
   font-size: 36px;
   justify-content: center;
-  margin-left: 200px;
+  margin-left: 210px;
 }
 
 .nav-right {
