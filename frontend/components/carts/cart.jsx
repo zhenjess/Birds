@@ -89,9 +89,51 @@ class Cart extends React.Component {
         const cartItems = items.map( (item, i) => {
             return <CartItem
                 item={item}
-                key={}
+                key={`${item.id}-${item.size}`}
+                index={i}
+                updateQuantity={this.updateQuantity}
+                removeFromCart={removeFromCart}
             />
         });
+
+        return (
+            <div className={open ? 'cart-page-container open-cart' : 'cart-page-container closed-cart'}>
+                <div onAnimationEnd={this.endNotification} className={this.state.notificationAnimating ? "fadeout notification" : "notification"}>Thank you for your purchase!</div>
+                <div className={open ? "cart-container in-front open-container" : "cart-container closed-cart"}>
+                    <div className={open ? "overlay-visible open-cart" : "closed-cart"}></div>
+                    <div className={open ? "cart-sidebar in-front" : "cart-sidebar closed-cart"}>
+                        <div className="cart-upper-container">
+                            <div className="cart-header">
+                                <h2>CART</h2>
+                                <div onClick={handleCartOpen} className="cart-close-button">close</div>
+                            </div>
+                            <ul className="cart-items">
+                                {cartItems}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="divider">Anything else?
+                        &nbsp;
+                            <Link onClick={handleCartOpen} className="shopping-link" to={'/collections/mens'}>Keep Shopping</Link>
+                    </div>
+                    <div className="cart-totals">
+                        <div className="cart-costs">
+                            <h3>Subtotal</h3>
+                            <div>${subtotal}</div>
+                        </div>
+                        <div className="cart-costs">
+                            <h3>Shipping</h3>
+                            <div>FREE</div>
+                        </div>
+                        <input onClick={this.emptyCart} className="cart-button" type="button" value="CHECKOUT"/>
+                    </div>
+                    <div className="cart-footer">
+                        <p>Looking for more birds?</p>&nbsp;
+                        <p>Click <Link className="shopping-link" onClick={handleCartOpen} to={`/shoes/mens`}>here</Link></p>
+                    </div>
+                </div>
+            </div>
+        );
     }
 }
 
