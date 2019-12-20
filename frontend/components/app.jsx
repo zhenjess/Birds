@@ -58,8 +58,6 @@ import MoreTrinoMain from './materials/trino/more_trino_main';
 
 import ShoeIndexContainer from './shoes/shoe_index_container';
 
-import About from './about/about';
-
 import Footer from './footer/footer_container';
 
 
