@@ -4,6 +4,8 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :shoe_options_id, null: false
       t.integer :size, null: false
       t.integer :price, null: false
+
+      t.timestamps
     end
   end
 end
