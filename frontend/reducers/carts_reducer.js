@@ -3,6 +3,8 @@ import {
     REMOVE_FROM_CART 
 } from '../actions/cart_actions';
 
+import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
+
 const cartReducer = (oldState={}, action) => {
     Object.freeze(oldState);
 
@@ -15,6 +17,8 @@ const cartReducer = (oldState={}, action) => {
             newState = Object.assign({}, oldState);
             delete newState[`${action.id}-${action.size}`];
             return newState;
+        case LOGOUT_CURRENT_USER:
+            return {};
         default: 
             return oldState;
     }
