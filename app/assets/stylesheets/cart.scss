@@ -1,0 +1,144 @@
+@import 'utils';
+
+.closed-cart {
+    opacity: 0;
+    z-index: 0;
+
+    height: 0;
+    width: 0; 
+    overflow: hidden;
+}
+
+.open-cart {
+    height: 100%;
+    width: 100%;
+}
+
+.cart-page-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.cart-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    top: 0;
+    left: 0;
+}
+
+.open-container {
+    height: 100%;
+    width: 100%;
+}
+
+.in-front {
+    z-index: 15;
+}
+
+.cart-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width: 450px;
+    height: 100%;
+    align-self: flex-end;
+    padding: 20px;
+}
+
+.cart-header {
+    display: flex;
+    height: 60px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $mid-grey;
+}
+
+.cart-close-button {
+    &:hover {
+        cursor: pointer;
+    }
+    color: black;
+}
+
+.cart-header h2 {
+    font-family: $title-font-1;
+    font-size: 22px;
+}
+
+.cart-upper-conatiner {
+    height: calc(100% - 275px - 40px);
+}
+
+.cart-items {
+    margin: 10px 0 10px 0;
+    height: calc(100% - 52px);
+    overflow: scroll;
+}
+
+.divider {
+    border-top: 1px solid $mid-grey;
+    border-bottom: 1px solid $mid-grey;
+    padding: 15px 0 15px 0;
+    font-size: 14px;
+}
+
+.shopping-link {
+    &:hover {
+        cursor: pointer;
+        color: black;
+    }
+    color: $mid-dark-grey;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+.cart-totals {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 15px 0;
+}
+
+.cart-costs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 5px 0;
+}
+
+.cart-button {
+    color: white;
+    background-color: $bg-green;
+    box-sizing: content-box;
+    font-size: 16px;
+    height: 40px;
+    width: calc(100% - 20px);
+    margin: 20px 20px 0 20px;
+    transition: 0.3s;
+    border: 2px solid black;
+    border-radius: 3px;
+    align-self: center;
+    &:focus {
+        outline: none;
+    }
+}
+
+.cart-button:hover { 
+    cursor: hover;
+    color: black;
+    background-color: white;
+}
+
+.cart-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-light-green;
+    height: 80px;
+}
+
