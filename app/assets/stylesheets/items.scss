@@ -87,8 +87,8 @@
 
 .size-selections-container {
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    margin-left: -40px;
     .size {
         display: flex;
         align-items: center;
