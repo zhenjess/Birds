@@ -29,7 +29,7 @@ class Cart extends React.Component {
         }
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         const { items } = this.props;
 
         if (items.length !== prevProps.items.length) {
@@ -114,7 +114,7 @@ class Cart extends React.Component {
                     </div>
                     <div className="divider">Anything else?
                         &nbsp;
-                            <Link onClick={handleCartOpen} className="shopping-link" to={'/collections/mens'}>Keep Shopping</Link>
+                            <Link onClick={handleCartOpen} className="shopping-link" to={'/shoes/men'}>Keep Shopping</Link>
                     </div>
                     <div className="cart-totals">
                         <div className="cart-costs">
@@ -129,7 +129,7 @@ class Cart extends React.Component {
                     </div>
                     <div className="cart-footer">
                         <p>Looking for more birds?</p>&nbsp;
-                        <p>Click <Link className="shopping-link" onClick={handleCartOpen} to={`/shoes/mens`}>here</Link></p>
+                        <p>Click <Link className="shopping-link" onClick={handleCartOpen} to={`/shoes/men`}>here</Link></p>
                     </div>
                 </div>
             </div>
