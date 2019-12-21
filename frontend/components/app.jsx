@@ -86,9 +86,6 @@ const App = () => (
         <Route exact path="/" component={AboutMain} /> 
         <Route exact path="/" component={MaterialsMain} />
 
-        <div className='footer'>
-            <Footer />
-        </div>
         {/* <Route exact path="/" component={AccessoriesMain} /> */}
 
         <Route exact path="/materials" component={AboutMaterials} />
@@ -106,6 +103,10 @@ const App = () => (
         <Route exact path="/materials/trino" component={AboutTrinoMaterial} />
         {/* <Route exact path="/materials/trino" component={AboutTrinoSub} />
         <Route exact path="/materials/trino" component={MoreTrinoMain} />    */}
+
+        <div className='footer'>
+            <Footer />
+        </div>
     </div>
 
 );
