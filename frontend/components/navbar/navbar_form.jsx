@@ -111,7 +111,7 @@ class NavbarForm extends React.Component {
             <div 
                 onAnimationEnd={this.handleAnimation} 
                 id="nav-dropdown" className={!this.state.dropDown ? 'invisible' : !this.state.isAnimating ? 'visible' : this.state.bounce ? 'visible swipe-up-down' : 'visible swipe-down'}>
-                <ShoesDropdown gender={this.state.dropDownGender} genderQuery={this.state.dropDownGender === 'WOMEN' ? 'womens' : 'mens'} showDropDown={this.showDropDown} />
+                <ShoesDropdown gender={this.state.dropDownGender} genderQuery={this.state.dropDownGender === 'WOMEN' ? 'women' : 'men'} showDropDown={this.showDropDown} />
             </div>
             <div className={dropDown ? 'overlay-visible' : 'overly-invisible'}></div>
             </>
