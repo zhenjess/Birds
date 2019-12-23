@@ -1,36 +1,23 @@
 import React from 'react';
 
-const dropDownBtn = ({
-    activeHeader, 
-    showDropdown, 
-    dropDown, 
-    title, 
-    id, 
-    dropDownGender
-}) => {
-
-    const caretOrMinus = ({ 
-        dropDown, 
-        gender, 
-        componentGender 
-    }) => {
+const dropDownBtn = ({ activeHeader, showDropdown, dropDown, title, id, dropDownGender }) => {
+    const dropOrNot = ({ dropDown, gender, componentGender }) => {
         if (dropDown && gender === componentGender) {
-            return (<h3 className="minus">&minus;</h3>);
+            return (<h5 className="minus">&minus;</h5>);
         } else {
-            return (<h3><i className="fas fa-angle-down"></i></h3>);
+            return (<h5 className="downCaret"><i className="fas fa-angle-down"></i></h5>);
         }
     };
 
     return (
         <>
-            <div className={( activeHeader ? 'a-header-button' : 'u-header-button') + ' nav-link'}
+        <div className={(activeHeader ? 'a-header-button' : 'u-header-button') + ' nav-link'}
                 onClick={() => showDropdown(id)}>
-                    <h3>{title}</h3>
-                <caretOrMinus dropDown={dropDown} gender={dropDownGender} componentGender={id}/>
-            </div>
+                <h2>{title}</h2>
+                <dropOrNot dropDown={dropDown} gender={dropDownGender} componentGender={id}/>
+        </div>
         </>
-    );
+    )
 };
-
 
 export default dropDownBtn;
