@@ -9,10 +9,16 @@ class NavbarForm extends React.Component {
     constructor(props) {
         super(props);
 
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
-            processed: false
-        }
+            processed: false,
+            dropDown: false, 
+            dropDownGender: "Women",
+            activeHeader: false
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.showDropdown = this.showDropdown.bind(this);
+
     }
 
     handleSubmit(modal) {
@@ -26,6 +32,8 @@ class NavbarForm extends React.Component {
             }
         }
     }
+
+    
 
     render() {
         return (
