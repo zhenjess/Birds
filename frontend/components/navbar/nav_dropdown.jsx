@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class ShoesDropdown extends React.Component {
-    render () {
+    render() {
         return (
 
             <div className="nav-dropdown-box">

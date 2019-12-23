@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link, withRouter } from 'react-router-dom';
 
-import DropdownBtn from './nav_dropbtn';
+import DropDownBtn from './nav_dropbtn';
 import ShoesDropdown from './nav_dropdown';
 
 
@@ -11,6 +11,8 @@ class NavbarForm extends React.Component {
         super(props);
 
         this.state = {
+            scrollPosition: window.pageYOffset,
+            isHovered: false,
             processed: false,
             dropDown: false, 
             dropDownGender: "Women",
@@ -22,6 +24,17 @@ class NavbarForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showDropdown = this.showDropdown.bind(this);
         this.handleAnimation = this.handleAnimation.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+        this.setState({activeHeader: !!(this.state.scrollPosition || this.state.isHovered || this.state.dropDown)});
+    }
+
+    handleScroll() {
+        this.setState(() => ({ scrollPosition: window.pageYOffset }));
+        this.setState(state => ({ activeHeader: !!(state.scrollPosition || state.isHovered || state.dropDown )}));
     }
 
     handleSubmit(modal) {
@@ -75,7 +88,7 @@ class NavbarForm extends React.Component {
             <div className={(dropDown && activeHeader) ? 'active-header-with-dropdown' : (activeHeader) ? 'active-header' : 'header'} id='header'>
                 <div id="navs">
                     <div className="navbar" id="nav-left">
-                        <dropDownBtn
+                        <DropDownBtn
                             activeHeader={activeHeader}
                             showDropdown={this.showDropdown}
                             dropDown={this.state.dropDown}
@@ -83,7 +96,7 @@ class NavbarForm extends React.Component {
                             title="WOMEN"
                             id="WOMEN"
                         />
-                        <dropDownBtn
+                        <DropDownBtn
                             activeHeader={activeHeader}
                             showDropdown={this.showDropdown}
                             dropDown={this.state.dropDown}
