@@ -8,7 +8,7 @@ class ShoesDropdown extends React.Component {
 
             <div className="nav-dropdown-box">
                 <ul>
-                    <Link onCLick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
+                    <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
                         <li>
                             <div className="dropdown-shoe-img">
                                 <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_grey_wool_runners.webp" alt=""/>
@@ -16,7 +16,7 @@ class ShoesDropdown extends React.Component {
                             <h3>WOOL RUNNERS</h3>
                         </li>
                     </Link>
-                    <Link onCLick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
+                    <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
                         <li>
                             <div className="dropdown-shoe-img">
                                 <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_black_tree_runners.webp" alt="" />
@@ -25,7 +25,7 @@ class ShoesDropdown extends React.Component {
                         </li>
                     </Link>
 
-                    <Link onCLick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
+                    <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
                         <li>
                             <div className="dropdown-shoe-img">
                                 <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_grey_wool_loungers.webp" alt="" />
@@ -33,7 +33,7 @@ class ShoesDropdown extends React.Component {
                             <h3>WOOL LOUNGERS</h3>
                         </li>
                     </Link>
-                    <Link onCLick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
+                    <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
                         <li>
                             <div className="dropdown-shoe-img">
                                 <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_black_tree_loungers.webp" alt="" />
@@ -42,7 +42,7 @@ class ShoesDropdown extends React.Component {
                         </li>
                     </Link>
 
-                    <Link onCLick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
+                    <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
                         <li>
                             <div className="dropdown-shoe-img">
                                 <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_grey_tree_skippers.webp" alt="" />
@@ -50,7 +50,7 @@ class ShoesDropdown extends React.Component {
                             <h3>TREE SKIPPERS</h3>
                         </li>
                     </Link>
-                    <Link onCLick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
+                    <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
                         <li>
                             <div className="dropdown-shoe-img">
                                 <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_black_tree_toppers.webp" alt="" />
@@ -64,7 +64,7 @@ class ShoesDropdown extends React.Component {
                         <Link onClick={ () => this.props.showDropDown(this.props.gender)} to={`/shoes/${this.props.genderQuery}`}>
                             <h2>Shop ALL BIRDS</h2>
                         </Link>
-                        <div className="right-arrow"><i class="fas fa-angle-right"></i></div>
+                        <div className="right-arrow"><i className="fas fa-angle-right"></i></div>
                     </div>
 
                     <ul>
@@ -80,7 +80,7 @@ class ShoesDropdown extends React.Component {
                     </ul>
                 </div>
                 <div className="close-nav-dropDown">
-                    <h3 onClick={() => this.props.showDropDown(this.props.gender)} className="uparrow"><i class="fas fa-angle-up"></i></h3>
+                    <h3 onClick={() => this.props.showDropDown(this.props.gender)} className="uparrow"><i className="fas fa-angle-up"></i></h3>
                 </div>
             </div>
         );
