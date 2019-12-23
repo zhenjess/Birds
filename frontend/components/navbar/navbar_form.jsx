@@ -13,12 +13,14 @@ class NavbarForm extends React.Component {
             processed: false,
             dropDown: false, 
             dropDownGender: "Women",
-            activeHeader: false
+            activeHeader: false,
+            isAnimating: false,
+            bounce: false
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showDropdown = this.showDropdown.bind(this);
-
+        this.handleAnimation = this.handleAnimation.bind(this);
     }
 
     handleSubmit(modal) {
@@ -33,10 +35,45 @@ class NavbarForm extends React.Component {
         }
     }
 
-    
+    showDropdown(dropDownGender) {
+        this.setState(state => {
+            if (state.dropDown && dropDownGender !== state.dropDownGender) {
+                return ({
+                    dropDown: true, 
+                    dropDownGender: dropDownGender,
+                    isAnimating: true, 
+                    bounce: true
+                });
+            } else if (!state.dropDown) {
+                return ({
+                    dropDown: true, 
+                    dropDownGender: dropDownGender,
+                    isAnimating: true, 
+                    bounce: false
+                });
+            } else {
+                return ({
+                    dropDown: false, 
+                    dropDownGender: dropDownGender,
+                    bounce: false
+                });
+            }
+        });
+    }
+
+    handleAnimation() {
+        this.setState({ isAnimating: false });
+    }
 
     render() {
+        const activeHeader = this.state.activeHeader;
+        const dropDown = this.state.dropDown;
+
         return (
+            <div className={(dropDown && activeHeader) ? 'active-header-with-dropdown' :
+             (activeHeader) ? 'active-header' : 'header'} id='header'>
+
+            </div>
             <div className="navbar">
                 <div className="nav-left">
                     <div className="dropdown-women">
