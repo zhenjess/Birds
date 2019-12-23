@@ -46,20 +46,24 @@ class NavbarForm extends React.Component {
 
                 </div>
 
-                <div className="nav-right">
-                    <div className="nav-materials">
-                        <a href="#materials">MATERIALS</a>
-                    </div>
-                    <div className="nav-branches">
-                        <a href="#branches">BRANCHES</a>
-                    </div>
+                {/* <div className="nav-right">
+                    <a href="#materials" className="nav-materials">MATERIALS</a>
+                    <a href="#branches" className="nav-branches">BRANCHES</a>
 
-                    {/* <div className="nav-icons">
-                        <a href="#account"><i className="far fa-user icon"></i></a>
-                        <a href="?"><i className="far fa-question-circle icon"></i></a>
+                </div> */}
+                    <div className="nav-icons">
+                        <div className="nav-right">
+                            <div className="nav-materials">
+                                <a href="#materials">MATERIALS</a>
+                            </div>
+                            <div className="nav-branches">
+                                 <a href="#branches">BRANCHES</a>
+                            </div>
+                        </div>
+                        <a href="#account" className="icon-button cart-button" ><i className="far fa-user icon"></i></a>
+                        <a href="?" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a>
                         <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button>
-                    </div> */}
-                </div>
+                    </div>
             </div>
         );
     }
