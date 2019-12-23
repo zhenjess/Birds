@@ -85,7 +85,7 @@ class NavbarForm extends React.Component {
 
         return (
             <>
-            <div className={(dropDown && activeHeader) ? 'active-header-with-dropdown' : (activeHeader) ? 'active-header' : 'header'} id='header'>
+            <div className={(dropDown && activeHeader) ? 'active-header with-dropdown' : (activeHeader) ? 'active-header' : 'header'} id='header'>
                 <div id="navs">
                     <div className="navbar" id="nav-left">
                         <DropDownBtn
