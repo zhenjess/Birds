@@ -1,6 +1,6 @@
 import React from 'react';
 
-const dropDownBtn = ({ activeHeader, showDropDown, dropDown, title, id, dropDownGender }) => {
+const dropDownBtn = ({ activeHeader, showeDropDown, dropDown, title, id, dropDownGender }) => {
 
     const DropOrNot = ({ dropDown, gender, componentGender }) => {
         if (dropDown && gender === componentGender) {

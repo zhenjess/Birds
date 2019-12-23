@@ -22,7 +22,7 @@ class NavbarForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.showDropdown = this.showDropdown.bind(this);
+        this.showDropDown = this.showDropDown.bind(this);
         this.handleAnimation = this.handleAnimation.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
     }
@@ -49,7 +49,7 @@ class NavbarForm extends React.Component {
         }
     }
 
-    showDropdown(dropDownGender) {
+    showDropDown(dropDownGender) {
         this.setState(state => {
             if (state.dropDown && dropDownGender !== state.dropDownGender) {
                 return ({
@@ -90,7 +90,7 @@ class NavbarForm extends React.Component {
                     <div className="navbar" id="nav-left">
                         <DropDownBtn
                             activeHeader={activeHeader}
-                            showDropdown={this.showDropdown}
+                            showDropDown={this.showDropDown}
                             dropDown={this.state.dropDown}
                             dropDownGender={this.state.dropDownGender}
                             title="WOMEN"
@@ -98,7 +98,7 @@ class NavbarForm extends React.Component {
                         />
                         <DropDownBtn
                             activeHeader={activeHeader}
-                            showDropdown={this.showDropdown}
+                            showDropDown={this.showDropDown}
                             dropDown={this.state.dropDown}
                             dropDownGender={this.state.dropDownGender}
                             title="MEN"
@@ -111,7 +111,7 @@ class NavbarForm extends React.Component {
             <div 
                 onAnimationEnd={this.handleAnimation} 
                 id="nav-dropdown" className={!this.state.dropDown ? 'invisible' : !this.state.isAnimating ? 'visible' : this.state.bounce ? 'visible swipe-up-down' : 'visible swipe-down'}>
-                <ShoesDropdown gender={this.state.dropDownGender} genderQuery={this.state.dropDownGender === 'WOMEN' ? 'womens' : 'mens'} showDropdown={this.showDropdown} />
+                <ShoesDropdown gender={this.state.dropDownGender} genderQuery={this.state.dropDownGender === 'WOMEN' ? 'womens' : 'mens'} showDropDown={this.showDropDown} />
             </div>
             <div className={dropDown ? 'overlay-visible' : 'overly-invisible'}></div>
             </>
