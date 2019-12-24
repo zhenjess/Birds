@@ -14,7 +14,7 @@ Material.destroy_all
 Color.destroy_all
 ShoeOption.destroy_all
 
-demoLogin = User.create!(first_name: "user", last_name: "name", email: 'user@gmail.com', password: "password")
+demoLogin = User.create!(first_name: "all", last_name: "birds", email: 'allbirds@gmail.com', password: "password")
 
 wool = Material.create!(material: 'Wool');
 tree = Material.create!(material: 'Tree');

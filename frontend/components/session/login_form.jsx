@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
         // const demoUser = Object.assign({}, this.state);
         let i = 0;
         let j = 0;
-        let email = 'user@gmail.com';
+        let email = 'allbirds@gmail.com';
         let password = 'password';
         const typeUser = () => {
             let timeout;
@@ -87,7 +87,7 @@ class LoginForm extends React.Component {
             }, 1500)
 
             window.setTimeout(() => {
-                this.setState({email: 'user@gmail.com', password: 'password'}, () => {
+                this.setState({email: 'allbirds@gmail.com', password: 'password'}, () => {
                     const user = Object.assign({}, this.state);
                     this.props.login(user)
                         .then(() => this.props.history.push('/account'));
