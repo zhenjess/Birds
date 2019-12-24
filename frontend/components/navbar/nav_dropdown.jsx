@@ -34,7 +34,7 @@ class ShoesDropdown extends React.Component {
                         <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>
                             <li>
                                 <div className="dropdown-shoe-img">
-                                    <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_grey_wool_loungers.webp" alt="" />
+                                    <img className="dropdown-show-img-item" src="https://birds-seeds.s3-us-west-1.amazonaws.com/women_black_wool_loungers.webp" alt="" />
                                 </div>
                                 <h3>Wool Loungers</h3>
                             </li>
@@ -72,18 +72,6 @@ class ShoesDropdown extends React.Component {
                         </Link>
                         <div className="right-arrow"><i className="fas fa-angle-right"></i></div>
                     </div> */}
-
-                    <ul>
-                        <li>
-                            <h3>BY MODEL</h3>
-                            <ol>
-                                <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Runners</Link>
-                                <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Loungers</Link>
-                                <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Skippers</Link>
-                                <Link onClick={() => this.props.showDropDown(this.props.gender)} className="attribute-link" to={`/shoes/${this.props.genderQuery}`}>Toppers</Link>
-                            </ol>
-                        </li>
-                    </ul>
                 </div>
                 <div className="close-nav-dropDown">
                     <h3 onClick={() => this.props.showDropDown(this.props.gender)} className="uparrow"><i className="fas fa-angle-up"></i></h3>
