@@ -23,7 +23,7 @@ const ShoesHeader = ({ gender }) => {
                     <div className="right-bar">
                         <div className="dropdown">
                             <span className="bar-link">Size</span>
-                            <i className="fas fa-caret-down"></i>
+                            <i className="fas fa-angle-down"></i>
                             <div className="dropdown-content">
                                 <p>5</p>
                                 <p>6</p>
@@ -37,7 +37,7 @@ const ShoesHeader = ({ gender }) => {
 
                         <div className="dropdown">
                             <span className="bar-link">Hue</span>
-                            <i className="fas fa-caret-down"></i>
+                            <i className="fas fa-angle-down"></i>
                             <div className="dropdown-content">
                                 <p>Black</p>
                                 <p>Grey</p>
@@ -50,7 +50,7 @@ const ShoesHeader = ({ gender }) => {
 
                         <div className="dropdown">
                             <span className="bar-link">Model</span>
-                            <i className="fas fa-caret-down"></i>
+                            <i className="fas fa-angle-down"></i>
                             <div className="dropdown-content">
                                 <p>Runners</p>
                                 <p>Loungers</p>
@@ -61,7 +61,7 @@ const ShoesHeader = ({ gender }) => {
 
                         <div className="dropdown">
                             <span className="bar-link">Material</span>
-                            <i className="fas fa-caret-down"></i>
+                            <i className="fas fa-angle-down"></i>
                             <div className="dropdown-content">
                                 <p>Wool</p>
                                 <p>Tree</p>
