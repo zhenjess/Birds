@@ -28,14 +28,14 @@
 .about-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     h2 {
         display: flex;
         text-align: center;
         font-family: 'Merriweather Sans', sans-serif;
-        font-size: 20px;
-        right: 250px;
+        font-size: 25px;
+        margin-left: -40px;
         // margin-bottom: 20px;
         // margin: -430px -25px 25px 120px;
         // position: relative;
@@ -45,7 +45,7 @@
 
     p {
         display: flex;
-        text-align: center;
+        text-align: left;
         font-family: 'Merriweather Sans', sans-serif;
         font-size: 14px;
         // left: 480px;
