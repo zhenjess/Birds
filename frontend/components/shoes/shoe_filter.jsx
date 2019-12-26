@@ -1,8 +1,8 @@
 import React from 'react';
 
-import dropDownBtn from './shoe_filter_dropdown';
+import DropDownBtn from './shoe_filter_dropdown';
 
-class FilterShoeItems extends React.Component {
+class ShoeFilter extends React.Component {
     constructor(props) {
         super(props);
 
@@ -58,4 +58,4 @@ class FilterShoeItems extends React.Component {
 
 }
 
-export default FilterShoeItems;
+export default ShoeFilter;
