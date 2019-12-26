@@ -45,7 +45,7 @@ class Shoes extends React.Component {
     componentDidUpdate(prevProp) {
         const id = this.props.match.params.id;
 
-        id (this.props.location.pathname !== prevProps.location.pathname) {
+        if (this.props.location.pathname !== prevProp.location.pathname) {
             this.props.fetchItems(id).then((data) => {
                 this.setState({
                     items: Object.values(data.items)
@@ -68,8 +68,78 @@ class Shoes extends React.Component {
     }
 
     addFilter(k, v) {
-        
+        this.setState(state => {
+            const newFilter = Object.assign({}, state.filters, { [k]: v });
+            return ({
+                filters: newFilter, 
+                animateItem: true
+            });
+        }, 
+        this.filterItems
+        );
     }
+
+    clearAllFilters() {
+        this.setState(() => ({
+            filters: {}, 
+            animateItem: true
+        }),
+        this.filterItems 
+        );
+    }
+
+    clearFilter(key) {
+        this.setState(state => {
+            let newFilters = Object.assign({}, state.filters);
+            delete newFilters[key];
+            return ({
+                filters: newFilters,
+                animateItem: true
+            });
+        },
+        this.filterItems
+        );
+    }
+
+    handleFilter(title, id, elements) {
+        return () => this.setState( ({ openFilter, filterInfo}) => {
+            const newFilterInfo = {
+                filterTitle: title, 
+                filterId: id, 
+                filterElements: elements
+            };
+
+            if (openFilter && title !== filterInfo.filterTitle) {
+                return ({ filterInfo: newFilterInfo, openFilter: true, willAnimate: true });
+            } else if (!openFilter) {
+                return ({ filterInfo: newFilterInfo, openFilter: true, willAnimate: true });
+            } else {
+                return ({ openFilter: false });
+            }
+        });
+    }
+
+    handleAnimationEnd() {
+        this.setState({ willAnimate: false });
+    }
+
+    clearAnimations() {
+        this.setState({ animateItem: false });
+    }
+
+    loadedImage() {
+        this.setState({ loading: false });
+    }
+
+    startNotification() {
+        this.setState({ startAnimate: true });
+    }
+
+    endNotification() {
+        this.setState({ startAnimate: false });
+    }
+
+    
 }
 
 export default Shoes;
