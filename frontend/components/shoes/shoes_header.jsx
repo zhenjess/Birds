@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const ShoesHeader = ({ gender }) => {
     if (gender === 'women') {
         return (
