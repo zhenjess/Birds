@@ -4,9 +4,9 @@ const dropDownBtn = ({ activeHeader, showDropDown, dropDown, title, id, dropDown
 
     const DropOrNot = ({ dropDown, gender, componentGender }) => {
         if (dropDown && gender === componentGender) {
-            return (<h5 className="minus"> &minus;</h5>);
+            return (<h5 className="minus">&minus;</h5>);
         } else {
-            return (<h5 className="drop-down"> <i className="fas fa-angle-down"></i></h5>);
+            return (<h5 className="drop-down"><i className="fas fa-angle-down"></i></h5>);
         }
     };
 
