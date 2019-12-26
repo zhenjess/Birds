@@ -186,10 +186,57 @@ class Shoes extends React.Component {
                             >CLEAR FILTERS
                             </div>
 
-                            
+                            <ul className="filter-attributes">
+                                <ShoeFilter
+                                    handleFilter={handleFilter}
+                                    title={"Size"}
+                                    id={"size"}
+                                    elements={["7", "8", "9", "10", "11", "12"]}
+                                    whatFilter={this.state.filters.size}
+                                    openFilter={this.state.openFilter}
+                                    currentFilter={filterTitle}
+                                    clearFilter={clearFilter}
+                                />
+                                <ShoeFilter
+                                    handleFilter={handleFilter}
+                                    title={"Hue"}
+                                    id={"hue"}
+                                    elements={["Grey", "Black", "White", "Red", "Green", "Blue"]}
+                                    whatFilter={this.state.filters.size}
+                                    openFilter={this.state.openFilter}
+                                    currentFilter={filterTitle}
+                                    clearFilter={clearFilter}
+                                />
+                                <ShoeFilter
+                                    handleFilter={handleFilter}
+                                    title={"Model"}
+                                    id={"model"}
+                                    elements={["Runners", "Loungers", "Skippers", "Toppers"]}
+                                    whatFilter={this.state.filters.size}
+                                    openFilter={this.state.openFilter}
+                                    currentFilter={filterTitle}
+                                    clearFilter={clearFilter}
+                                />
+                                <ShoeFilter
+                                    handleFilter={handleFilter}
+                                    title={"Material"}
+                                    id={"material"}
+                                    elements={["Tree", "Wool"]}
+                                    whatFilter={this.state.filters.size}
+                                    openFilter={this.state.openFilter}
+                                    currentFilter={filterTitle}
+                                    clearFilter={clearFilter}
+                                />
+                            </ul>
                         </div>
                     </div>
+                    <div onAnimationEnd={this.handleAnimationEnd} className={(this.state.openFilter ? "open-filter" : "close-filter") + 
+                        (this.state.willAnimate ? "animate" : "") + "filter-dropdown"}>
+                        <FilterShoeItems title={filterTitle} id={filterId} elements={filterElements} addFilter={this.addFilter}/>
+                    </div>
+                    {items}
                 </div>
+                <footer></footer>
             </div>
             </>
         );
