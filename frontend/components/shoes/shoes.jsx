@@ -1,6 +1,8 @@
 import FilterShoeItems from './filter_shoe';
 
 import ShoeFilter from './shoe_filter';
+import ShoeIndexItem from './shoe_index_item';
+import ShoesHeader from './shoes_header';
 
 class Shoes extends React.Component {
     constructor(props) {
@@ -139,7 +141,59 @@ class Shoes extends React.Component {
         this.setState({ startAnimate: false });
     }
 
-    
+    render() {
+        const filterAttrs = this.state.filterInfo;
+        const { addToCart } = this.props;
+        const { filterTitle, filterId, filterElements } = filterAttrs;
+        const handleFilter = this.handleFilter;
+        const clearFilter = this.clearFilter;
+
+        const populateItems = () => {
+            const shoeItems = this.state.shoeItems.map(shoeItem => {
+                return (
+                    <ShoeIndexItem
+                        startNotification={this.startNotification}
+                        addToCart={addToCart}
+                        clearAnimations={clearAnimations}
+                        animateItem={this.state.animateItem}
+                        shoeItem={shoeItem}
+                        key={`${shoeItem.id}`}
+                    />
+                );
+            });
+
+            return (
+                <ul>
+                    {shoeItems}
+                </ul>
+            );
+        }
+
+        return (
+            <>
+            <Loading isLoading={this.state.loading}/>
+            <div>
+                <div onAnimationEnd={this.endNotification} className={this.state.startAnimate ? "fadeout note" : "note"}>
+                    Item added to cart!
+                </div>
+                <ShoesHeader loadedImage={this.loadedImage} gender={this.props.match.params.id}/>
+                <div className="shoe-index-items">
+                    <div className="filter">
+                        <div>{`${!!(Object.keys(this.state.filters).length) ? "" : "All - "} ${this.state.items.length} Results`}</div>
+                        <div className="nav-filter">
+                            <div onClick={this.clearAllFilters}
+                                 className={!!(Object.keys(this.state.filters).length) ? "clear-filters" : "hide-clear-filters"}
+                            >CLEAR FILTERS
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </>
+        );
+    }
 }
 
 export default Shoes;
