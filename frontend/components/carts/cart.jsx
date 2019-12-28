@@ -86,54 +86,89 @@ class Cart extends React.Component {
         const { open, handleCartOpen, items, removeFromCart } = this.props;
         const { subtotal } = this.state;
 
-        const cartItems = items.map( (item, i) => {
-            return <CartItem
-                item={item}
-                key={`${item.id}-${item.size}`}
-                index={i}
-                updateQuantity={this.updateQuantity}
-                removeFromCart={removeFromCart}
-            />
-        });
+        if (Object.values(this.props.cartItems).length > 0 && Object.values(this.props.items).length >= Object.values(this.props.cartItems).length) {
 
-        return (
-            <div className={open ? 'cart-page-container open-cart' : 'cart-page-container closed-cart'}>
-                <div onAnimationEnd={this.endNotification} className={this.state.notificationAnimating ? "fadeout notification" : "notification"}>Thank you for your purchase!</div>
-                <div className={open ? "cart-container in-front open-container" : "cart-container closed-cart"}>
-                    <div className={open ? "overlay-visible open-cart" : "closed-cart"}></div>
-                    <div className={open ? "cart-sidebar in-front" : "cart-sidebar closed-cart"}>
-                        <div className="cart-upper-container">
-                            <div className="cart-header">
-                                <h2>CART</h2>
-                                <div onClick={handleCartOpen} className="cart-close-button">close</div>
+            const cartItems = items.map( (item, i) => {
+                return <CartItem
+                    item={item}
+                    key={`${item.id}-${item.size}`}
+                    index={i}
+                    updateQuantity={this.updateQuantity}
+                    removeFromCart={removeFromCart}
+                />
+            });
+    
+            return (
+                <div className={open ? 'cart-page-container open-cart' : 'cart-page-container closed-cart'}>
+                    <div onAnimationEnd={this.endNotification} className={this.state.notificationAnimating ? "fadeout notification" : "notification"}>Thank you for your purchase!</div>
+                    <div className={open ? "cart-container in-front open-container" : "cart-container closed-cart"}>
+                        <div className={open ? "overlay-visible open-cart" : "closed-cart"}></div>
+                        <div className={open ? "cart-sidebar in-front" : "cart-sidebar closed-cart"}>
+                            <div className="cart-upper-container">
+                                <div className="cart-header">
+                                    <h2>CART</h2>
+                                    <div onClick={handleCartOpen} className="cart-close-button">&#10005;</div>
+                                </div>
+                                <ul className="cart-items">
+                                    {cartItems}
+                                </ul>
                             </div>
-                            <ul className="cart-items">
-                                {cartItems}
-                            </ul>
                         </div>
-                    </div>
-                    <div className="divider">Anything else?
-                        &nbsp;
-                            <Link onClick={handleCartOpen} className="shopping-link" to={'/shoes/men'}>Keep Shopping</Link>
-                    </div>
-                    <div className="cart-totals">
-                        <div className="cart-costs">
-                            <h3>Subtotal</h3>
-                            <div>${subtotal}</div>
+                        <div className="divider">Anything else?
+                            &nbsp;
+                                <Link onClick={handleCartOpen} className="shopping-link" to={'/shoes/men'}>Keep Shopping</Link>
                         </div>
-                        <div className="cart-costs">
-                            <h3>Shipping</h3>
-                            <div>FREE</div>
+                        <div className="cart-totals">
+                            <div className="cart-costs">
+                                <h3>Subtotal</h3>
+                                <div>${subtotal}</div>
+                            </div>
+                            <div className="cart-costs">
+                                <h3>Shipping</h3>
+                                <div>FREE</div>
+                            </div>
+                            <input onClick={this.emptyCart} className="cart-button" type="button" value="CHECKOUT"/>
                         </div>
-                        <input onClick={this.emptyCart} className="cart-button" type="button" value="CHECKOUT"/>
-                    </div>
-                    <div className="cart-footer">
-                        <p>Looking for more birds?</p>&nbsp;
-                        <p>Click <Link className="shopping-link" onClick={handleCartOpen} to={`/shoes/men`}>here</Link></p>
+                        <div className="cart-footer">
+                            <p>Looking for more birds?</p>&nbsp;
+                            <p>Click <Link className="shopping-link" onClick={handleCartOpen} to={`/shoes/men`}>here</Link></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        );
+            );
+        } else {
+            return (
+                <div className="empty-cart">
+                    <div className="shop-links">
+                        <div className="nest-text">
+                            <div className="nest-img"><i class="fas fa-shopping-cart"></i></div>
+                            <p>You're $50 away from free shipping</p>
+                        </div>
+                        <br />
+                            <p>Your Cart is Empty</p>
+                            <style>
+                                @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
+                            </style>
+                            <div onClick={this.handleMenModalClick} className="shop-link" >
+                                <input
+                                    type="submit"
+                                    className="submit"
+                                    value="SHOP MEN"
+                                />
+                            </div>
+                            <div onClick={this.handleWomenModalClick} className="shop-link">
+                                <input
+                                    type="submit"
+                                    className="submit"
+                                    value="SHOP WOMEN"
+                                />
+                            </div>
+
+                    </div>
+                </div>
+            );
+        }
+
     }
 }
 
