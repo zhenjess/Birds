@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     # resources :reviews, only: [:create, :show, :edit, :destroy]
     # resource :user, only: [:create]
     # resource :cart 
-    resources :users, only: [:create]
+    resources :users, only: [:create, :update, :show]
     resource :session, only: [:create, :destroy]
     resources :shoes, only: [:index, :show]
     resources :materials, only: [:index, :show]
@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :shoes_colors, only: [:index, :show]
     resources :shoes_materials, only: [:index, :show]
     resources :carts, only: [:create, :edit, :destroy, :show]
+    resources :items, only: [:show]
 
   end
   root "static_pages#root"
