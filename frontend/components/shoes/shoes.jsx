@@ -184,7 +184,7 @@ class Shoes extends React.Component {
                 <div className="shoe-index-items">
                     <div className="filter">
                         <div>{`${!!(Object.keys(this.state.filters).length) ? "" : "All - "} ${this.state.items.length} Results`}</div>
-                        <div className="nav-filter">
+                        <div className="filter-bar">
                             <div onClick={this.clearAllFilters}
                                  className={!!(Object.keys(this.state.filters).length) ? "clear-filters" : "hide-clear-filters"}
                             >CLEAR FILTERS
