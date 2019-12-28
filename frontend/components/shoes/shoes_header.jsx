@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Shoes from './shoes';
-
 const ShoesHeader = ({ gender }) => {
     if (gender === 'women') {
         return (
@@ -15,8 +13,8 @@ const ShoesHeader = ({ gender }) => {
                         </div>
                     </div>
                 </div>
-
-                <Shoes/>
+{/* 
+                <Shoes/> */}
                 {/* <div className="shoe-bar">
                     <div className="left-bar">
                         <p>All- 35 Results</p>
@@ -85,7 +83,7 @@ const ShoesHeader = ({ gender }) => {
                     </div>
                 </div>  
 
-                <Shoes/>
+                {/* <Shoes/> */}
 
                 {/* <div className="shoe-bar">
                     <div className="left-bar">

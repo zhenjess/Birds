@@ -110,6 +110,7 @@ class ShoeIndex extends React.Component {
                  </div>
 
              </div> */}
+             
             <div className="shoe-index-text">
                 <h2>Wool Runners</h2>
                 
