@@ -6,7 +6,6 @@ import ShoeFilter from './shoe_filter';
 
 import ShoeIndexItem from './shoe_index_item';
 
-import ShoesHeader from './shoes_header';
 
 class Shoes extends React.Component {
     constructor(props) {
@@ -23,7 +22,7 @@ class Shoes extends React.Component {
             },
             willAnimate: false, 
             animateItem: true, 
-            startAnimate: false
+            startAnimate: false,
         };
 
         this.filterItems = this.filterItems.bind(this);
@@ -33,7 +32,6 @@ class Shoes extends React.Component {
         this.handleFilter = this.handleFilter.bind(this);
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
         this.clearAnimations = this.clearAnimations.bind(this);
-        this.loadedImage = this.loadedImage.bind(this);
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
     }
@@ -43,7 +41,7 @@ class Shoes extends React.Component {
 
         this.props.fetchItems(id).then((data) => {
             this.setState({
-                items: Object.values(data.items)
+                items: Object.values(data.items),
             });
         });
     }
@@ -54,7 +52,7 @@ class Shoes extends React.Component {
         if (this.props.location.pathname !== prevProp.location.pathname) {
             this.props.fetchItems(id).then((data) => {
                 this.setState({
-                    items: Object.values(data.items)
+                    items: Object.values(data.items),
                 });
             });
         }
@@ -133,10 +131,6 @@ class Shoes extends React.Component {
         this.setState({ animateItem: false });
     }
 
-    loadedImage() {
-        this.setState({ loading: false });
-    }
-
     startNotification() {
         this.setState({ startAnimate: true });
     }
@@ -153,36 +147,37 @@ class Shoes extends React.Component {
         const clearFilter = this.clearFilter;
 
         const populateItems = () => {
-            const shoeItems = this.state.shoeItems.map(shoeItem => {
+            const items = this.state.items.map(item => {
                 return (
                     <ShoeIndexItem
                         startNotification={this.startNotification}
                         addToCart={addToCart}
                         clearAnimations={clearAnimations}
                         animateItem={this.state.animateItem}
-                        shoeItem={shoeItem}
-                        key={`${shoeItem.id}`}
+                        item={item}
+                        key={`${item.id}`}
                     />
                 );
             });
 
             return (
                 <ul>
-                    {shoeItems}
+                    {items}
                 </ul>
             );
         }
 
+        const items = this.props.items.length ? populateItems() : (<div>Waiting for items...</div>);
+
         return (
             <>
-            <Loading isLoading={this.state.loading}/>
             <div>
                 <div onAnimationEnd={this.endNotification} className={this.state.startAnimate ? "fadeout note" : "note"}>
                     Item added to your cart!
                 </div>
-                <ShoesHeader loadedImage={this.loadedImage} gender={this.props.match.params.id}/>
+                
                 <div className="shoe-index-items">
-                    <div className="filter">
+                    <div className="filter-head">
                         <div>{`${!!(Object.keys(this.state.filters).length) ? "" : "All - "} ${this.state.items.length} Results`}</div>
                         <div className="filter-bar">
                             <div onClick={this.clearAllFilters}
@@ -191,16 +186,7 @@ class Shoes extends React.Component {
                             </div>
 
                             <ul className="filter-attributes">
-                                <ShoeFilter
-                                    handleFilter={handleFilter}
-                                    title={"Size"}
-                                    id={"size"}
-                                    elements={["7", "8", "9", "10", "11", "12"]}
-                                    whatFilter={this.state.filters.size}
-                                    openFilter={this.state.openFilter}
-                                    currentFilter={filterTitle}
-                                    clearFilter={clearFilter}
-                                />
+                                
                                 <ShoeFilter
                                     handleFilter={handleFilter}
                                     title={"Hue"}
@@ -240,7 +226,6 @@ class Shoes extends React.Component {
                     </div>
                     {items}
                 </div>
-                <footer></footer>
             </div>
             </>
         );
