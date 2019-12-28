@@ -1,7 +1,11 @@
+import React from 'react';
+
 import FilterShoeItems from './filter_shoe';
 
 import ShoeFilter from './shoe_filter';
+
 import ShoeIndexItem from './shoe_index_item';
+
 import ShoesHeader from './shoes_header';
 
 class Shoes extends React.Component {
@@ -174,7 +178,7 @@ class Shoes extends React.Component {
             <Loading isLoading={this.state.loading}/>
             <div>
                 <div onAnimationEnd={this.endNotification} className={this.state.startAnimate ? "fadeout note" : "note"}>
-                    Item added to cart!
+                    Item added to your cart!
                 </div>
                 <ShoesHeader loadedImage={this.loadedImage} gender={this.props.match.params.id}/>
                 <div className="shoe-index-items">
