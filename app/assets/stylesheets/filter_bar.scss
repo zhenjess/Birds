@@ -74,6 +74,47 @@
 
         .filter-elements {
             display: flex;
+            height: 40px;
+            margin-left: 10px;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+
+            .filter {
+                animation: swipe-left .3s;
+            }
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                padding-top: 14px;
+                margin-left: 10px;
+            }
+
+            h5 {
+                margin-left: 10px;
+                box-sizing: border-box;
+                width: 20px;
+            }
+
+            .x {
+                font-family: 'Roboto', sans-serif;
+                font-size: 30px;
+                padding-top: 14px;
+            }
+
+            .minus {
+                font-family: 'Roboto', sans-serif;
+                font-size: 30px;
+                padding: 5px 0px 0px 3px;
+            }
+
+            .filter-dropdown {
+                padding-top: 16px;
+                padding-left: 5px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 12px;
+            }
         }
     }
 }

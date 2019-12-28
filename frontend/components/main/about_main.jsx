@@ -15,7 +15,7 @@ class AboutMain extends React.Component {
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:700&display=swap');
                     </style>
-                    <h2>Natural Comfort Sourced from Natural Materials</h2>
+                    <h2>Natural Comfort Sourced from Sustainable Natural Materials</h2>
                     <style>
                         @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
                     </style>

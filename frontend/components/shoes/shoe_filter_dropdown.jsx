@@ -11,7 +11,7 @@ const dropDownBtn = ({ openFilter, currentFilter, title, id, elements, clearFilt
         );
     } else {
         return (
-            <h5 className="dropdown" onClick={handleFilter(title, id, elements)}><i className="fas fa-angle-down"></i></h5>
+            <h5 className="filter-dropdown" onClick={handleFilter(title, id, elements)}><i className="fas fa-angle-down"></i></h5>
         );
     }
 };
