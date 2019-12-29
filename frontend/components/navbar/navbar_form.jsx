@@ -25,7 +25,7 @@ class NavbarForm extends React.Component {
             openCart: false,
         };
 
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
         this.showDropDown = this.showDropDown.bind(this);
         this.handleAnimation = this.handleAnimation.bind(this);
         this.handleScroll = this.handleScroll.bind(this);

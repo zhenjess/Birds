@@ -1,6 +1,6 @@
-export const receiveShoeItems = (gender) => (
-    $ajax({
-        method: 'GET', 
-        url: `/api/items/${gender}`
-    })
-);
+export const receiveShoeItems = (gender) => {
+    return $.ajax({
+        url: `/api/items/${gender}`,
+        method: 'GET'
+    });
+};

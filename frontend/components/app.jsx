@@ -1,6 +1,6 @@
 import React from "react";
 
-import Modal from './modal/modal';
+// import Modal from './modal/modal';
 
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
@@ -64,7 +64,7 @@ import Footer from './footer/footer_container';
 const App = () => (
     <div>
         <div>
-            <Modal />
+            {/* <Modal /> */}
             {/* <div>
                 <Link to="/shoes" className="nest-link">
                     <h1>You're $50 away from free shipping</h1>
