@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :colors, only: [:index, :show]
     resources :shoes_colors, only: [:index, :show]
     resources :shoes_materials, only: [:index, :show]
-    resources :carts, only: [:create, :edit, :destroy, :show]
+    resources :carts, only: [:create, :show, :edit, :destroy]
     resources :items, only: [:show]
 
   end
