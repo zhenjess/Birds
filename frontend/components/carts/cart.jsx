@@ -11,14 +11,34 @@ class Cart extends React.Component {
             quantity: [],
             numItems: 0,
             notificationAnimating: false,
+            processed: false
         };
 
         this.updateQuantity = this.updateQuantity.bind(this);
         this.emptyCart = this.emptyCart.bind(this);
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleMenModalClick = this.handleMenModalClick.bind(this);
+        this.handleWomenModalClick = this.handleWomenModalClick.bind(this);
     }
 
+    renderErrors() {
+        if (this.state.processed) {
+            return (
+                <div>e
+                    <ul>
+                        {
+                            this.props.errors.map((error, i) => (
+                                <li key={`error-${i}`}>{error}</li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            );
+        }
+    }
+    
     componentDidMount() {
         const { items } = this.props;
         if(items.length) {
@@ -82,8 +102,26 @@ class Cart extends React.Component {
         }
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        const shop = this.props.shop;
+        const user = Object.assign({}, this.state);
+        shop(user);
+        this.setState({ processed: true });
+    }
+
+    handleMenModalClick() {
+        this.props.history.push('/shoes/men')
+        this.props.closeModal()
+    }
+
+    handleWomenModalClick() {
+        this.props.history.push('/shoes/women')
+        this.props.closeModal()
+    }
+
     render() {
-        const { open, handleCartOpen, items, removeFromCart } = this.props;
+        const { open, handleOpenCart, items, removeFromCart } = this.props;
         const { subtotal } = this.state;
 
         if (Object.values(this.props.cartItems).length > 0 && Object.values(this.props.items).length >= Object.values(this.props.cartItems).length) {
@@ -107,7 +145,7 @@ class Cart extends React.Component {
                             <div className="cart-upper-container">
                                 <div className="cart-header">
                                     <h2>CART</h2>
-                                    <div onClick={handleCartOpen} className="cart-close-button">&#10005;</div>
+                                    <div onClick={handleOpenCart} className="cart-close-button">&#10005;</div>
                                 </div>
                                 <ul className="cart-items">
                                     {cartItems}
@@ -116,7 +154,7 @@ class Cart extends React.Component {
                         </div>
                         <div className="divider">Anything else?
                             &nbsp;
-                                <Link onClick={handleCartOpen} className="shopping-link" to={'/shoes/men'}>Keep Shopping</Link>
+                                <Link onClick={handleOpenCart} className="shopping-link" to={'/shoes/men'}>Keep Shopping</Link>
                         </div>
                         <div className="cart-totals">
                             <div className="cart-costs">
