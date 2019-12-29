@@ -16,9 +16,12 @@ export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 //         .then( items => dispatch(fetchShoeItems(items)))
 // );
 
-const reiveItems = payload => ({
+const receiveItems = payload => ({
     type: RECEIVE_ITEMS, 
     payload
 });
 
-export const 
+export const fetchItems = id => dispatch => (
+    APIUtil.fetchItems()
+        .then(items => dispatch(receiveItems(items)))
+);
