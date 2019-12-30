@@ -11,9 +11,11 @@ class Shoe < ApplicationRecord
         through: :shoe_options, 
         source: :color
 
+    # has_many :items
+    #     through: :shoe_options, 
+    #     source: :item
+
     has_many :items
-        through: :shoe_options, 
-        source: :item
 
     has_many_attached :photos
 end

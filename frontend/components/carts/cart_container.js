@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { removeFromCart } from '../../actions/cart_actions';
 
 const mapStateToProps = state => {
+ 
     return ({
-        items: Object.values(state.entities.cart)
+        items: Object.values(state.entities.carts)
     });
 };
 
