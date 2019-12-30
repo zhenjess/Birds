@@ -4,12 +4,9 @@ import { LOGOUT_CURRENT_USER } from '../actions/session_actions';
 const itemsReducer = (oldState={}, action) => {
     Object.freeze(oldState);
 
-    let newState;
-
     switch(action.type) {
         case RECEIVE_ITEMS:
-            newState = Object.assign({}, oldState, action.payload.items);
-            return newState;
+            return Object.assign({}, oldState, action.payload.items);    
         case LOGOUT_CURRENT_USER:
             return {};
         default:
