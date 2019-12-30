@@ -100,7 +100,7 @@ class Cart extends React.Component {
                         <div className="cart-upper-conatiner">
                             <div className="cart-header">
                                 <h2>CART</h2>
-                                <div onClick={handleCartOpen} className="cart-close-button">&#10005;</div>
+                                <div onClick={handleOpenCart} className="cart-close-button">&#10005;</div>
                             </div>
                             <ul className="cart-items">
                                 {cartItems}
