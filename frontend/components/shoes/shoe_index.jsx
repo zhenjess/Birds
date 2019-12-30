@@ -7,9 +7,28 @@ import ShoesHeader from './shoes_header';
 import ShoeIndexItem from './shoe_index_item';
 
 class ShoeIndex extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [],
+            shouldAnimate: false,
+            animateItems: true,
+            animateNotification: false
+        };
+        this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
+        this.clearGlobalAnimations = this.clearGlobalAnimations.bind(this);
+        this.startNotification = this.startNotification.bind(this);
+        this.endNotification = this.endNotification.bind(this);
+    }
     componentDidMount() {
         // debugger
         const id = this.props.match.params.id;
+
+        this.props.fetchShoeItems(id).then((data) => {
+            this.setState({
+                items: Object.values(data.items)
+            });
+        });
 
         // this.props.fetchShoe(shoeId).then((data) => {
         //     this.setState({
@@ -18,6 +37,17 @@ class ShoeIndex extends React.Component {
         // });
 
         this.props.fetchAllShoes();
+    }
+
+    componentDidUpdate(prevProp) {
+        const id = this.props.match.params.id;
+        if (this.props.location.pathname !== prevProp.location.pathname) {
+            this.props.fetchShoeItems(id).then((data) => {
+                this.setState({
+                    items: Object.values(data.items),
+                });
+            });
+        }
     }
 
     // constructor(props) {
