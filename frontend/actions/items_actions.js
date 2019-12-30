@@ -21,7 +21,7 @@ const receiveItems = payload => ({
     payload
 });
 
-export const fetchItems = id => dispatch => (
-    APIUtil.fetchItems()
+export const fetchShoeItems = id => dispatch => (
+    APIUtil.fetchShoeItems(id)
         .then(items => dispatch(receiveItems(items)))
 );
