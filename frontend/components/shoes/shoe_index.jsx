@@ -155,11 +155,16 @@ class ShoeIndex extends React.Component {
         const items = this.props.items.length ? fetchItems() : (<div>Fetching Birds...</div>);
 
         return (
+            <div className="shoe-index-head">
+                <div onAnimationEnd={this.endNotification} 
+                    className={this.state.animateNotification ? 
+                    "fadeout notification" : "notification"}>Item added to your cart!</div>
+                <ShoesHeader
+                    gender={this.props.match.params.gender}
+                />
+            </div>
             
         <div className="shoe">
-            <ShoesHeader 
-                gender={this.props.match.params.gender}
-             />
 
              {/* <div className='shoebar'>
                  <div className="right">
