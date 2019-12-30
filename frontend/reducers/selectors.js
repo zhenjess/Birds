@@ -21,6 +21,7 @@ export const selectAllShoes = (state) => {
 export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded by url
     //    return [];
     const shoes = [];
+
     Object.values(state.entities.shoeOptions).forEach((shoeOption) => {
         const shoe = state.entities.shoes[shoeOption.shoeId];
         
@@ -35,6 +36,7 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
     })
     //debugger
     return shoes;
+};
 
     //iterate through shoeMaterials slice of state
     // Object.values(state.entities.shoeMaterials).forEach((shoeMaterial) => {
@@ -63,5 +65,10 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
     // });
     // // debugger
     // return shoes; //return value of selector, all shoes to see the material
-};
 
+//filter items by gender
+export const filterItemsByGender = (state, gender) => {
+    const items = state.entities.items;
+    const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
+    return filteredItems;
+};
