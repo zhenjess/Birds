@@ -6,4 +6,7 @@ class ShoeOption < ApplicationRecord
     belongs_to :shoe
 
     has_one_attached :photo #do active storage here
+
+    has_many :items
+
 end

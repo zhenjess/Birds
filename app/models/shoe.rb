@@ -12,6 +12,8 @@ class Shoe < ApplicationRecord
         source: :color
 
     has_many :items
+        through: :shoe_options, 
+        source: :item
 
     has_many_attached :photos
 end
