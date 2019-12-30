@@ -137,9 +137,9 @@ class NavbarForm extends React.Component {
                         <a href="#account" className="icon-button cart-button" ><i className="far fa-user icon"></i></a>
                         <a href="?" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a>
                         {/* <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button> */}
-                        <div onClick={this.handleOpenCart} className={
-                            (activeHeader ? "a-header-button cart-header-button" 
-                            : "u-header-button cart-header-button") + " nav-link"}>
+                        <div onClick={this.handleOpenCart} className={(activeHeader ?
+                            "a-header-button cart-header-button" :
+                            "u-header-button cart-header-button") + " nav-link"}>
                             <i className="fas fa-shopping-cart" />
                         </div>
                     </div>
