@@ -4,6 +4,24 @@ import ShoesHeader from './shoes_header';
 
 import { Link } from 'react-router-dom';
 
+class ShoeIndexItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(id, size) {
+        this.props.addToCart(id, size);
+        this.props.startNotification();
+    }
+
+    render() {
+        const { item, addToCart } = this.props;
+
+        
+    }
+}
+
 const ShoeIndexItem = ({ shoe }) => (
     
     <li className="shoe-index-item">
