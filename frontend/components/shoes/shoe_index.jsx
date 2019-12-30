@@ -96,6 +96,22 @@ class ShoeIndex extends React.Component {
     //     );
     // }
 
+    handleAnimationEnd() {
+        this.setState({shouldAnimate: false});
+    }
+
+    clearGlobalAnimations() {
+        this.setState({animateItems: false});
+    }
+
+    startNotification() {
+        this.setState({ animateNotification: true});
+    }
+
+    endNotification() {
+        this.setState({ animateNotification: false });
+    }
+
     getShoesByMaterialAndModel(material, model) {
         let shoesArr = this.props.shoes.filter(shoe => shoe.model.toLowerCase() === model && shoe.material.toLowerCase() === material)
         //debugger
