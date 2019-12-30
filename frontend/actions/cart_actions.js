@@ -1,10 +1,6 @@
+
 export const POST_TO_CART = "POST_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
-
-// const postToCart = payload => ({
-//     type: POST_TO_CART, 
-//     payload
-// });
 
 const postToCart = (payload) => {
     return ({
@@ -15,19 +11,11 @@ const postToCart = (payload) => {
 
 const removeCartItem = (id, size) => {
     return ({
-        type: REMOVE_FROM_CART, 
-        id, 
+        type: REMOVE_FROM_CART,
+        id,
         size
     });
 };
-
-// const removeCartItem = (id, size) => {
-//     return ({
-//         type: REMOVE_FROM_CART, 
-//         id, 
-//         size
-//     });
-// };
 
 function receiveCartItems(item, size) {
     let state = Object.assign({}, item, { size });
@@ -44,6 +32,8 @@ export const addToCart = (item, size) => dispatch => {
     }
     return _func(payload);
 };
+
+
 
 export const removeFromCart = (id, size) => dispatch => {
     function _func(id, size) {
