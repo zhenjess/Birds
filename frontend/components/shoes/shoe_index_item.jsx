@@ -26,14 +26,19 @@ class ShoeIndexItem extends React.Component {
                     <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt=""/>
                 </div>
                 <div className="shoe-item-info">
-                    <h3>{shoe.color}</h3>
-                    <br />
-                    <h3>{"$95 "}</h3>
-                    <h3>{shoe.gender + " "}</h3>
-                    <h3>{shoe.material + " "}</h3>
-                    <h3>{shoe.model}</h3>
-                    <br />
-                    <h3>{shoe.size}</h3>
+                    <div className="shoe-item-color">
+                        <h3>{shoe.color}</h3>
+                        <br />
+                    </div>
+
+                    <div className="shoe-item-content">
+                        <h3>{"$95 "}</h3>
+                        <h3>{shoe.gender + " "}</h3>
+                        <h3>{shoe.material + " "}</h3>
+                        <h3>{shoe.model}</h3>
+                        <br />
+                        <h3>{shoe.size}</h3>
+                    </div>
 
                     <ol className="size-selections-container">
                         <li onClick={() => this.handleClick(shoe, 7)} className="size"><h4>7</h4></li>

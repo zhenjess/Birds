@@ -1,36 +1,6 @@
 @import 'utils';
 @import 'animations';
 
-.items-body > ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.img-header-item {
-    height: 440px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.items-header-title-container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 440px;
-    width: 100%;
-
-    .items-header-title {
-        width: 800px;
-        text-align: center;
-        transform: rotate(-10deg);
-        color: white;
-        font-size: 90px;
-        font-style: italic;
-    }
-}
-
 .fadeInUp {
   animation: fadeInUp .3s;
 }
@@ -38,7 +8,7 @@
 .item {
     margin: 20px 20px 20px 20px;
     
-    .item-photo-header {
+    .shoe-item-color {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -49,12 +19,12 @@
         }
     }
 
-    .item-photo {
+    .shoe-image {
         height: 350px;
         width: 350px;
         background-color: $bg-light-grey;
         
-        .item-photo-item {
+        .shoe-image-item {
             height: 350px;
             width: 350px;
             object-fit: cover;
@@ -66,22 +36,9 @@
         }
     }
 
-    .item-info {
+    .shoe-item-content {
         color: $dark-grey;
         padding:0 0 10px 0;
-    }
-
-    .select-size {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        border: 1px solid $mid-dark-grey;
-        background-color: white;
-        transition: .2s;
-        &:hover {
-            cursor: pointer;
-            border: 1px solid black;   
-        }
     }
 }
 
