@@ -126,9 +126,34 @@ class ShoeIndex extends React.Component {
 
     render() {
         const { shoes } = this.props;
+        const { addToCart } = this.props;
         // const filterAttrs = this.state.filterAttributes;
         // const { filterName, filterId, filterOptions } = filterAttrs;
         // debugger
+
+        const fetchItems = () => {
+            const items = this.state.items.map(item => {
+                return (
+                    <Item
+                        startNotification={this.startNotification}
+                        addToCart={this.addToCart}
+                        clearGlobalAnimations={this.clearGlobalAnimations}
+                        animateItems={this.state.animateItems}
+                        item={item}
+                        key={`${item.id}`}
+                    />
+                );
+            });
+
+            return (
+                <ul>
+                    {items}
+                </ul>
+            )
+        }
+
+        const items = this.props.items.length ? fetchItems() : (<div>Fetching Birds...</div>);
+
         return (
             
         <div className="shoe">
