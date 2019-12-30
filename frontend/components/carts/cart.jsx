@@ -109,7 +109,7 @@ class Cart extends React.Component {
                         <div>
                             <div className="divider">Looking for something else?
                                     &nbsp;
-                            <Link onClick={handleOpenCart} className="shopping-link" to={'/shoess/men'}>Keep Shopping</Link>
+                            <Link onClick={handleOpenCart} className="shopping-link" to={'/shoes/men'}>Keep Shopping</Link>
                             </div>
                             <div className="cart-totals">
                                 <div className="cart-costs">
@@ -124,7 +124,7 @@ class Cart extends React.Component {
                             </div>
                             <div className="cart-footer">
                                 <p>Looking for more shoes?</p>&nbsp;
-                            <p>Click<Link className="shopping-link" onClick={handleCartOpen} to={'/shoes/women'}>here</Link></p>
+                            <p>Click<Link className="shopping-link" onClick={handleOpenCart} to={'/shoes/women'}>here</Link></p>
                             </div>
                         </div>
                     </div>

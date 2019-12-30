@@ -67,7 +67,7 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
     // return shoes; //return value of selector, all shoes to see the material
 
 //filter items by gender
-export const filterItemsByGender = (state, gender) => {
+export const selectItemsByGender = (state, gender) => {
     const items = state.entities.items;
     const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
     return filteredItems;
