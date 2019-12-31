@@ -5,6 +5,6 @@ class Api::ItemsController < ApplicationController
     end
 
     def items_params
-        params.require(:item).permit(:photo)
+        params.require(:item).permit(:size, :price, :photo)
     end
 end
