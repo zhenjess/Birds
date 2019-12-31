@@ -25,13 +25,12 @@ const ShoesHeader = ({ gender }) => {
                             <span className="bar-link">Size</span>
                             <i className="fas fa-angle-down"></i>
                             <div className="dropdown-content">
-                                <p>5</p>
-                                <p>6</p>
                                 <p>7</p>
                                 <p>8</p>
                                 <p>9</p>
                                 <p>10</p>
                                 <p>11</p>
+                                <p>12</p>
                             </div>
                         </div>
 
@@ -95,13 +94,12 @@ const ShoesHeader = ({ gender }) => {
                             <span className="bar-link">Size</span>
                             <i className="fas fa-caret-down"></i>
                             <div className="dropdown-content">
-                                <p>5</p>
-                                <p>6</p>
                                 <p>7</p>
                                 <p>8</p>
                                 <p>9</p>
                                 <p>10</p>
                                 <p>11</p>
+                                <p>12</p>
                             </div>
                         </div>
 
