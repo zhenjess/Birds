@@ -25,7 +25,7 @@ class NavbarForm extends React.Component {
             openCart: false,
         };
 
-        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.showDropDown = this.showDropDown.bind(this);
         this.handleAnimation = this.handleAnimation.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
@@ -42,17 +42,17 @@ class NavbarForm extends React.Component {
         this.setState(state => ({ activeHeader: !!(state.scrollPosition || state.isHovered || state.dropDown )}));
     }
 
-    // handleSubmit(modal) {
-    //     return (e) => {
-    //         e.preventDefault();
+    handleSubmit(modal) {
+        return (e) => {
+            e.preventDefault();
             
-    //         if (this.state.processed) {
-    //             this.setState({ processed: false }, () => this.props.closeModal());
-    //         } else {
-    //             this.setState({ processed: true }, () => this.props.openModal(modal));
-    //         }
-    //     }
-    // }
+            if (this.state.processed) {
+                this.setState({ processed: false }, () => this.props.closeModal());
+            } else {
+                this.setState({ processed: true }, () => this.props.openModal(modal));
+            }
+        }
+    }
 
     showDropDown(dropDownGender) {
         this.setState(state => {
@@ -136,12 +136,12 @@ class NavbarForm extends React.Component {
                         </div>
                         <a href="#account" className="icon-button cart-button" ><i className="far fa-user icon"></i></a>
                         <a href="?" className="icon-button cart-button" ><i className="far fa-question-circle icon"></i></a>
-                        {/* <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button> */}
-                        <div onClick={this.handleOpenCart} className={(activeHeader ?
+                        <button className="icon-button cart-button" onClick={this.handleSubmit("shoe index")}><i className="fas fa-shopping-cart" /></button>
+                        {/* <div onClick={this.handleOpenCart} className={(activeHeader ?
                             "a-header-button cart-header-button" :
                             "u-header-button cart-header-button") + " nav-link"}>
                             <i className="fas fa-shopping-cart" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

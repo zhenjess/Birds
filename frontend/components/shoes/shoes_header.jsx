@@ -15,7 +15,7 @@ const ShoesHeader = ({ gender }) => {
                 </div>
 {/* 
                 <Shoes/> */}
-                {/* <div className="shoe-bar">
+                <div className="shoe-bar">
                     <div className="left-bar">
                         <p>All- 35 Results</p>
                     </div>
@@ -68,7 +68,7 @@ const ShoesHeader = ({ gender }) => {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         );
     } else {
@@ -85,7 +85,7 @@ const ShoesHeader = ({ gender }) => {
 
                 {/* <Shoes/> */}
 
-                {/* <div className="shoe-bar">
+                <div className="shoe-bar">
                     <div className="left-bar">
                         <p>All- 33 Results</p>
                     </div>
@@ -138,7 +138,7 @@ const ShoesHeader = ({ gender }) => {
                             </div>
                         </div>
                     </div>
-                </div>  */}
+                </div> 
             </div>
         );
     }
