@@ -22,38 +22,39 @@ class ShoeIndexItem extends React.Component {
             <div onAnimationEnd={this.state.clearGlobalAnimations}
                  className={this.props.animateItems ? "item fadeInUp" : "item"}>
 
-                <div className="shoe-image">
-                    <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt=""/>
-                </div>
-                <div className="shoe-item-info">
-                    <div className="shoe-item-color">
-                        <h3>{shoe.color}</h3>
-                        <br />
+                <li className="shoe-index-item">
+                    <div className="shoe-image">
+                        <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt="" />
                     </div>
-
-                    <div className="shoe-item-content">
-                        <h3>{"$95 "}</h3>
-                        <h3>{shoe.gender + " "}</h3>
-                        <h3>{shoe.material + " "}</h3>
-                        <h3>{shoe.model}</h3>
-                        <br />
-                        <h3>{shoe.size}</h3>
-                    </div>
-
-                    <ol className="size-selections-container">
-                        <li onClick={() => this.handleClick(shoe, 7)} className="size"><h4>7</h4></li>
-                        <li onClick={() => this.handleClick(shoe, 8)} className="size"><h4>8</h4></li>
-                        <li onClick={() => this.handleClick(shoe, 19)} className="size"><h4>9</h4></li>
-                        <li onClick={() => this.handleClick(shoe, 10)} className="size"><h4>10</h4></li>
-                        <li onClick={() => this.handleClick(shoe, 11)} className="size"><h4>11</h4></li>
-                        <li onClick={() => this.handleClick(shoe, 12)} className="size"><h4>12</h4></li>
-                    </ol>
-                </div>
+                    <Link to={`/shoe/${shoe.id}`}>
+                        <div className="shoe-item-color">
+                            <h3>{shoe.color}</h3>
+                            <br />
+                        </div>
+                        <div className="shoe-item-content">
+                            <h3>{"$95 "}</h3>
+                            <h3>{shoe.gender + " "}</h3>
+                            <h3>{shoe.material + " "}</h3>
+                            <h3>{shoe.model}</h3>
+                            <br />
+                            <h3>{shoe.size}</h3>
+                        </div>
+                        <ol className="size-selections-container">
+                            <li onClick={() => this.handleClick(shoe, 7)} className="size"><h4>7</h4></li>
+                            <li onClick={() => this.handleClick(shoe, 8)} className="size"><h4>8</h4></li>
+                            <li onClick={() => this.handleClick(shoe, 19)} className="size"><h4>9</h4></li>
+                            <li onClick={() => this.handleClick(shoe, 10)} className="size"><h4>10</h4></li>
+                            <li onClick={() => this.handleClick(shoe, 11)} className="size"><h4>11</h4></li>
+                            <li onClick={() => this.handleClick(shoe, 12)} className="size"><h4>12</h4></li>
+                        </ol>
+                    </Link>
+                </li>
             </div>
         );
     }
 }
 export default ShoeIndexItem;
+
 // const ShoeIndexItem = ({ shoe }) => (
     
 //     <li className="shoe-index-item">
