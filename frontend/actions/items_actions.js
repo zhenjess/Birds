@@ -16,9 +16,9 @@ export const RECEIVE_ITEMS = 'RECEIVE_ITEMS';
 //         .then( items => dispatch(fetchShoeItems(items)))
 // );
 
-const receiveItems = payload => ({
+const receiveItems = items => ({
     type: RECEIVE_ITEMS, 
-    payload
+    items: items
 });
 
 export const fetchShoeItems = id => dispatch => (
