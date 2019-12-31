@@ -44,7 +44,7 @@ json.cart do
     cart_item_ids.select! { |id| !id.nil? }
 
     json.set! @cart.id do 
-        json.extract! @cart, :user_id
+        json.extract! @cart, :user_id, :status
         json.cartItems { json.array! cart_item_ids }
 
         cartTotal = 0;
