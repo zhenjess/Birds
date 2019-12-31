@@ -10,7 +10,7 @@ class Cart extends React.Component {
             subtotal: 0,
             quantity: [],
             numItems: 0,
-            notificationAnimating: false,
+            animateNotification: false,
         };
         this.updateQuantity = this.updateQuantity.bind(this);
         this.emptyCart = this.emptyCart.bind(this);
@@ -44,11 +44,11 @@ class Cart extends React.Component {
     }
 
     startNotification() {
-        this.setState({ notificationAnimating: true });
+        this.setState({ animateNotification: true });
     }
 
     endNotification() {
-        this.setState({ notificationAnimating: false });
+        this.setState({ animateNotification: false });
     }
 
     updateQuantity(idx, val) {
@@ -93,7 +93,7 @@ class Cart extends React.Component {
 
         return (
             <div className={open ? "cart-page-container open-cart" : "cart-page-container closed-cart"}>
-                <div onAnimationEnd={this.endNotification} className={this.state.notificationAnimating ? "fadeout notification" : "notification"}>Thank you for your purchase!</div>
+                <div onAnimationEnd={this.endNotification} className={this.state.animateNotification ? "fadeout notification" : "notification"}>Thank you for your purchase!</div>
                 <div className={open ? "cart-container in-front open-container" : "cart-container closed-cart"}>
                     <div className={open ? "overlay-visible open-cart" : "closed-cart"}></div>
                     <div className={open ? "cart-sidebar in-front" : "cart-sidebar closed-cart"}>
@@ -109,7 +109,8 @@ class Cart extends React.Component {
                         <div>
                             <div className="divider">Looking for something else?
                                     &nbsp;
-                            <Link onClick={handleOpenCart} className="shopping-link" to={'/shoes/men'}>Keep Shopping</Link>
+                            <Link onClick={handleOpenCart} className="shopping-link" to={'/shoes/women'}>Shop Women</Link>
+                            <Link onClick={handleOpenCart} className="shopping-link" to={'/shoes/men'}>Shop Men</Link>
                             </div>
                             <div className="cart-totals">
                                 <div className="cart-costs">
@@ -124,7 +125,8 @@ class Cart extends React.Component {
                             </div>
                             <div className="cart-footer">
                                 <p>Looking for more shoes?</p>&nbsp;
-                            <p>Click<Link className="shopping-link" onClick={handleOpenCart} to={'/shoes/women'}>here</Link></p>
+                                <p>Click<Link className="shopping-link" onClick={handleOpenCart} to={'/shoes/women'}>here for Women</Link></p>
+                                <p>Click<Link className="shopping-link" onClick={handleOpenCart} to={'/shoes/men'}>here for Men</Link></p>
                             </div>
                         </div>
                     </div>
