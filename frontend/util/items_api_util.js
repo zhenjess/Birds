@@ -4,3 +4,4 @@ export const fetchShoeItems = (gender) => {
         method: 'GET'
     });
 };
+
