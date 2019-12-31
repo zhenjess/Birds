@@ -1,18 +1,18 @@
-import Cart from './cart';
-import { connect } from 'react-redux';
-import { removeFromCart } from '../../actions/cart_actions';
+// import Cart from './cart';
+// import { connect } from 'react-redux';
+// import { removeFromCart } from '../../actions/cart_actions';
 
-const mapStateToProps = state => {
+// const mapStateToProps = state => {
  
-    return ({
-        items: Object.values(state.entities.carts)
-    });
-};
+//     return ({
+//         items: Object.values(state.entities.carts)
+//     });
+// };
 
-const mapDispatchToProps = dispatch => {
-    return ({
-        removeFromCart: (id, size) => dispatch(removeFromCart(id, size))
-    });
-};
+// const mapDispatchToProps = dispatch => {
+//     return ({
+//         removeFromCart: (id, size) => dispatch(removeFromCart(id, size))
+//     });
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+// export default connect(mapStateToProps, mapDispatchToProps)(Cart);
