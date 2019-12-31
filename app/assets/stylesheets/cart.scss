@@ -59,6 +59,12 @@
     border-bottom: 1px solid $mid-grey;
 }
 
+.cart-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cart-close-button {
     &:hover {
         cursor: pointer;
@@ -113,7 +119,7 @@
 
 .cart-button {
     color: white;
-    // background-color: $bg-green;
+    background-color: $bg-green;
     box-sizing: content-box;
     font-size: 16px;
     height: 40px;
