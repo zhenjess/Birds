@@ -3,7 +3,7 @@ import React from 'react';
 import { shoes } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Cart from './cart';
-import { removeFromCart } from 'react-redux';
+import { removeFromCart } from '../../actions/cart_actions';
 // import NestForm from './nest_form';
 
 const mapStateToProps = ({ state, errors }) => {
