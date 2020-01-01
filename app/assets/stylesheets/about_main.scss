@@ -10,10 +10,10 @@
 }
 
 .about-image {
-    // display: flex;
+    display: flex;
     background-image: url("https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/homepage/en-US/images/21Qx20nUNN1w1t3eQo7lwM/1");
     background-position: center;
-     width: 100vw;
+    width: 100vw;
     height: 100vh;
     flex-direction: column;
     // margin: 100px 75px 5px 70px;
@@ -60,7 +60,7 @@
     input {
         box-sizing: border-box;
         min-height: 40px;
-        min-width: 400px;
+        min-width: 500px;
         padding: 20px;
         border: 1px solid #E6E5E5;
         right: 60px;
