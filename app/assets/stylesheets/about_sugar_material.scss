@@ -49,7 +49,8 @@
         .about-sugar-text {
             p {
                 display: flex;
-                text-align: center;
+                text-align: left;
+                justify-content: center;
                 font-family: 'Merriweather Sans', sans-serif;
                 right: 250px;
                 font-size: 24px;
@@ -63,7 +64,7 @@
         .about-sugar-sub-text {
             p {
                 display: flex;
-                text-align: center;
+                text-align: left;
                 font-family: 'Merriweather Sans', sans-serif;
                 right: 250px;
                 font-size: 14px;

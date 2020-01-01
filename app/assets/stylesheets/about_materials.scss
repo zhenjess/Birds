@@ -49,7 +49,8 @@
     .about-main-text {    
         p {
             display: flex;
-            text-align: center;
+            align-items: left;
+            justify-content: center;
             font-family: 'Merriweather Sans', sans-serif;
             right: 250px;
             font-size: 24px;
@@ -64,7 +65,7 @@
 
         p {
             display: flex;
-            text-align: center;
+            text-align: left;
             font-family: 'Merriweather Sans', sans-serif;
             right: 250px;
             font-size: 14px;
