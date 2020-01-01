@@ -43,6 +43,7 @@ a:visited {
 }
 
 .shoe-bar {
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -52,7 +53,7 @@ a:visited {
     //position: fixed;
     //width: 100vw;
     z-index: 10;
-    border-bottom: 3px solid gray;
+    border-bottom: 1px solid gray;
     //padding: 160px 100px 0px 10px;
    // box-sizing: border-box;
     //text-align: center;
@@ -68,36 +69,101 @@ a:visited {
         margin-left: 50px;
     }
 
-    .right-bar {
+    ul li {
+        margin: 10px;
+    }
+
+    .open-filter-dropdown {
+        max-height: 200px;
+    }
+
+    .close-filter-dropdown {
+        max-height: 0px;
+    }
+
+    .animation-wipe {
+        animation: wipe .5s;
+    }
+
+   .right-bar {
         position: relative;
         width: 350px;
         right: 1%;
-        display: flex;
         justify-content: space-evenly;
         // float: right;
         font-family: sans-serif;
         font-size: 12px;
         font-weight: bold;
-    }
+        display: flex;
+        align-items: center;
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+        &:hover {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .shoe-filter-container {
+            display: flex;
+            height: 40px;
+            margin-left: 10px;
+            align-items: flex-start;
+            justify-content: flex-end;
+            overflow: hidden;
+            
+            .swipe-left {
+                animation: swipe-left .3s;
+            }  
 
-    .dropdown-content {
-        display: none;
-        flex-direction: row;
-        justify-content: space-evenly; 
-        position: absolute;
-        background-color: white;
-        min-width: 130px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
+            h2 {
+                font-family: $title-font-1;
+                font-size: 16px;
+                padding-top: 14px;
+                margin-left: 10px;
+            }
+
+            h5 {
+                margin-left: 10px;
+                box-sizing: border-box;
+                width: 20px;
+            }
+
+            .x {
+                font-size: 18px;
+                padding-top: 14px;
+            }
+
+            .minus {
+                font-size: 32px;
+                padding: 8px 0 0 3px;
+            }
+
+            .drop-down {
+                padding-top: 19px;
+                padding-left: 3px;
+                font-size: 12px;
+            } 
+        }
     }
+}
+
+    // .dropdown {
+    //     position: relative;
+    //     display: inline-block;
+    // }
+
+    // .dropdown-content {
+    //     display: none;
+    //     flex-direction: row;
+    //     justify-content: space-evenly; 
+    //     position: absolute;
+    //     background-color: white;
+    //     min-width: 130px;
+    //     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    //     z-index: 1;
+    // }
 
     
-}
+
 
 .men-shoe-image {
      display: flex;
