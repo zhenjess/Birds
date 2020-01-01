@@ -33,10 +33,6 @@ class ShoeIndexItem extends React.Component {
                             <br />
                         </div>
                         <div className="shoe-item-content">
-                            {/* <h3>{"$95 "}</h3>
-                            <h3>{shoe.gender + " "}</h3>
-                            <h3>{shoe.material + " "}</h3>
-                            <h3>{shoe.model}</h3> */}
                             <h3>{"$95 "}</h3>
                             <h3>{shoe.gender + " "}</h3>
                             <h3>{shoe.material + " "}</h3>
