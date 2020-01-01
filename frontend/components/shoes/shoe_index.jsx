@@ -152,7 +152,7 @@ class ShoeIndex extends React.Component {
             )
         }
 
-        const items = this.props.items.length ? fetchItems() : (<div>Fetching Birds...</div>);
+        const items = this.props.items.length ? fetchItems() : ""; //(<div>Fetching Birds...</div>)
 
         return (
             <div>
