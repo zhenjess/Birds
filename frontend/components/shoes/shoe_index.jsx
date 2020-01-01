@@ -16,7 +16,7 @@ class ShoeIndex extends React.Component {
             animateNotification: false
         };
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
-        this.clearGlobalAnimations = this.clearGlobalAnimations.bind(this);
+        // this.clearGlobalAnimations = this.clearGlobalAnimations.bind(this);
         this.startNotification = this.startNotification.bind(this);
         this.endNotification = this.endNotification.bind(this);
     }
@@ -100,9 +100,9 @@ class ShoeIndex extends React.Component {
         this.setState({shouldAnimate: false});
     }
 
-    clearGlobalAnimations() {
-        this.setState({animateItems: false});
-    }
+    // clearGlobalAnimations() {
+    //     this.setState({animateItems: false});
+    // }
 
     startNotification() {
         this.setState({ animateNotification: true});
@@ -137,7 +137,7 @@ class ShoeIndex extends React.Component {
                     <Item
                         startNotification={this.startNotification}
                         addToCart={addToCart}
-                        clearGlobalAnimations={this.clearGlobalAnimations}
+                        // clearGlobalAnimations={this.clearGlobalAnimations}
                         animateItems={this.state.animateItems}
                         item={item}
                         key={`${item.id}`}

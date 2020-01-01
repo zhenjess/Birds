@@ -219,13 +219,12 @@ h2.nav-link {
 .nav-link .drop-down {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font-family: $body-font-1;
     padding: 5px 0px 5px 5px;
 }
 
 .nav-link .minus {
     font-size: 14px;
-    font-family: $body-font-1;
+    font-family: 'Roboto', sans-serif;
     padding-bottom: 0px;
     padding-left: 5px;
 }
@@ -256,7 +255,7 @@ h2.nav-link {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  margin-top: 4vh;
+  margin-top: 3.5vh;
   justify-content: space-between;
   display: flex;
   position: relative;
@@ -280,8 +279,6 @@ h2.nav-link {
   font-family: 'Roboto', sans-serif;
   width: 400px;
 }
-
-
 
 .icon-button {
   display: flex;

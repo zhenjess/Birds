@@ -19,7 +19,8 @@ class ShoeIndexItem extends React.Component {
         const { shoe, item, addToCart } = this.props;
 
         return (
-            <div onAnimationEnd={this.state.clearGlobalAnimations}
+            // <div onAnimationEnd={this.state.clearGlobalAnimations}
+            <div
                  className={this.props.animateItems ? "item fadeInUp" : "item"}>
 
                 <li className="shoe-index-item">

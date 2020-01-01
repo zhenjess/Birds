@@ -6,7 +6,7 @@ import DropDownBtn from './nav_dropbtn';
 
 import ShoesDropdown from './nav_dropdown';
 
-import CartContainer from '../carts/cart_container';
+// import CartContainer from '../modal/cart_container';
 
 
 class NavbarForm extends React.Component {
@@ -22,14 +22,14 @@ class NavbarForm extends React.Component {
             activeHeader: false,
             isAnimating: false,
             bounce: false,
-            openCart: false,
+            // openCart: false,
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showDropDown = this.showDropDown.bind(this);
         this.handleAnimation = this.handleAnimation.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
-        this.handleOpenCart = this.handleOpenCart.bind(this);
+        // this.handleOpenCart = this.handleOpenCart.bind(this);
     }
 
     componentDidMount() {
@@ -84,12 +84,12 @@ class NavbarForm extends React.Component {
         this.setState({ isAnimating: false });
     }
 
-    handleOpenCart() {
-        const openCart = !this.state.openCart;
-        this.setState({
-            openCart
-        });
-    }
+    // handleOpenCart() {
+    //     const openCart = !this.state.openCart;
+    //     this.setState({
+    //         openCart
+    //     });
+    // }
 
     render() {
         const activeHeader = this.state.activeHeader;
@@ -152,7 +152,7 @@ class NavbarForm extends React.Component {
                 <ShoesDropdown gender={this.state.dropDownGender} genderQuery={this.state.dropDownGender === 'WOMEN' ? 'women' : 'men'} showDropDown={this.showDropDown} />
             </div>
             <div className={dropDown ? 'overlay-visible' : 'overly-invisible'}></div>
-            <CartContainer open={this.state.openCart} handleOpenCart={this.handleOpenCart}/>
+            {/* <CartContainer open={this.state.openCart} handleOpenCart={this.handleOpenCart}/> */}
             </>
             // <div className="navbar">
             //     <div className="nav-left">

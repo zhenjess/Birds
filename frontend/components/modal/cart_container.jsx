@@ -7,10 +7,11 @@ import { removeFromCart } from '../../actions/cart_actions';
 // import NestForm from './nest_form';
 
 const mapStateToProps = ({ state, errors }) => {
+
     return {
         errors: errors.session,
         formType: 'shoe',
-        items: Object.values(state.entities.carts)
+        // items: Object.values(state.entities.carts)
     };
 };
 
