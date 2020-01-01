@@ -11,19 +11,15 @@ class ShoesHeader extends React.Component {
         this.state = {
             openFilter: false, 
             filters: {},
-            items: [], 
             filterAttributes: {
                 filterTitle: "",
                 filterId: "",
                 filters: []
             },
             shouldAnimate: false,
-            animateItems: true, 
             animateNotification: false
         };
 
-        this.filterItems = this.filterItems.bind(this);
-        this.addFilter = this.addFilter.bind(this);
         this.handleFilterAttrs = this.handleFilterAttrs.bind(this);
         this.handleAnimationEnd = this.handleAnimationEnd.bind(this);
     }
