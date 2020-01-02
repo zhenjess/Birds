@@ -10,3 +10,4 @@ class ShoeOption < ApplicationRecord
     has_many :items
 
 end
+

@@ -6,7 +6,7 @@ class Item < ApplicationRecord
     has_one_attached :photo #do active storage here
 
     # ShoeOption.joins(:items, :shoe)
-    
+
     def self.find_by_gender(search_id)
         Item.joins(:shoe_option, :shoe) 
         .where("item.shoe_option_id = shoe_option.id", "shoe_option.shoe_id = shoe.id", shoes: {gender: search_id})
