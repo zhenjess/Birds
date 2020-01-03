@@ -11,3 +11,25 @@ export const fetchShoe = (shoeId) => {
         method: 'GET'
     });
 };
+
+export const fetchAllColors = (colorId) => {
+    return $.ajax({
+        url: `/api/shoes/${colorId}`,
+        method: 'GET'
+    });
+};
+
+export const fetchAllMaterials = (materialId) => {
+    return $.ajax({
+        url: `/api/shoes/${materialId}`,
+        method: 'GET'
+    });
+};
+
+export const fetchAllModels = (modelId) => {
+    return $.ajax({
+        url: `/api/shoes/${modelId}`,
+        method: 'GET'
+    });
+};
+

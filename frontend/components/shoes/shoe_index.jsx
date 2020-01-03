@@ -10,7 +10,9 @@ class ShoeIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            shoes: this.props.shoes,
             items: [],
+            color: "",
             shouldAnimate: false,
             animateItems: true,
             animateNotification: false
@@ -22,13 +24,16 @@ class ShoeIndex extends React.Component {
     }
     componentDidMount() {
         // debugger
+
         const id = this.props.match.params.id;
 
-        this.props.fetchShoeItems(id).then((data) => {
-            this.setState({
-                items: Object.values(data.items)
+        if (id) {
+            this.props.fetchShoeItems(id).then((data) => {
+                this.setState({
+                    items: Object.values(data.items)
+                });
             });
-        });
+        }
 
         // this.props.fetchShoe(shoeId).then((data) => {
         //     this.setState({
@@ -118,6 +123,11 @@ class ShoeIndex extends React.Component {
         return shoesArr;
     }
 
+    getShoesByColor(color) {
+        let colorArr = this.state.shoes.filter(shoe => shoe.color.toLowerCase() === color)
+        return colorArr;
+    }
+
     // getShoesByColor(hue) {
     //     let shoesArray = this.props.shoes.filter(shoe => shoe.hue.toLowerCase() === hue)
 
@@ -125,11 +135,11 @@ class ShoeIndex extends React.Component {
     // }
 
     render() {
-        const { shoes } = this.props;
+        const { shoes } = this.state.shoes;
         const { addToCart } = this.props;
         // const filterAttrs = this.state.filterAttributes;
         // const { filterName, filterId, filterOptions } = filterAttrs;
-        // debugger
+        debugger
 
         const fetchItems = () => {
             const items = this.state.items.map(item => {
@@ -305,6 +315,21 @@ class ShoeIndex extends React.Component {
             </div>
         )
     }
+
+    // render() {
+    //     if (this.props.shoes.length === 0) return <div>Loading</div>
+
+    //     debugger
+    //     return (
+    //         <div>
+    //             {
+    //                 this.props.shoes.map((shoe) => (
+    //                     <ShoeIndexItem shoe={shoe}/>
+    //                 ))
+    //             }
+    //         </div>
+    //     )
+    // }
 }
 
 export default ShoeIndex;

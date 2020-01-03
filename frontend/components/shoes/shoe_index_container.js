@@ -10,15 +10,18 @@ import{ addToCart, removeFromCart } from '../../actions/cart_actions';
 
 import { fetchShoeItems } from '../../actions/items_actions';
 
-const mapStateToProps = (state, ownProps) => ({
-    //shoes: Object.values(state.entities.shoes),
+const mapStateToProps = (state, ownProps) => {
+    debugger
+        return {
+        //shoes: Object.values(state.entities.shoes),
 
-    //selector to return an array of shoes with name material and shoe id
-    shoes: selectAllShoesByGender(state, ownProps.match.params.gender), //to hard code by gender
+        //selector to return an array of shoes with name material and shoe id
+        shoes: selectAllShoesByGender(state, ownProps.match.params.gender), //to hard code by gender
 
-    items: selectItemsByGender(state, ownProps.match.params.id)
+        items: selectItemsByGender(state, ownProps.match.params.id)
 
-});
+    };
+}
 
 const mapDispatchToProps = dispatch => ({
     fetchAllShoes: () => dispatch(fetchAllShoes()),

@@ -8,6 +8,7 @@ const shoesReducer = (oldState={}, action) => {
 
     let shoe;
 
+    // debugger
     switch(action.type) {
         case RECEIVE_ALL_SHOES:
             return Object.assign({}, oldState, action.payload.shoes);
