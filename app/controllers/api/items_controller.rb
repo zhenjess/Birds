@@ -1,13 +1,13 @@
 class Api::ItemsController < ApplicationController
-    def new 
-        @items = Item.new
-        render :new
-    end
-    def index
-        @items = Item.all
-        @shoe_options = ShoeOption.all
-        @shoes = Shoe.all
-    end
+    # def new 
+    #     @items = Item.new
+    #     render :new
+    # end
+    # def index
+    #     @items = Item.all
+    #     @shoe_options = ShoeOption.all
+    #     @shoes = Shoe.all
+    # end
 
     def show
         @items = Item.find_by_gender(params[:id])
