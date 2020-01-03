@@ -34,34 +34,34 @@ end
 #     end
 # end
 
-# json.cart do
-#     cart_item_ids = @cart.cart_items.map { |item|
-#         if (@items["#{item.item_id}"])
-#             item.id
-#         end
-#     }
-
-#     cart_item_ids.select! { |id| !id.nil? }
-
-#     json.set! @cart.id do 
-#         json.extract! @cart, :user_id, :status
-#         json.cartItems { json.array! cart_item_ids }
-
-#         cartTotal = 0;
-#         @cart_items.each do |id, cartItem|
-#             if (@items["#{cartItem["item_id"]}"])
-#                 cartTotal += (cartItem["quantity"] * @items[cartItem["item_id"].to_s]['price'])
-#             end
-#         end
-#         json.cartTotal cartTotal
-#     end
-# end
 json.cart do
-    @cart_items.each do |item|
-        json.partial! 'item'
-        item : item
+    cart_item_ids = @cart.cart_items.map { |item|
+        if (@items["#{item.item_id}"])
+            item.id
+        end
+    }
+
+    cart_item_ids.select! { |id| !id.nil? }
+
+    json.set! @cart.id do 
+        json.extract! @cart, :user_id, :status
+        json.cartItems { json.array! cart_item_ids }
+
+        cartTotal = 0;
+        @cart_items.each do |id, cartItem|
+            if (@items["#{cartItem["item_id"]}"])
+                cartTotal += (cartItem["quantity"] * @items[cartItem["item_id"].to_s]['price'])
+            end
+        end
+        json.cartTotal cartTotal
     end
-end 
+end
+# json.cart do
+#     @cart_items.each do |item|
+#         json.partial! 'item'
+#         item : item
+#     end
+# end 
 
 json.cartItems do 
     @cart.cart_items.each do |item|
