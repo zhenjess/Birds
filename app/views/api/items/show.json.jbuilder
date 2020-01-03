@@ -9,7 +9,7 @@
 #     end
 # end
 
-
+json.partial! 'api/items/item', item: @item
  
 @items.each do |item|
     json.set! item["id"] do

@@ -61,6 +61,7 @@ shoe_2_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -77,6 +78,7 @@ shoe_3_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -93,6 +95,7 @@ shoe_4_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -110,6 +113,7 @@ shoe_5_colors.each do |color|
          #p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -127,6 +131,7 @@ shoe_6_colors.each do |color|
         #  p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -144,6 +149,7 @@ shoe_7_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -160,6 +166,7 @@ shoe_8_colors.each do |color|
        # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -177,6 +184,7 @@ shoe_9_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -193,6 +201,7 @@ shoe_10_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
 
     end
 end
@@ -210,6 +219,7 @@ shoe_11_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -226,6 +236,7 @@ shoe_12_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
@@ -242,6 +253,7 @@ shoe_13_colors.each do |color|
         # p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
         shoe_option.photo.attach(io: file, filename: filename)
+        item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
     end
 end
 
