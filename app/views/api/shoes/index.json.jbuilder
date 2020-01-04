@@ -56,3 +56,11 @@ json.shoeOptions do
         end
     end
 end
+
+json.items do
+    Item.all.each do |item|
+        json.set! item.id do
+            json.extract! item, :id, :shoe_option_id, :size, :price
+        end 
+    end
+end

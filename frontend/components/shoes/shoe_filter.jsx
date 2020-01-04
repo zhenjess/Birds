@@ -32,6 +32,7 @@ class ShoeFilter extends React.Component {
         const whatFilter = this.props.whatFilter;
         const openFilter = this.props.openFilter;
         const currentOpenFilter = this.props.currentOpenFilter;
+        const clearFilter = this.props.clearFilter;
 
         return (
             <div className="shoe-filter-container">
@@ -49,6 +50,7 @@ class ShoeFilter extends React.Component {
                     openFilter={openFilter}
                     currentOpenFilter={currentOpenFilter}
                     handleFilterAttrs={handleFilterAttrs}
+                    clearFilter={clearFilter}
                 />
             </div>
         );

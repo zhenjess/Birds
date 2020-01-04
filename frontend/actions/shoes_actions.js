@@ -39,3 +39,29 @@ export const fetchShoe = shoeId => dispatch => (
         .then(shoe => dispatch(receiveShoe(shoe)))
 );
 
+export const fetchAllColors = (colorId) => dispatch => (
+    APIUtil.fetchAllColors(colorId)
+        //shoe data or payload to consider additional info material and shoeMaterial
+        .then(shoeData => {
+            return dispatch(receiveAllColors(shoeData))
+        }
+        )
+);
+
+// export const fetchAllMaterials = (materialId) => dispatch => (
+//     APIUtil.fetchAllMaterials(materialId)
+//         //shoe data or payload to consider additional info material and shoeMaterial
+//         .then(shoeData => {
+//             return dispatch(receiveAllMaterials(shoeData))
+//         }
+//         )
+// );
+
+// export const fetchAllModels = (modelId) => dispatch => (
+//     APIUtil.fetchAllModels(modelId)
+//         //shoe data or payload to consider additional info material and shoeMaterial
+//         .then(shoeData => {
+//             return dispatch(receiveAllModels(shoeData))
+//         }
+//         )
+// );

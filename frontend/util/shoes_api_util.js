@@ -12,24 +12,24 @@ export const fetchShoe = (shoeId) => {
     });
 };
 
-export const fetchAllColors = (colorId) => {
+export const fetchAllColors = (gender, colorId) => {
     return $.ajax({
-        url: `/api/shoes/${colorId}`,
+        url: `/api/shoes/${gender}/${colorId}`,
         method: 'GET'
     });
 };
 
-export const fetchAllMaterials = (materialId) => {
-    return $.ajax({
-        url: `/api/shoes/${materialId}`,
-        method: 'GET'
-    });
-};
+// export const fetchAllMaterials = (materialId) => {
+//     return $.ajax({
+//         url: `/api/shoes/${materialId}`,
+//         method: 'GET'
+//     });
+// };
 
-export const fetchAllModels = (modelId) => {
-    return $.ajax({
-        url: `/api/shoes/${modelId}`,
-        method: 'GET'
-    });
-};
+// export const fetchAllModels = (modelId) => {
+//     return $.ajax({
+//         url: `/api/shoes/${modelId}`,
+//         method: 'GET'
+//     });
+// };
 

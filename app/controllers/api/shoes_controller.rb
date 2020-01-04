@@ -13,6 +13,12 @@ class Api::ShoesController < ApplicationController
         @shoe_options = ShoeOption.all
         #implicit render index
         
+        # # keep of your params
+        # if 
+            
+        # else
+            
+        # end
     end
 
     def show 
