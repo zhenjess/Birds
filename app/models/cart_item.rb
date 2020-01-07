@@ -1,25 +1,8 @@
 class CartItem < ApplicationRecord
-    has_one :user
-
     belongs_to :product
 
     belongs_to :user
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # class CartItem < ApplicationRecord
