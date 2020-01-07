@@ -1,1 +1,1 @@
-json.extract! @color, :id, :hue
+json.extract! @color, :id, :color

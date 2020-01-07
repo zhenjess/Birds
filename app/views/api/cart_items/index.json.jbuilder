@@ -1,7 +1,8 @@
-json.cart_items do 
-    @cart_items.each do |cart_item|
-        json.set! cart_item.id do
-            json.extract! cart_item, :quantity
-        end 
+#add cart items key
+json.cartItems do 
+    @cart_items.each do |item|
+        json.set! item.id do 
+            json.extract! item, :id, :product_id
+        end
     end
 end

@@ -1,10 +1,10 @@
-unitPrice = @item['price']
-itemPrice = (unitPrice * @cart_item.quantity)
-
-json.cartItems do 
-    json.set! @cart_item.id do
-        json.extract! @cart_item, :id, :quantity, :item_id
-        json.unitPrice unitPrice
-        json.itemPrice itemPrice
+@cartItems.each do |item|
+    json.set! item["id"] do
+        json.extract! item, :id, :product_id, :gender_id, :color_id, :material_id, :style_id, :size_id, 
+                            :gender, :color, :material, :style, :size
+        json.photoUrl url_for(item.photo) 
     end 
 end
+
+
+
