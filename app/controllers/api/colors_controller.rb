@@ -1,25 +1,25 @@
 class Api::ColorsController < ApplicationController
     def new
-        @hue = Color.new
+        @color = Color.new
         render :new
     end
 
     def index
-        @hue = Color.all
+        @color = Color.all
     end
 
     def show
-        @hue = Color.find_by(id: params[:id])
+        @color = Color.find_by(id: params[:id])
 
-        if @hue
+        if @color
             render :show
         else
-            render json: @hue.errors.full_messages, status: 422
+            render json: @color.errors.full_messages, status: 422
         end
     end
 
     private
-    def hue_params
-        params.require(:hue).permit(:id)
+    def color_params
+        params.require(:color).permit(:id)
     end
 end
