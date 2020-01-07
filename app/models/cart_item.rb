@@ -1,3 +1,9 @@
+class CartItem < ApplicationRecord
+    has_one :user
+
+    belongs_to :product
+end
+
 # class CartItem < ApplicationRecord
 #     validates :quantity, presence: true
 
@@ -12,10 +18,4 @@
 #         through: :item,
 #         source: :shoe_option
 # end
-
-class CartItem < ApplicationRecord
-    has_one :user
-
-    has_many :products
-end
 

@@ -1,3 +1,18 @@
+class Product < ApplicationRecord
+    validates :product_code, presence: true
+
+    belongs_to :gender
+
+    belongs_to :color
+
+    belongs_to :material
+
+    belongs_to :style
+
+    belongs_to :size
+
+    has_one_attached :photo
+end
 # class Shoe < ApplicationRecord
 #     validates :model, :gender, presence: true
 
@@ -22,19 +37,3 @@
 
 #     has_many_attached :photos
 # end
-
-class Shoe < ApplicationRecord
-    validates :product_code, presence: true
-
-    belongs_to :gender
-
-    belongs_to :color
-
-    belongs_to :material
-
-    belongs_to :style
-
-    belongs_to :size
-
-    has_one_attached :photo
-end
