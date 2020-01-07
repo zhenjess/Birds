@@ -10,16 +10,6 @@ class Material < ApplicationRecord
 end
 
 
-
-
-
-
-
-
-
-
-
-
     # has_many :shoe_materials
     
     # has_many :shoes,
