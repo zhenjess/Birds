@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_29_233317) do
+ActiveRecord::Schema.define(version: 2020_01_07_023917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,20 +37,13 @@ ActiveRecord::Schema.define(version: 2019_12_29_233317) do
   end
 
   create_table "cart_items", force: :cascade do |t|
-    t.integer "cart_id", null: false
-    t.integer "item_id", null: false
-    t.integer "quantity", null: false
+    t.integer "user_id", null: false
+    t.integer "product_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cart_id", "item_id"], name: "index_cart_items_on_cart_id_and_item_id", unique: true
-    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
-    t.index ["item_id"], name: "index_cart_items_on_item_id"
-  end
-
-  create_table "carts", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "status", null: false
-    t.index ["user_id"], name: "index_carts_on_user_id"
+    t.index ["product_id"], name: "index_cart_items_on_product_id"
+    t.index ["user_id", "product_id"], name: "index_cart_items_on_user_id_and_product_id", unique: true
+    t.index ["user_id"], name: "index_cart_items_on_user_id"
   end
 
   create_table "colors", force: :cascade do |t|
@@ -59,10 +52,10 @@ ActiveRecord::Schema.define(version: 2019_12_29_233317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "items", force: :cascade do |t|
-    t.integer "shoe_option_id", null: false
-    t.integer "size", null: false
-    t.integer "price", null: false
+  create_table "genders", force: :cascade do |t|
+    t.string "gender", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "materials", force: :cascade do |t|
@@ -71,18 +64,24 @@ ActiveRecord::Schema.define(version: 2019_12_29_233317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "shoe_options", force: :cascade do |t|
-    t.integer "shoe_id", null: false
+  create_table "products", force: :cascade do |t|
+    t.string "product_code", null: false
+    t.integer "gender_id", null: false
     t.integer "color_id", null: false
     t.integer "material_id", null: false
-    t.index ["color_id"], name: "index_shoe_options_on_color_id"
-    t.index ["material_id"], name: "index_shoe_options_on_material_id"
-    t.index ["shoe_id", "color_id", "material_id"], name: "index_shoe_options_on_shoe_id_and_color_id_and_material_id", unique: true
+    t.integer "style_id", null: false
+    t.integer "size_id", null: false
+    t.index ["product_code"], name: "index_products_on_product_code", unique: true
   end
 
-  create_table "shoes", force: :cascade do |t|
-    t.string "model", null: false
-    t.string "gender", null: false
+  create_table "sizes", force: :cascade do |t|
+    t.integer "size", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string "style", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -2,12 +2,13 @@ class Item < ApplicationRecord
     validates :size, :price, :shoe_option_id, presence: true
 
     belongs_to :shoe_option
+end
 
     # has_one :shoe,
     #     through: :shoe_option,
     #     source: :shoe
 
-end
+
 
 #     has_many :cart_items
 #    # belongs_to :shoe_option

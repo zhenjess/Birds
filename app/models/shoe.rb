@@ -20,7 +20,5 @@ class Shoe < ApplicationRecord
         source: :items
     # # has_many :items
 
-
-
     has_many_attached :photos
 end

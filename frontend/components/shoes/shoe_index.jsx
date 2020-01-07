@@ -123,10 +123,10 @@ class ShoeIndex extends React.Component {
         return shoesArr;
     }
 
-    getShoesByColor(color) {
-        let colorArr = this.state.shoes.filter(shoe => shoe.color.toLowerCase() === color)
-        return colorArr;
-    }
+    // getShoesByColor(color) {
+    //     let colorArr = this.state.shoes.filter(shoe => shoe.color.toLowerCase() === color)
+    //     return colorArr;
+    // }
 
     // getShoesByColor(hue) {
     //     let shoesArray = this.props.shoes.filter(shoe => shoe.hue.toLowerCase() === hue)

@@ -38,6 +38,38 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
     return shoes;
 };
 
+export const selectItemsByGender = (state, gender) => {
+    const items = [];
+
+    Object.values(state.entities.items).forEach((item) => {
+        const shoe_option = state.entities.shoe_options[item.shoe_option.id];
+        const shoe = state.entities.shoes[shoe_option.shoeId];
+
+        if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
+            const color = state.entities.colors[shoeOption.colorId];
+            const material = state.entities.materials[shoeOption.materialId];
+
+            const shoeItem = Object.assign({}, color, material, item);
+            shoeItem.photoUrl = shoeOption.photoUrl;
+            items.push(shoeItem);
+        }
+    })
+    return items;
+};
+
+// export const selectItemsByGender = (state, gender) => {
+//    // debugger
+//     let items = Object.values(state.entities.items);
+//     let shoe_options = Object.values(state.entities.shoe_options);
+//     let shoes = Object.values(state.entities.shoes);
+//     filteredItems = items.filter((item) => {
+//         let shoe_option = state.entities.shoe_options[item.shoe_option.id];
+//         let shoe = state.entities.shoes[shoe_option.shoeId];
+//         return shoe.gender.toLowerCase() === gender.toLowerCase();
+//     });
+//     return filteredItems;
+// };
+
     //iterate through shoeMaterials slice of state
     // Object.values(state.entities.shoeMaterials).forEach((shoeMaterial) => {
        
@@ -67,9 +99,10 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
     // return shoes; //return value of selector, all shoes to see the material
 
 //filter items by gender
-export const selectItemsByGender = (state, gender) => {
-    debugger
-    const items = state.entities.items;
-    const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
-    return filteredItems;
-};
+// export const selectItemsByGender = (state, gender) => {
+//     debugger
+//     const items = state.entities.items;
+//     const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
+//     return filteredItems;
+// };
+

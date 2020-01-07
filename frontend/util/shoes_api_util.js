@@ -12,13 +12,6 @@ export const fetchShoe = (shoeId) => {
     });
 };
 
-export const fetchAllColors = (gender, colorId) => {
-    return $.ajax({
-        url: `/api/shoes/${gender}/${colorId}`,
-        method: 'GET'
-    });
-};
-
 // export const fetchAllMaterials = (materialId) => {
 //     return $.ajax({
 //         url: `/api/shoes/${materialId}`,
