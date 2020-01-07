@@ -13,6 +13,14 @@ class Product < ApplicationRecord
 
     has_one_attached :photo
 end
+
+
+
+
+
+
+
+
 # class Shoe < ApplicationRecord
 #     validates :model, :gender, presence: true
 

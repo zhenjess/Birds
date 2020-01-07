@@ -9,6 +9,17 @@ class Material < ApplicationRecord
     has_many :products
 end
 
+
+
+
+
+
+
+
+
+
+
+
     # has_many :shoe_materials
     
     # has_many :shoes,
