@@ -1,6 +1,6 @@
 json.items do 
     @items.each do |item|
-        json.set! item["id"] do
+        json.set! item.id do
             json.extract! item, :id, :shoe_id, :gender, :model, :color, :material, :size
             
             if item.photo.attached? 

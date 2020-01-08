@@ -17,26 +17,49 @@ export const selectAllShoes = (state) => {
     return shoes; //return value of selector, all shoes to see the material
 };
 
-
-export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded by url
-    //    return [];
+export const selectAllShoesByGender = (state, gender) => {
     const shoes = [];
 
-    Object.values(state.entities.shoeOptions).forEach((shoeOption) => {
-        const shoe = state.entities.shoes[shoeOption.shoeId];
-        
+    Object.values(state.entities.items).forEach((item) => {
+        const shoe = state.entities.shoes[item.shoeId];
+
         if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
-            const color = state.entities.colors[shoeOption.colorId];
-            const material = state.entities.materials[shoeOption.materialId];
-            
+            const color = state.entities.colors[shoe.colorId];
+            const material = state.entities.materials[shoe.materialId];
+
             const shoeItem = Object.assign({}, color, material, shoe);
-            shoeItem.photoUrl = shoeOption.photoUrl;
+            shoeItem.photoUrl = item.photoUrl;
             shoes.push(shoeItem);
         }
     })
-    //debugger
     return shoes;
 };
+
+export const selectItemsByGender = (state, gender) => {
+    const items = state.entities.items;
+    const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
+    return filteredItems;
+};
+
+// export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded by url
+//     //    return [];
+//     const shoes = [];
+
+//     Object.values(state.entities.shoeOptions).forEach((shoeOption) => {
+//         const shoe = state.entities.shoes[shoeOption.shoeId];
+
+//         if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
+//             const color = state.entities.colors[shoeOption.colorId];
+//             const material = state.entities.materials[shoeOption.materialId];
+
+//             const shoeItem = Object.assign({}, color, material, shoe);
+//             shoeItem.photoUrl = shoeOption.photoUrl;
+//             shoes.push(shoeItem);
+//         }
+//     })
+//     //debugger
+//     return shoes;
+// };
 
     //iterate through shoeMaterials slice of state
     // Object.values(state.entities.shoeMaterials).forEach((shoeMaterial) => {
@@ -66,9 +89,9 @@ export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded
     // // debugger
     // return shoes; //return value of selector, all shoes to see the material
 
-//filter items by gender
-export const selectItemsByGender = (state, gender) => {
-    const items = state.entities.items;
-    const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
-    return filteredItems;
-};
+// //filter items by gender
+// export const selectItemsByGender = (state, gender) => {
+//     const items = state.entities.items;
+//     const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
+//     return filteredItems;
+// };
