@@ -5,14 +5,11 @@ class Api::ShoesController < ApplicationController
     end
 
     def index 
+        #implicit render index
         @shoes = Shoe.all
         @materials = Material.all 
-        # @shoe_materials = ShoeMaterial.all
         @colors = Color.all
-        # @shoe_colors = ShoeColor.all
-        @shoe_options = ShoeOption.all
-        #implicit render index
-        
+        @items = Item.all
     end
 
     def show 
@@ -25,19 +22,19 @@ class Api::ShoesController < ApplicationController
         end
     end
 
-    def create
-        @shoe = Shoe.new(shoe_params)
+    # def create
+    #     @shoe = Shoe.new(shoe_params)
 
-        if @shoe.save
-            render :show
-        else
-            render json: ["Birds don't exist"], status: 404
-        end
-    end
+    #     if @shoe.save
+    #         render :show
+    #     else
+    #         render json: ["Birds don't exist"], status: 404
+    #     end
+    # end
 
     private
     def shoe_params
-        params.require(:shoe).permit(:model, :gender, photos: [])
+        params.require(:shoe).permit(:model, :gender, :color_id, :material_id, photos: [])
     end
 end
 

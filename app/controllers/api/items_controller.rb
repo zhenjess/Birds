@@ -3,9 +3,9 @@ class Api::ItemsController < ApplicationController
         @items = Item.new
         render :new
     end
+    
     def index
         @items = Item.all
-        @shoe_options = ShoeOption.all
         @shoes = Shoe.all
     end
 
@@ -15,6 +15,6 @@ class Api::ItemsController < ApplicationController
     end
 
     def items_params
-        params.require(:item).permit(:size, :price, :photo)
+        params.require(:item).permit(:size, :photo)
     end
 end
