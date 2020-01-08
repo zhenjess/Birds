@@ -17,23 +17,23 @@ Item.destroy_all
 
 demoLogin = User.create!(first_name: "all", last_name: "birds", email: 'allbirds@gmail.com', password: "password")
 
-wool = Material.create!(material: 'Wool');
-tree = Material.create!(material: 'Tree');
+wool = Material.create!(material: 'Wool')
+tree = Material.create!(material: 'Tree')
 
-grey = Color.create!(color: 'Grey');
-black = Color.create!(color: 'Black');
-white = Color.create!(color: 'White');
-red = Color.create!(color: 'Red');
-green = Color.create!(color: 'Green');
-blue = Color.create!(color: 'Blue');
+grey = Color.create!(color: 'Grey')
+black = Color.create!(color: 'Black')
+white = Color.create!(color: 'White')
+red = Color.create!(color: 'Red')
+green = Color.create!(color: 'Green')
+blue = Color.create!(color: 'Blue')
 
 # all_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
 
 shoe_1 = Shoe.create!(gender: 'Men', model: 'Runners')
 # shoe_1.material_ids = [wool.id, tree.id];
 # shoe_1.color_ids = all_color_ids;
-shoe_1_colors = [grey, black, white, red, green, blue];
-shoe_1_materials = [wool]; #,tree
+shoe_1_colors = [grey, black, white, red, green, blue]
+shoe_1_materials = [wool] #,tree
 
 shoe_1_colors.each do |color|
     shoe_1_materials.each do |material|
@@ -41,6 +41,7 @@ shoe_1_colors.each do |color|
         filename = "#{shoe_1.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_1.model.downcase}.webp"
         #p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        # debugger
         shoe_option.photo.attach(io: file, filename: filename)
         item = Item.create!(shoe_option_id: shoe_option.id, size: 8, price: 95)
         #item.photo.attach(io: file, filename: filename)

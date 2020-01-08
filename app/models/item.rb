@@ -3,7 +3,7 @@ class Item < ApplicationRecord
 
     has_many :cart_items
     belongs_to :shoe_option
-    has_one_attached :photo #do active storage here
+    #has_one_attached :photo #do active storage here
 
     # ShoeOption.joins(:items, :shoe)
 
