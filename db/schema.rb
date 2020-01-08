@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_29_233317) do
+ActiveRecord::Schema.define(version: 2020_01_08_181741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,9 +60,8 @@ ActiveRecord::Schema.define(version: 2019_12_29_233317) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.integer "shoe_option_id", null: false
+    t.integer "shoe_id", null: false
     t.integer "size", null: false
-    t.integer "price", null: false
   end
 
   create_table "materials", force: :cascade do |t|
@@ -71,20 +70,13 @@ ActiveRecord::Schema.define(version: 2019_12_29_233317) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "shoe_options", force: :cascade do |t|
-    t.integer "shoe_id", null: false
-    t.integer "color_id", null: false
-    t.integer "material_id", null: false
-    t.index ["color_id"], name: "index_shoe_options_on_color_id"
-    t.index ["material_id"], name: "index_shoe_options_on_material_id"
-    t.index ["shoe_id", "color_id", "material_id"], name: "index_shoe_options_on_shoe_id_and_color_id_and_material_id", unique: true
-  end
-
   create_table "shoes", force: :cascade do |t|
     t.string "model", null: false
     t.string "gender", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "color_id", null: false
+    t.integer "material_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
