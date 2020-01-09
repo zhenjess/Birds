@@ -4,6 +4,8 @@ import { shoes } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Cart from './cart';
 import { removeFromCart } from '../../actions/cart_actions';
+import { withRouter } from 'react-router-dom';
+
 // import NestForm from './nest_form';
 
 const mapStateToProps = ( state ) => {
@@ -31,4 +33,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cart));

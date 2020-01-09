@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { withRouter } from 'react-router-dom';
 
 import ShoeIndex from '../shoes/shoe_index';
 
@@ -195,12 +194,12 @@ class Cart extends React.Component {
                                 <div className="cart-img"><i className="fas fa-shopping-cart"></i></div>
                             </div>
                              <ul className="cart-items">
-                             {cartItems}
+                                 {cartItems}
                              </ul>
             </div>
                          <div>
                              <div className="divider">Looking for something else?
-                                     &nbsp;
+                                     {/* &nbsp; */}
                     
                              </div>
                              <div className="cart-totals">
@@ -219,13 +218,13 @@ class Cart extends React.Component {
                                  <p>Click<Link className="shopping-link" onClick={this.handleWomenModalClick} to={'/shoes/women'}>here for Women</Link></p>
                                  <p>Click<Link className="shopping-link" onClick={this.handleMenModalClick} to={'/shoes/men'}>here for Men</Link></p>
                             </div>
-            </div>
+                        </div>
             </div>
         );
     }
 
 }
 
-export default withRouter(Cart);
+export default Cart;
 
 

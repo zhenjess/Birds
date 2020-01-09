@@ -24,7 +24,7 @@ export const selectAllShoesByGender = (state, gender) => {
     Object.values(state.entities.items).forEach((item) => {
         const shoe = state.entities.shoes[item.shoeId];
 
-        if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
+        if (shoe && shoe.gender.toLowerCase() === gender.toLowerCase()) {
             const color = state.entities.colors[shoe.colorId];
             const material = state.entities.materials[shoe.materialId];
             const gender = state.entities.shoes[item.shoeId].gender;
