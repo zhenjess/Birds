@@ -30,7 +30,7 @@ blue = Color.create!(color: 'Blue')
 
 # # all_color_ids = [grey.id, black.id, white.id, red.id, green.id, blue.id];
 
-shoe_1 = Shoe.create!(gender: 'Men', model: 'Runners')
+# shoe_1 = Shoe.create!(gender: 'Men', model: 'Runners')
 # shoe_1.material_ids = [wool.id, tree.id];
 # shoe_1.color_ids = all_color_ids;
 shoe_1_colors = [grey, black, white, red, green, blue]
@@ -38,7 +38,8 @@ shoe_1_materials = [wool] #,tree
 
 shoe_1_colors.each do |color|
     shoe_1_materials.each do |material|
-        item = Item.create!(shoe_id: shoe_1.id, color_id: color.id, material_id: material.id, size: 8)
+        shoe_1 = Shoe.create!(gender: 'Men', model: 'Runners', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_1.id, size: 8)
         filename = "#{shoe_1.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_1.model.downcase}.webp"
         #p filename
         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
@@ -49,200 +50,212 @@ end
 
 
 # shoe_2 = Shoe.create!(gender: 'Men', model: 'Runners')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_2_colors = [grey, black, white, red, green, blue];
-# shoe_2_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_2_colors = [grey, black, white, red, green, blue];
+shoe_2_materials = [tree]; #,tree
 
-# shoe_2_colors.each do |color|
-#     shoe_2_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_2.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_2.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_2.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_2_colors.each do |color|
+    shoe_2_materials.each do |material|
+        shoe_2 = Shoe.create!(gender: 'Men', model: 'Runners', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_2.id, size: 8)
+        filename = "#{shoe_2.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_2.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_3 = Shoe.create!(gender: 'Men', model: 'Loungers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_3_colors = [grey, black, red, blue];
-# shoe_3_materials = [wool]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_3_colors = [grey, black, red, blue];
+shoe_3_materials = [wool]; #,tree
 
-# shoe_3_colors.each do |color|
-#     shoe_3_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_3.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_3.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_3.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_3_colors.each do |color|
+    shoe_3_materials.each do |material|
+        shoe_3 = Shoe.create!(gender: 'Men', model: 'Loungers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_3.id, size: 8)
+        filename = "#{shoe_3.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_3.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_4 = Shoe.create!(gender: 'Men', model: 'Loungers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_4_colors = [grey, black, white, red, green, blue];
-# shoe_4_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_4_colors = [grey, black, white, red, green, blue];
+shoe_4_materials = [tree]; #,tree
 
-# shoe_4_colors.each do |color|
-#     shoe_4_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_4.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_4.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_4.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_4_colors.each do |color|
+    shoe_4_materials.each do |material|
+        shoe_4 = Shoe.create!(gender: 'Men', model: 'Loungers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_4.id, size: 8)
+        filename = "#{shoe_4.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_4.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_5 = Shoe.create!(gender: 'Men', model: 'Skippers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_5_colors = [grey, black, white, red, green, blue];
-# shoe_5_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_5_colors = [grey, black, white, red, green, blue];
+shoe_5_materials = [tree]; #,tree
 
-# shoe_5_colors.each do |color|
-#     shoe_5_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_5.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_5.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_5.model.downcase}.webp"
-#          #debugger
-#          #p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_5_colors.each do |color|
+    shoe_5_materials.each do |material|
+        shoe_5 = Shoe.create!(gender: 'Men', model: 'Skippers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_5.id, size: 8)
+        filename = "#{shoe_5.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_5.model.downcase}.webp"
+         #debugger
+         #p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_6 = Shoe.create!(gender: 'Men', model: 'Toppers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_6_colors = [grey, black, white, red, green, blue];
-# shoe_6_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_6_colors = [grey, black, white, red, green, blue];
+shoe_6_materials = [tree]; #,tree
 
-# shoe_6_colors.each do |color|
-#     shoe_6_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_6.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_6.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_6.model.downcase}.webp"
-#         #  debugger
-#         #  p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_6_colors.each do |color|
+    shoe_6_materials.each do |material|
+        shoe_6 = Shoe.create!(gender: 'Men', model: 'Toppers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_6.id, size: 8)
+        filename = "#{shoe_6.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_6.model.downcase}.webp"
+        #  debugger
+        #  p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 
 # shoe_7 = Shoe.create!(gender: 'Women', model: 'Runners')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_7_colors = [grey, black, white, red, green, blue];
-# shoe_7_materials = [wool]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_7_colors = [grey, black, white, red, green, blue];
+shoe_7_materials = [wool]; #,tree
 
-# shoe_7_colors.each do |color|
-#     shoe_7_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_7.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_7.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_7.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_7_colors.each do |color|
+    shoe_7_materials.each do |material|
+        shoe_7 = Shoe.create!(gender: 'Women', model: 'Runners', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_7.id, size: 8)
+        filename = "#{shoe_7.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_7.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_8 = Shoe.create!(gender: 'Women', model: 'Runners')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_8_colors = [grey, black, white, red, green, blue];
-# shoe_8_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_8_colors = [grey, black, white, red, green, blue];
+shoe_8_materials = [tree]; #,tree
 
-# shoe_8_colors.each do |color|
-#     shoe_8_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_8.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_8.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_8.model.downcase}.webp"
-#        # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_8_colors.each do |color|
+    shoe_8_materials.each do |material|
+        shoe_8 = Shoe.create!(gender: 'Women', model: 'Runners', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_8.id, size: 8)
+        filename = "#{shoe_8.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_8.model.downcase}.webp"
+       # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 
 # shoe_9 = Shoe.create!(gender: 'Women', model: 'Loungers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_9_colors = [grey, black, white, red, blue];
-# shoe_9_materials = [wool]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_9_colors = [grey, black, white, red, blue];
+shoe_9_materials = [wool]; #,tree
 
-# shoe_9_colors.each do |color|
-#     shoe_9_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_9.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_9.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_9.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_9_colors.each do |color|
+    shoe_9_materials.each do |material|
+        shoe_9 = Shoe.create!(gender: 'Women', model: 'Loungers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_9.id, size: 8)
+        filename = "#{shoe_9.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_9.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_10 = Shoe.create!(gender: 'Women', model: 'Loungers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_10_colors = [grey, black, white, red, green, blue];
-# shoe_10_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_10_colors = [grey, black, white, red, green, blue];
+shoe_10_materials = [tree]; #,tree
 
-# shoe_10_colors.each do |color|
-#     shoe_10_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_10.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_10.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_10.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_10_colors.each do |color|
+    shoe_10_materials.each do |material|
+        shoe_10 = Shoe.create!(gender: 'Women', model: 'Loungers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_10.id, size: 8)
+        filename = "#{shoe_10.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_10.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_11 = Shoe.create!(gender: 'Women', model: 'Skippers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_11_colors = [grey, black, white, red, green, blue];
-# shoe_11_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_11_colors = [grey, black, white, red, green, blue];
+shoe_11_materials = [tree]; #,tree
 
-# shoe_11_colors.each do |color|
-#     shoe_11_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_11.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_11.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_11.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_11_colors.each do |color|
+    shoe_11_materials.each do |material|
+        shoe_11 = Shoe.create!(gender: 'Women', model: 'Skippers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_11.id, size: 8)
+        filename = "#{shoe_11.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_11.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_12 = Shoe.create!(gender: 'Women', model: 'Toppers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_12_colors = [grey, black, white, red, green, blue];
-# shoe_12_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_12_colors = [grey, black, white, red, green, blue];
+shoe_12_materials = [tree]; #,tree
 
-# shoe_12_colors.each do |color|
-#     shoe_12_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_12.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_12.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_12.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_12_colors.each do |color|
+    shoe_12_materials.each do |material|
+        shoe_12 = Shoe.create!(gender: 'Women', model: 'Toppers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_12.id, size: 8)
+        filename = "#{shoe_12.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_12.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_13 = Shoe.create!(gender: 'Women', model: 'Breezers')
-# # shoe_1.material_ids = [wool.id, tree.id];
-# # shoe_1.color_ids = all_color_ids;
-# shoe_13_colors = [grey, black, white, red, green, blue];
-# shoe_13_materials = [tree]; #,tree
+# shoe_1.material_ids = [wool.id, tree.id];
+# shoe_1.color_ids = all_color_ids;
+shoe_13_colors = [grey, black, white, red, green, blue];
+shoe_13_materials = [tree]; #,tree
 
-# shoe_13_colors.each do |color|
-#     shoe_13_materials.each do |material|
-#         item = Item.create!(shoe_id: shoe_13.id, color_id: color.id, material_id: material.id, size: 8)
-#         filename = "#{shoe_13.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_13.model.downcase}.webp"
-#         # p filename
-#         file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
-#         item.photo.attach(io: file, filename: filename)
-#     end
-# end
+shoe_13_colors.each do |color|
+    shoe_13_materials.each do |material|
+        shoe_13 = Shoe.create!(gender: 'Women', model: 'Breezers', color_id: color.id, material_id: material.id)
+        item = Item.create!(shoe_id: shoe_13.id, size: 8)
+        filename = "#{shoe_13.gender.downcase}_#{color.color.downcase}_#{material.material.downcase}_#{shoe_13.model.downcase}.webp"
+        # p filename
+        file = open("https://birds-seeds.s3-us-west-1.amazonaws.com/#{filename}")
+        item.photo.attach(io: file, filename: filename)
+    end
+end
 
 # shoe_2 = Shoe.create!(gender: 'Male', model: 'Loungers')
 # # shoe_2.material_ids = [wool.id, tree.id];

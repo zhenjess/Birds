@@ -58,6 +58,8 @@ import MoreTrinoMain from './materials/trino/more_trino_main';
 
 import ShoeIndexContainer from './shoes/shoe_index_container';
 
+import MainContainer from './main/main_container';
+
 import Footer from './footer/footer_container';
 
 
@@ -73,7 +75,7 @@ const App = () => (
             <Route path="/" component={NavBarContainer}/> 
         </div>
         <Switch>
-            <Route exact path="/" component={Main}/> 
+            <Route exact path="/" component={MainContainer}/> 
             <Route exact path="/account" component={AccountFormsContainer}/> 
             <Route exact path="/materials" component={Materials} />
             <Route exact path="/materials/tree" component={Tree} /> 

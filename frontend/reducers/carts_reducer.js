@@ -5,6 +5,7 @@ const cartsReducer = (oldState={}, action) => {
     let newState;
     switch (action.type) {
         case POST_TO_CART:
+            // debugger
             newState = Object.assign({}, oldState, action.item);
             return newState;
         case REMOVE_FROM_CART:

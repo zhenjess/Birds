@@ -152,7 +152,8 @@ class ShoeIndex extends React.Component {
             )
         }
 
-        const items = this.props.items.length ? fetchItems() : ""; //(<div>Fetching Birds...</div>)
+        // const items = this.props.shoes.length ? fetchItems() : ""; //(<div>Fetching Birds...</div>)
+        const items = Object.keys(this.props.shoes).length;
 
         return (
             <div>
@@ -200,6 +201,8 @@ class ShoeIndex extends React.Component {
                                             shoe={shoe}
                                             key={`${shoe.id}-${shoe.material}`}
                                             key={`${shoe.id}-${shoe.material}-${shoe.color}`}
+                                            addToCart={this.props.addToCart}
+                                            startNotification={this.startNotification}
                                         />
                                     ))
                                 }
@@ -226,6 +229,8 @@ class ShoeIndex extends React.Component {
                                         shoe={shoe}
                                         key={`${shoe.id}-${shoe.material}`}
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
                                     />
                                 ))
                             }
@@ -243,6 +248,8 @@ class ShoeIndex extends React.Component {
                                         shoe={shoe}
                                         key={`${shoe.id}-${shoe.material}`}
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
                                     />
                                 ))
                             }
@@ -260,6 +267,8 @@ class ShoeIndex extends React.Component {
                                         shoe={shoe}
                                         key={`${shoe.id}-${shoe.material}`}
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
                                     />
                                 ))
                             }
@@ -277,6 +286,8 @@ class ShoeIndex extends React.Component {
                                         shoe={shoe}
                                         key={`${shoe.id}-${shoe.material}`}
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
                                     />
                                 ))
                             }
@@ -294,6 +305,8 @@ class ShoeIndex extends React.Component {
                                         shoe={shoe}
                                         key={`${shoe.id}-${shoe.material}`}
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
+                                        addToCart={this.props.addToCart}
+                                        startNotification={this.startNotification}
                                     />
                                 ))
                             }

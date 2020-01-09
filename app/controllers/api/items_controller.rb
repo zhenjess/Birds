@@ -6,6 +6,7 @@ class Api::ItemsController < ApplicationController
     
     def index
         @items = Item.all
+        @genders
         @shoes = Shoe.all
     end
 

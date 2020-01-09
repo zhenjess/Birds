@@ -11,6 +11,7 @@ class ShoeIndexItem extends React.Component {
     }
 
     handleClick(id, size) {
+        // debugger
         this.props.addToCart(id, size);
         this.props.startNotification();
     }
@@ -27,7 +28,7 @@ class ShoeIndexItem extends React.Component {
                     <div className="shoe-image">
                         <img className="shoe-image-item" src={this.props.shoe.photoUrl} alt="" />
                     </div>
-                    <Link to={`/shoe/${shoe.id}`}>
+                    <Link to={`/shoes/${shoe.gender.toLowerCase()}`}>
                         <div className="shoe-item-color">
                             <h3>{shoe.color}</h3>
                             <br />

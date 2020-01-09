@@ -20,14 +20,16 @@ export const selectAllShoes = (state) => {
 export const selectAllShoesByGender = (state, gender) => {
     const shoes = [];
 
+    // debugger
     Object.values(state.entities.items).forEach((item) => {
         const shoe = state.entities.shoes[item.shoeId];
 
         if (shoe.gender.toLowerCase() === gender.toLowerCase()) {
             const color = state.entities.colors[shoe.colorId];
             const material = state.entities.materials[shoe.materialId];
+            const gender = state.entities.shoes[item.shoeId].gender;
 
-            const shoeItem = Object.assign({}, color, material, shoe);
+            const shoeItem = Object.assign({}, color, material, shoe, gender);
             shoeItem.photoUrl = item.photoUrl;
             shoes.push(shoeItem);
         }
@@ -35,11 +37,12 @@ export const selectAllShoesByGender = (state, gender) => {
     return shoes;
 };
 
-export const selectItemsByGender = (state, gender) => {
-    const items = state.entities.items;
-    const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
-    return filteredItems;
-};
+// export const selectItemsByGender = (state, gender) => {
+//     debugger
+//     const items = state.entities.items;
+//     const filteredItems = Object.values(items).filter(item => item.gender.toLowerCase() === gender.toLowerCase());
+//     return filteredItems;
+// };
 
 // export const selectAllShoesByGender = (state, gender) => { //gender is hardcoded by url
 //     //    return [];

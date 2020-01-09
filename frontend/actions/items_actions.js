@@ -7,8 +7,8 @@ const receiveItems = items => ({
     items: items
 });
 
-export const fetchShoeItems = itemId => dispatch => (
-    APIUtil.fetchShoeItems(itemId)
+export const fetchShoeItems = () => dispatch => (
+    APIUtil.fetchShoeItems()
         .then(items => dispatch(receiveItems(items)))
 );
 

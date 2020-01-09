@@ -6,10 +6,8 @@ Rails.application.routes.draw do
     resources :shoes, only: [:index, :show]
     resources :materials, only: [:index, :show]
     resources :colors, only: [:index, :show]
-
-    resources :users, only: [:create, :update, :show] do
-      resources :items, only: [:index, :show]
-    end
+    resources :items, only: [:index, :show]
+    resources :users, only: [:create, :update, :show]
 
   end
   root "static_pages#root"
