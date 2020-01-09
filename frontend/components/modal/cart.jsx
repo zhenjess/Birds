@@ -198,9 +198,8 @@ class Cart extends React.Component {
                              </ul>
             </div>
                          <div>
-                             <div className="divider">Looking for something else?
-                                     {/* &nbsp; */}
-                    
+                    <div className="divider"><p>Looking for something else?</p>
+                                
                              </div>
                              <div className="cart-totals">
                                  <div className="cart-costs">
