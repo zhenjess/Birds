@@ -5,18 +5,21 @@ import CartContainer from './cart_container';
 // import LoginFormContainer from '../session_form/login_form_container';
 // import SignupFormContainer from '../session_form/signup_form_container';
 
+
 function Modal({ modal, closeModal }) {
+
     if (!modal) {
         return null;
     }
-    let component;
-    switch (modal) {
-        case 'shoe index':
-            component = <CartContainer />;
-            break;
-        default:
-            return null;
-    }
+    //debugger
+    let component = <CartContainer/>
+    // switch (modal) {
+    //     case 'shoe index':
+    //         component = <CartContainer />;
+    //         break;
+    //     default:
+    //         return null;
+    // }
     return (
         <div className="modal-background" onClick={closeModal}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -28,6 +31,7 @@ function Modal({ modal, closeModal }) {
 
 const mapStateToProps = state => {
     return {
+
         modal: state.ui.modal
     };
 };

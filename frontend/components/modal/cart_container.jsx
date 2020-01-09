@@ -6,11 +6,12 @@ import Cart from './cart';
 import { removeFromCart } from '../../actions/cart_actions';
 // import NestForm from './nest_form';
 
-const mapStateToProps = ({ state, errors }) => {
-
+const mapStateToProps = ( state ) => {
+    
     return {
-        errors: errors.session,
+        errors: state.errors.session,
         formType: 'shoe',
+        items: Object.values(state.entities.carts)
         // items: Object.values(state.entities.carts)
     };
 };
@@ -18,13 +19,15 @@ const mapStateToProps = ({ state, errors }) => {
 const mapDispatchToProps = dispatch => {
     return {
         removeFromCart: (id, size) => dispatch(removeFromCart(id, size)),
+    
         processForm: (user) => dispatch(login(user)),
         otherForm: (
             <button onClick={() => dispatch(openModal('Cart'))}>
                 Cart
             </button>
         ),
-        closeModal: () => dispatch(closeModal())
+        // closeModal: () => dispatch(closeModal())
+        openModal: () => dispatch(openModal())
     };
 };
 

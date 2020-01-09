@@ -10,6 +10,8 @@ import{ addToCart, removeFromCart } from '../../actions/cart_actions';
 
 import { fetchShoeItems } from '../../actions/items_actions';
 
+import { openModal, closeModal } from '../../actions/modal_actions';
+
 const mapStateToProps = (state, ownProps) => {
     //shoes: Object.values(state.entities.shoes),
 
@@ -26,7 +28,10 @@ const mapDispatchToProps = dispatch => ({
     fetchShoe: (shoeId) => dispatch(fetchShoe(shoeId)),
     fetchShoeItems: (itemId) => dispatch(fetchShoeItems(itemId)),
     addToCart: (item, size) => dispatch(addToCart(item, size)),
-    removeFromCart: (id, size) => dispatch(removeFromCart(id, size))
+    removeFromCart: (id, size) => dispatch(removeFromCart(id, size)),
+    openModal: () => dispatch(openModal()), 
+    closeModal: () => dispatch(closeModal())
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoeIndex);

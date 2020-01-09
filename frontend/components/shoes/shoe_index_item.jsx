@@ -11,9 +11,11 @@ class ShoeIndexItem extends React.Component {
     }
 
     handleClick(id, size) {
-        // debugger
+    
         this.props.addToCart(id, size);
         this.props.startNotification();
+
+        this.props.openModal();
     }
 
     render() {

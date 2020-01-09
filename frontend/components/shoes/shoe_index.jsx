@@ -203,6 +203,8 @@ class ShoeIndex extends React.Component {
                                             key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                                             addToCart={this.props.addToCart}
                                             startNotification={this.startNotification}
+                                            openModal={this.props.openModal}
+                                            closeModal={this.props.closeModal}
                                         />
                                     ))
                                 }
@@ -231,6 +233,8 @@ class ShoeIndex extends React.Component {
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                                         addToCart={this.props.addToCart}
                                         startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
                                     />
                                 ))
                             }
@@ -250,6 +254,8 @@ class ShoeIndex extends React.Component {
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                                         addToCart={this.props.addToCart}
                                         startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
                                     />
                                 ))
                             }
@@ -269,6 +275,8 @@ class ShoeIndex extends React.Component {
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                                         addToCart={this.props.addToCart}
                                         startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
                                     />
                                 ))
                             }
@@ -288,6 +296,8 @@ class ShoeIndex extends React.Component {
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                                         addToCart={this.props.addToCart}
                                         startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
                                     />
                                 ))
                             }
@@ -307,6 +317,8 @@ class ShoeIndex extends React.Component {
                                         key={`${shoe.id}-${shoe.material}-${shoe.color}`}
                                         addToCart={this.props.addToCart}
                                         startNotification={this.startNotification}
+                                        openModal={this.props.openModal}
+                                        closeModal={this.props.closeModal}
                                     />
                                 ))
                             }
