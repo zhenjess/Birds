@@ -40,7 +40,8 @@ class Cart extends React.Component {
         const { items } = this.props;
         if (items.length) {
             this.props.openModal('shoe index', this.props.cart);
-            const subtotal = items.reduce((total, item) => 95 + total, 0);
+            //set default value of reduce to 0 to not add the first obj ele which is an obj
+            const subtotal = items.reduce((total, item) => 95 + total, 0); 
             this.setState({
                 subtotal
             });
