@@ -31,7 +31,6 @@ class CartItem extends React.Component {
         const { quantity } = this.state;
         // const { model, material, gender, color, photoUrl, price, size, id } = this.props.item;
         const { removeFromCart } = this.props;
-    
         return (
             <div className="cart-item-container">
                 <div className="cart-item-image-container">

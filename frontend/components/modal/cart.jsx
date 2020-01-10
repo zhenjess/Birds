@@ -40,7 +40,7 @@ class Cart extends React.Component {
         const { items } = this.props;
         if (items.length) {
             this.props.openModal('shoe index', this.props.cart);
-            const subtotal = items.reduce((total, item) => item.price + total);
+            const subtotal = items.reduce((total, item) => 95 + total, 0);
             this.setState({
                 subtotal
             });
@@ -52,7 +52,7 @@ class Cart extends React.Component {
         if (items.length !== prevProps.items.length) {
             let subtotal = 0;
             items.forEach(item => {
-                subtotal += item.price;
+                subtotal += 95;
             });
             this.setState({ subtotal });
 
@@ -77,11 +77,11 @@ class Cart extends React.Component {
         this.setState(() => ({ quantity }));
 
         const { items } = this.props;
-
+        debugger
         let subtotal = 0;
         let numItems = 0;
         items.forEach((item, i) => {
-            subtotal = item.price * quantity[i] + subtotal;
+            subtotal = 95 * quantity[i] + subtotal;
             numItems += quantity[i];
         });
         this.setState(() => ({ subtotal }));
@@ -134,7 +134,7 @@ class Cart extends React.Component {
                 gender={item.gender}
                 color={item.color}
                 photoUrl={item.photoUrl}
-                price={item.price}
+                price={95}
                 size={item.size}
                 id={item.id}
                 key={`${item.id}-${item.size}`}
@@ -143,7 +143,6 @@ class Cart extends React.Component {
                 removeFromCart={removeFromCart}
             />
         });
-        debugger
         return (
             // // <div className={open ? "cart-page-container open-cart" : "cart-page-container closed-cart"}>
             //     <div onAnimationEnd={this.endNotification} className={this.state.animateNotification ? "fadeout notification" : "notification"}>Thank you for your purchase!</div>
